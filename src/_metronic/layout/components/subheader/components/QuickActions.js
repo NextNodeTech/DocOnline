@@ -32,7 +32,7 @@ const QuickActionsDropdownToggle = forwardRef((props, ref) => {
 export function QuickActions() {
   return (
       <>
-        <OverlayTrigger
+        {/* <OverlayTrigger
             placement="left"
             overlay={<Tooltip id="quick-actions-tooltip">Quick actions</Tooltip>}
         >
@@ -46,7 +46,7 @@ export function QuickActions() {
               <DropdownMenu1 />
             </Dropdown.Menu>
           </Dropdown>
-        </OverlayTrigger>
+        </OverlayTrigger> */}
       </>
   );
 }

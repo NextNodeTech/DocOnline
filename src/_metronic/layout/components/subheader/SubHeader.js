@@ -6,6 +6,7 @@ import {QuickActions} from "./components/QuickActions";
 import {BreadCrumbs} from "./components/BreadCrumbs";
 import {getBreadcrumbsAndTitle, useSubheader} from "../../_core/MetronicSubheader";
 import {useHtmlClassService} from "../../_core/MetronicLayout"
+import { FormControl } from "react-bootstrap";
 
 export function SubHeader() {
   const uiService = useHtmlClassService();
@@ -67,18 +68,24 @@ export function SubHeader() {
               </h5>
 
             </div>
-
+ 
 
             <BreadCrumbs items={subheader.breadcrumbs} />
           </div>
 
           {/* Toolbar */}
           <div className="d-flex align-items-center">
-            <a href="#" className="btn btn-light btn-sm font-weight-bold" id="kt_dashboard_daterangepicker"
+            {/* <a href="#" className="btn btn-light btn-sm font-weight-bold" id="kt_dashboard_daterangepicker"
                data-toggle="tooltip" title="Select dashboard daterange" data-placement="left">
               <span className="text-muted font-weight-bold mr-2" id="kt_dashboard_daterangepicker_title">Today</span>
               <span className="text-primary font-weight-bold" id="kt_dashboard_daterangepicker_date">Aug 16</span>
-            </a>
+            </a> */}
+            <FormControl
+                    style={{width: "30vw"}}
+                    type="text"
+                    placeholder="Search"
+                    className=" mr-sm-2"
+                  />
             <QuickActions/>
           </div>
         </div>

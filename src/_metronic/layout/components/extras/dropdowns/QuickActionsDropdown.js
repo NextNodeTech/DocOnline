@@ -70,9 +70,9 @@ export function QuickActionsDropdown() {
                 className="d-flex flex-column align-items-center justify-content-center pt-10 pb-10 bgi-size-cover bgi-no-repeat rounded-top"
                 style={{ backgroundImage: `url(${bgImage})` }}
               >
-                <h3 className="text-white font-weight-bold font-size-5">
+                {/* <h3 className="text-white font-weight-bold font-size-5">
                   Quick Actions
-                </h3>
+                </h3> */}
                 <span className="btn btn-success btn-sm btn-bold btn-font-md mt-2">
                   23 tasks pending
                 </span>
