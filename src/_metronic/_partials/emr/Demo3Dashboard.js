@@ -8,7 +8,7 @@ import {
   StatsWidget10,
   ListsWidget8,
   ListsWidget10,
-  ListsWidget14,
+  // ListsWidget14,
   AdvanceTablesWidget9,
 } from "../widgets";
 
@@ -48,9 +48,9 @@ export function Demo3Dashboard() {
             </div>
           </div>
         </div>
-        <div className="col-xl-8">
+        {/* <div className="col-xl-8">
           <ListsWidget14 className="gutter-b card-stretch" />
-        </div>
+        </div> */}
       </div>
       {/* end::Row */}
 

@@ -5,6 +5,7 @@ import AccountInformation from "./AccountInformation";
 import { ProfileOverview } from "./ProfileOverview";
 import ChangePassword from "./ChangePassword";
 import PersonaInformation from "./PersonaInformation";
+import GuardianInformation from "./GuardianInformation";
 import EmailSettings from "./EmailSettings";
 import { ProfileCard } from "./components/ProfileCard";
 
@@ -40,6 +41,10 @@ export default function UserProfilePage() {
           <Route
             path="/user-profile/personal-information"
             component={PersonaInformation}
+          />
+          <Route
+            path="/user-profile/guardian-information"
+            component={GuardianInformation}
           />
         </Switch>
       </div>

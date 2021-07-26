@@ -1,30 +1,20 @@
-import React, {useMemo} from "react";
-import objectPath from "object-path";
-import {useHtmlClassService} from "../../layout";
-import {Demo1Dashboard} from "./Demo1Dashboard";
-import {Demo2Dashboard} from "./Demo2Dashboard";
-import {Demo3Dashboard} from "./Demo3Dashboard";
-import {Demo4Dashboard} from "./Demo4Dashboard";
-import {Demo5Dashboard} from "./Demo5Dashboard";
-import {Demo6Dashboard} from "./Demo6Dashboard";
-import {Demo7Dashboard} from "./Demo7Dashboard";
+import React from "react";
 
 export function EMR () {
-    const uiService = useHtmlClassService();
-    const layoutProps = useMemo(() => {
-        return {
-            demo: objectPath.get(
-                uiService.config,
-                "demo"
-            )};
-    }, [uiService]);
-    return <>
-        {layoutProps.demo === 'demo1' && <Demo1Dashboard />}
-        {layoutProps.demo === 'demo2' && <Demo2Dashboard />}
-        {layoutProps.demo === 'demo3' && <Demo3Dashboard />}
-        {layoutProps.demo === 'demo4' && <Demo4Dashboard />}
-        {layoutProps.demo === 'demo5' && <Demo5Dashboard />}
-        {layoutProps.demo === 'demo6' && <Demo6Dashboard />}
-        {layoutProps.demo === 'demo7' && <Demo7Dashboard />}
-    </>;
+    return (
+        <>
+        <div className="d-flex align-items-center">
+                <div className="symbol symbol-60 symbol-xxl-100 mr-5 align-self-start align-self-xxl-center">
+            <div className="symbol symbol-60 symbol-xxl-100 mr-5 align-self-start align-self-xxl-center">
+                  <div style={{ align: "left"}}
+                    className="symbol-label"
+                    style={{ backgroundImage: `url(${"/media/users/300_24.jpg"})` }}
+                  ></div>
+                  <i className="symbol-badge bg-success"></i>
+            </div>
+            </div>
+            </div>
+        </>
+    )
+    
 }

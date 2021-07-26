@@ -108,10 +108,10 @@ export function UserNotificationsDropdown() {
                           key === "Events" ? "active" : ""
                         }`}
                       >
-                        Events
+                        Messages
                       </Nav.Link>
                     </Nav.Item>
-                    <Nav.Item as="li">
+                    {/* <Nav.Item as="li">
                       <Nav.Link
                         eventKey="Logs"
                         className={`nav-link show ${
@@ -120,7 +120,7 @@ export function UserNotificationsDropdown() {
                       >
                         Logs
                       </Nav.Link>
-                    </Nav.Item>
+                    </Nav.Item> */}
                   </Nav>
 
                   <Tab.Content className="tab-content">

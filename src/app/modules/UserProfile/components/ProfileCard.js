@@ -2,7 +2,7 @@
 import React, { useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import { shallowEqual, useSelector } from "react-redux";
-import { Dropdown, OverlayTrigger, Tooltip } from "react-bootstrap";
+import { Dropdown } from "react-bootstrap";
 import SVG from "react-inlinesvg";
 import { toAbsoluteUrl } from "../../../../_metronic/_helpers";
 import {
@@ -42,7 +42,7 @@ export function ProfileCard() {
                     <DropdownMenu4></DropdownMenu4>
                   </Dropdown.Menu>
                 </Dropdown>
-              </div>
+              </div> 
               {/* end::Toolbar */}
               {/* begin::User */}
               <div className="d-flex align-items-center">
@@ -102,26 +102,6 @@ export function ProfileCard() {
               <div className="navi navi-bold navi-hover navi-active navi-link-rounded">
                 <div className="navi-item mb-2">
                   <NavLink
-                    to="/user-profile/profile-overview"
-                    className="navi-link py-4"
-                    activeClassName="active"
-                  >
-                    <span className="navi-icon mr-2">
-                      <span className="svg-icon">
-                        <SVG
-                          src={toAbsoluteUrl(
-                            "/media/svg/icons/Design/Layers.svg"
-                          )}
-                        ></SVG>{" "}
-                      </span>
-                    </span>
-                    <span className="navi-text font-size-lg">
-                      Profile Overview
-                    </span>
-                  </NavLink>
-                </div>
-                <div className="navi-item mb-2">
-                  <NavLink
                     to="/user-profile/personal-information"
                     className="navi-link py-4"
                     activeClassName="active"
@@ -137,6 +117,26 @@ export function ProfileCard() {
                     </span>
                     <span className="navi-text font-size-lg">
                       Personal Information
+                    </span>
+                  </NavLink>
+                </div>
+                <div className="navi-item mb-2">
+                  <NavLink
+                    to="/user-profile/guardian-information"
+                    className="navi-link py-4"
+                    activeClassName="active"
+                  >
+                    <span className="navi-icon mr-2">
+                      <span className="svg-icon">
+                        <SVG
+                          src={toAbsoluteUrl(
+                            "/media/svg/icons/General/User.svg"
+                          )}
+                        ></SVG>{" "}
+                      </span>
+                    </span>
+                    <span className="navi-text font-size-lg">
+                      Guardian Information
                     </span>
                   </NavLink>
                 </div>
@@ -205,73 +205,7 @@ export function ProfileCard() {
                     </span>
                   </NavLink>
                 </div>
-                <div className="navi-item mb-2">
-                  <OverlayTrigger
-                    placement="right"
-                    overlay={<Tooltip>Coming soon...</Tooltip>}
-                  >
-                    <a href="#" className="navi-link py-4">
-                      <span className="navi-icon mr-2">
-                        <span className="svg-icon">
-                          <SVG
-                            src={toAbsoluteUrl(
-                              "/media/svg/icons/Layout/Layout-top-panel-6.svg"
-                            )}
-                          ></SVG>{" "}
-                        </span>
-                      </span>
-                      <span className="navi-text font-size-lg">
-                        Saved Credit Cards
-                      </span>
-                    </a>
-                  </OverlayTrigger>
-                </div>
-                <div className="navi-item mb-2">
-                  <OverlayTrigger
-                    placement="right"
-                    overlay={<Tooltip>Coming soon...</Tooltip>}
-                  >
-                    <a href="#" className="navi-link py-4">
-                      <span className="navi-icon mr-2">
-                        <span className="svg-icon">
-                          <SVG
-                            src={toAbsoluteUrl(
-                              "/media/svg/icons/Files/File.svg"
-                            )}
-                          ></SVG>{" "}
-                        </span>
-                      </span>
-                      <span className="navi-text font-size-lg">
-                        Tax information
-                      </span>
-                      <span className="navi-label">
-                        <span className="label label-light-primary label-inline font-weight-bold">
-                          new
-                        </span>
-                      </span>
-                    </a>
-                  </OverlayTrigger>
-                </div>
-                <div className="navi-item mb-2">
-                  <OverlayTrigger
-                    placement="right"
-                    overlay={<Tooltip>Coming soon...</Tooltip>}
-                  >
-                    <a href="#" className="navi-link py-4">
-                      <span className="navi-icon mr-2">
-                        <span className="svg-icon">
-                          <SVG
-                            src={toAbsoluteUrl(
-                              "/media/svg/icons/Text/Article.svg"
-                            )}
-                          ></SVG>{" "}
-                        </span>
-                      </span>
-                      <span className="navi-text">Statements</span>
-                    </a>
-                  </OverlayTrigger>
-                </div>
-              </div>
+                              </div>
               {/* end::Nav */}
             </div>
             {/* end::Body */}
