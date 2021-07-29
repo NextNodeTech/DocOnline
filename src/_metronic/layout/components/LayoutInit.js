@@ -9,7 +9,6 @@ import KTLayoutAsideToggle from "../../_assets/js/layout/base/aside-toggle";
 import KTLayoutAsideMenu from "../../_assets/js/layout/base/aside-menu";
 import KTLayoutContent from "../../_assets/js/layout/base/content";
 import KTLayoutFooter from "../../_assets/js/layout/base/footer";
-import KTLayoutSubheader from "../../_assets/js/layout/base/subheader";
 import KTLayoutScrolltop from "../../_assets/js/layout/extended/scrolltop";
 import KTLayoutStickyCard from "../../_assets/js/layout/base/sticky-card";
 import KTLayoutStretchedCard from "../../_assets/js/layout/base/stretched-card";

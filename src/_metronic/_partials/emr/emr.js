@@ -25,7 +25,6 @@ import FormControlLabel from '@material-ui/core/FormControlLabel';
 import FormControl from '@material-ui/core/FormControl';
 import Checkbox from '@material-ui/core/Checkbox';
 import FormGroup from '@material-ui/core/FormGroup';
-import FormLabel from '@material-ui/core/FormLabel';
 
 
 
@@ -194,9 +193,9 @@ export function EMR() {
                     <div className="d-flex align-items-center">
                         <div className="symbol symbol-60 symbol-xxl-100 mr-1 align-self-start align-self-xxl-center">
                             <div className="symbol symbol-60 symbol-xxl-100 mr-1 align-self-start align-self-xxl-center">
-                                <div style={{ align: "left", height: '100%' }}
+                                <div
                                     className="symbol-label"
-                                    style={{ backgroundImage: `url(${"/media/users/300_24.jpg"})` }}
+                                    style={{ align: "left", height: '100%', backgroundImage: `url(${"/media/users/300_24.jpg"})` }}
                                 ></div>
                                 <i className="symbol-badge bg-success"></i>
                             </div>
