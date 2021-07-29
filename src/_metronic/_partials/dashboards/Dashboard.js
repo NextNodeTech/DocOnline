@@ -23,7 +23,6 @@ import useStyles from "./styles";
 import Image1 from "./doctor.jpg";
 import Image2 from "./medical.jpg";
 import Image3 from "./running_fitness.png";
-import { ProfilePic } from "./doctor.jpg";
 import Carousel from "./Carousel"
 
 const Dashboard = () => {
