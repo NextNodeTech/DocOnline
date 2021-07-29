@@ -1,5 +1,5 @@
-import React, {useLayoutEffect} from "react";
-import {KTUtil} from "../../_assets/js/components/util";
+import React, { useLayoutEffect } from "react";
+import { KTUtil } from "../../_assets/js/components/util";
 import KTLayoutHeader from "../../_assets/js/layout/base/header";
 import KTLayoutHeaderMenu from "../../_assets/js/layout/base/header-menu";
 import KTLayoutHeaderTopbar from "../../_assets/js/layout/base/header-topbar";
@@ -51,7 +51,7 @@ export function LayoutInit() {
       //////////////////////////////////////////////
       // Layout Extended Partials(optional to use)//
       //////////////////////////////////////////////
-      KTLayoutSubheader.init('kt_subheader');
+      // KTLayoutSubheader.init('kt_subheader');
 
       // Init Scrolltop
       KTLayoutScrolltop.init('kt_scrolltop');
