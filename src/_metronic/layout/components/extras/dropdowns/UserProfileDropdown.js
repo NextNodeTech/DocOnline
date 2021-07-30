@@ -90,7 +90,7 @@ export function UserProfileDropdown() {
         </>
 
         <div className="navi navi-spacer-x-0 pt-5">
-          <Link to="/user-profile" className="navi-item px-8 cursor-pointer">
+          <Link to="/user-profile/personal-information" className="navi-item px-8 cursor-pointer">
             <div className="navi-link">
               <div className="navi-icon mr-2">
                 <i className="flaticon2-calendar-3 text-success" />

@@ -136,7 +136,7 @@ export function ProfileCard() {
                       </span>
                     </span>
                     <span className="navi-text font-size-lg">
-                      Guardian Information
+                      Guardian
                     </span>
                   </NavLink>
                 </div>
