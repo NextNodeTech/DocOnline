@@ -35,7 +35,7 @@ const Dashboard = () => {
         <Grid style={{paddingLeft: "2vw", justifyContent: "left" }} container className={classes.root}>
           <div style={{ width: "90%" }}>
           <Carousel  show={6.5} >
-            <Paper style={{margin: 12, width: "140px", height: "140px"}} elevation={7} className={classes.rootpapers}>
+            <Paper style={{margin: 12, width: "140px", height: "140px"}} elevation={3} className={classes.rootpapers}>
               <AddCircleOutlineIcon className={classes.PaperIcons} />
               <Typography
                 style={{padding: 12}}
@@ -46,7 +46,7 @@ const Dashboard = () => {
                 Add readings
               </Typography>
             </Paper>
-            <Paper style={{margin: 12, width: "140px", height: "140px"}} elevation={7} className={classes.rootpapers}>
+            <Paper style={{margin: 12, width: "140px", height: "140px"}} elevation={3} className={classes.rootpapers}>
               <FavoriteBorderIcon className={classes.PaperIcons} />
               <Typography
                 variant='body1'
