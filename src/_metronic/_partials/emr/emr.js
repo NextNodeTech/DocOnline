@@ -1,3 +1,4 @@
+import React from 'react'
 import clsx from "clsx";
 import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
@@ -23,6 +24,7 @@ import FormControlLabel from "@material-ui/core/FormControlLabel";
 import FormControl from "@material-ui/core/FormControl";
 import Checkbox from "@material-ui/core/Checkbox";
 import FormGroup from "@material-ui/core/FormGroup";
+import Paper from "@material-ui/core/Paper";
 
 const frequencies = [
   {
@@ -193,7 +195,6 @@ export function EMR() {
                     backgroundImage: `url(${"/media/users/300_24.jpg"})`,
                   }}
                 ></div>
-                <i className='symbol-badge bg-success'></i>
               </div>
             </div>
           </div>
