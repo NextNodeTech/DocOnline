@@ -246,7 +246,7 @@ export function EMR() {
               <Typography variant='body2'>CARDIO-THROCIC /CPO</Typography>
 
               <Typography variant='body2'>
-                <span style={{ color: "blue" }}> Mr. OPD (Consultant)</span>
+                <span style={{ color: "#00C4DB" }}> Mr. OPD (Consultant)</span>
               </Typography>
             </div>
           </Paper>
@@ -456,7 +456,7 @@ export function EMR() {
                     </Typography>
                   </div>
                   <div className={classes.FlowSheetDiv}>
-                    <Typography style={{ color: "darkblue" }}>
+                    <Typography style={{ color: "#00C4DB" }}>
                       {" "}
                       114 (<span>&#8457;</span>)
                     </Typography>
@@ -476,7 +476,7 @@ export function EMR() {
                     <Typography>Respiratory Rate</Typography>
                   </div>
                   <div className={classes.FlowSheetDiv}>
-                    <Typography style={{ color: "darkblue" }}>
+                    <Typography style={{ color: "#00C4DB" }}>
                       {" "}
                       22 bpm
                     </Typography>
@@ -496,7 +496,7 @@ export function EMR() {
                     <Typography>Pulse Rate</Typography>
                   </div>
                   <div className={classes.FlowSheetDiv}>
-                    <Typography style={{ color: "darkblue" }}> 64</Typography>
+                    <Typography style={{ color: "#00C4DB" }}> 64</Typography>
                   </div>
                   <div className={classes.FlowSheetDiv}>
                     <TextField
@@ -513,7 +513,7 @@ export function EMR() {
                     <Typography>Blood Pressure</Typography>
                   </div>
                   <div className={classes.FlowSheetDiv}>
-                    <Typography style={{ color: "darkblue" }}>
+                    <Typography style={{ color: "#00C4DB" }}>
                       {" "}
                       120/85 mmHg
                     </Typography>
@@ -525,7 +525,7 @@ export function EMR() {
                     <Typography>O₂ Saturation</Typography>
                   </div>
                   <div className={classes.FlowSheetDiv}>
-                    <Typography style={{ color: "darkblue" }}> 35%</Typography>
+                    <Typography style={{ color: "#00C4DB" }}> 35%</Typography>
                   </div>
                   <div className={classes.FlowSheetDiv}>
                     <TextField
@@ -543,7 +543,7 @@ export function EMR() {
                     <Typography>Pain value</Typography>
                   </div>
                   <div className={classes.FlowSheetDiv}>
-                    <Typography style={{ color: "#000" }}> 4</Typography>
+                    <Typography style={{ color: "#00C4DB" }}> 4</Typography>
                   </div>
                   <div className={classes.FlowSheetDiv}>
                     <TextField
@@ -562,7 +562,7 @@ export function EMR() {
                     <Typography>Head Circum(cm)</Typography>
                   </div>
                   <div className={classes.FlowSheetDiv}>
-                    <Typography style={{ color: "#000" }}> 100cm</Typography>
+                    <Typography style={{ color: "#00C4DB" }}> 100cm</Typography>
                   </div>
                   <div className={classes.FlowSheetDiv}>
                     <TextField
@@ -579,7 +579,7 @@ export function EMR() {
                     <Typography>Height(cm)</Typography>
                   </div>
                   <div className={classes.FlowSheetDiv}>
-                    <Typography style={{ color: "darkblue" }}>
+                    <Typography style={{ color: "#00C4DB" }}>
                       {" "}
                       85 cm
                     </Typography>
@@ -599,7 +599,7 @@ export function EMR() {
                     <Typography>Weight(kg)</Typography>
                   </div>
                   <div className={classes.FlowSheetDiv}>
-                    <Typography style={{ color: "darkblue" }}>
+                    <Typography style={{ color: "#00C4DB" }}>
                       {" "}
                       58 kg
                     </Typography>
@@ -729,8 +729,8 @@ export function EMR() {
                       aria-label='contained primary button group'
                     >
                       <Button>Provisional</Button>
-                      <Button>Final</Button>
-                      <Button>Cancel</Button>
+                      <Button style={{background: "white"}}>Final</Button>
+                      <Button style={{background: "white"}}>Cancel</Button>
                     </ButtonGroup>{" "}
                   </Grid>
                 </Grid>
@@ -761,8 +761,8 @@ export function EMR() {
                       aria-label='contained primary button group'
                     >
                       <Button>Provisional</Button>
-                      <Button>Final</Button>
-                      <Button>Cancel</Button>
+                      <Button style={{background: "white"}}>Final</Button>
+                      <Button style={{background: "white"}}>Cancel</Button>
                     </ButtonGroup>{" "}
                   </Grid>
                 </Grid>
@@ -951,7 +951,7 @@ export function EMR() {
                   className={classes.button}
                   startIcon={<CloudUploadIcon />}
                 >
-                  Upload
+                  Browse...
                 </Button>
               </div>
             </Paper>
@@ -1229,8 +1229,8 @@ export function EMR() {
                         aria-label='contained primary button group'
                       >
                         <Button>Routine</Button>
-                        <Button>Urgent</Button>
-                        <Button>Start</Button>
+                        <Button style={{background: "white"}}>Urgent (Today)</Button>
+                        <Button style={{background: "white"}}>Start Now</Button>
                         <CloseIcon style={{ color: "red", marginTop: "5px" }} />
                       </ButtonGroup>
                     </Grid>
@@ -1354,14 +1354,14 @@ export function EMR() {
                       </div>
                     </Grid>
                     <Grid>
-                      <ButtonGroup
+                    <ButtonGroup
                         variant='contained'
                         color='primary'
                         aria-label='contained primary button group'
                       >
                         <Button>Routine</Button>
-                        <Button>Urgent</Button>
-                        <Button>Start</Button>
+                        <Button style={{background: "white"}}>Urgent (Today)</Button>
+                        <Button style={{background: "white"}}>Start Now</Button>
                         <CloseIcon style={{ color: "red", marginTop: "5px" }} />
                       </ButtonGroup>
                     </Grid>
@@ -1386,14 +1386,14 @@ export function EMR() {
                       </div>
                     </Grid>
                     <Grid>
-                      <ButtonGroup
+                    <ButtonGroup
                         variant='contained'
                         color='primary'
                         aria-label='contained primary button group'
                       >
                         <Button>Routine</Button>
-                        <Button>Urgent</Button>
-                        <Button>Start</Button>
+                        <Button style={{background: "white"}}>Urgent (Today)</Button>
+                        <Button style={{background: "white"}}>Start Now</Button>
                         <CloseIcon style={{ color: "red", marginTop: "5px" }} />
                       </ButtonGroup>
                     </Grid>
