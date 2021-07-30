@@ -32,8 +32,8 @@ const Dashboard = () => {
       <Grid container>
         {/* <<<<<<<<<<<<<<<grid root >>>>>>>>>>>>>>>>>> */}
         <div className={classes.rootscroll}>
-          <Grid container className={classes.root}>
-          <div style={{ width: "82%" }}>
+        <Grid style={{paddingLeft: "2vw", justifyContent: "left" }} container className={classes.root}>
+          <div style={{ width: "90%" }}>
           <Carousel  show={6.5} >
             <Paper style={{margin: 12, width: "140px", height: "140px"}} elevation={7} className={classes.rootpapers}>
               <AddCircleOutlineIcon className={classes.PaperIcons} />
