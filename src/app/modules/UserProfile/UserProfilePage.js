@@ -1,14 +1,11 @@
 import React from "react";
 import { Redirect, Route, Switch } from "react-router-dom";
 import { useSubheader } from "../../../_metronic/layout";
-import AccountInformation from "./AccountInformation";
 import { ProfileOverview } from "./ProfileOverview";
 import ChangePassword from "./ChangePassword";
 import PersonaInformation from "./PersonaInformation";
-import GuardianInformation from "./GuardianInformation";
-import EmailSettings from "./EmailSettings";
-import Languages from "./Languages";
 import { ProfileCard } from "./components/ProfileCard";
+import Languages from "./Languages";
 
 export default function UserProfilePage() {
   const suhbeader = useSubheader();
@@ -28,29 +25,18 @@ export default function UserProfilePage() {
             component={ProfileOverview}
           />
           <Route
-            path="/user-profile/account-information"
-            component={AccountInformation}
-          />
-          <Route
             path="/user-profile/change-password"
             component={ChangePassword}
-          />
-          <Route
-            path="/user-profile/email-settings"
-            component={EmailSettings}
-          />
-          <Route
-            path="/user-profile/personal-information"
-            component={PersonaInformation}
-          />
-          <Route
-            path="/user-profile/guardian-information"
-            component={GuardianInformation}
           />
           <Route
             path="/user-profile/languages"
             component={Languages}
           />
+          <Route
+            path="/user-profile/personal-information"
+            component={PersonaInformation}
+          />
+
         </Switch>
       </div>
     </div>
