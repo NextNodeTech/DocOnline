@@ -72,10 +72,10 @@ export function ProfileCard() {
               {/* begin::Contact */}
 
               {/* icons add  here... */}
-              <div className="navi-item mb-4 pt-2 text-center ">
-                <button class="btn btn-success btn-circle btn-circle-sm m-1"><i class="fab fa-facebook-messenger"></i></button>
-                <button class="btn btn-primary btn-circle btn-circle-sm m-1"><i class="fab fa-facebook-f"></i></button>
-                <button class="btn btn-info btn-circle btn-circle-sm m-1"><i class="fab fa-instagram"></i></button>
+              <div className="navi-item mb-4 pt-7 text-center ">
+                <button class="btn btn-success btn-circle btn-circle-sm m-2"><i class="fab fa-facebook-messenger ml-1"></i></button>
+                <button class="btn btn-primary btn-circle btn-circle-sm m-2"><i class="fab fa-facebook-f ml-1"></i></button>
+                <button class="btn btn-info btn-circle btn-circle-sm m-2"><i class="fab fa-instagram ml-1"></i></button>
 
               </div>
 
