@@ -9,12 +9,14 @@ import {
   DropdownCustomToggler,
   DropdownMenu4,
 } from "../../../../_metronic/_partials/dropdowns";
+import './styles.css';
+
 
 export function ProfileCard() {
   const user = useSelector(({ auth }) => auth.user, shallowEqual);
 
   useEffect(() => {
-    return () => {};
+    return () => { };
   }, [user]);
 
   return (
@@ -42,11 +44,11 @@ export function ProfileCard() {
                     <DropdownMenu4></DropdownMenu4>
                   </Dropdown.Menu>
                 </Dropdown>
-              </div> 
+              </div>
               {/* end::Toolbar */}
               {/* begin::User */}
-              <div className="d-flex align-items-center">
-                <div className="symbol symbol-60 symbol-xxl-100 mr-5 align-self-start align-self-xxl-center">
+              <div className=" justify-content-center text-center">
+                <div className="symbol symbol-60 symbol-xxl-100 align-self-center align-self-xxl-center rounded-circle ">
                   <div
                     className="symbol-label"
                     style={{ backgroundImage: `url(${user.pic})` }}
@@ -63,44 +65,44 @@ export function ProfileCard() {
                     {user.firstname} {user.lastname}
                   </a>
                   <div className="text-muted">{user.occupation}</div>
-                  <div className="mt-2">
-                    <a
-                      href="#"
-                      className="btn btn-sm btn-primary font-weight-bold mr-2 py-2 px-3 px-xxl-5 my-1"
-                    >
-                      Chat
-                    </a>
-                    <a
-                      href="#"
-                      className="btn btn-sm btn-success font-weight-bold py-2 px-3 px-xxl-5 my-1"
-                    >
-                      Follow
-                    </a>
-                  </div>
+
                 </div>
               </div>
               {/* end::User */}
               {/* begin::Contact */}
-              <div className="py-9">
-                <div className="d-flex align-items-center justify-content-between mb-2">
-                  <span className="font-weight-bold mr-2">Email:</span>
-                  <span className="text-muted text-hover-primary">
-                    {user.email}
-                  </span>
-                </div>
-                <div className="d-flex align-items-center justify-content-between mb-2">
-                  <span className="font-weight-bold mr-2">Phone:</span>
-                  <span className="text-muted">{user.phone}</span>
-                </div>
-                <div className="d-flex align-items-center justify-content-between">
-                  <span className="font-weight-bold mr-2">Location:</span>
-                  <span className="text-muted">{user.address.city}</span>
-                </div>
+
+              {/* icons add  here... */}
+              <div className="navi-item mb-4 pt-2 text-center ">
+                <button class="btn btn-success btn-circle btn-circle-sm m-1"><i class="fab fa-facebook-messenger"></i></button>
+                <button class="btn btn-primary btn-circle btn-circle-sm m-1"><i class="fab fa-facebook-f"></i></button>
+                <button class="btn btn-info btn-circle btn-circle-sm m-1"><i class="fab fa-instagram"></i></button>
+
               </div>
+
               {/* end::Contact */}
               {/* begin::Nav */}
-              <div className="navi navi-bold navi-hover navi-active navi-link-rounded">
+              <div className="navi navi-bold navi-hover navi-active navi-link-rounded py-7">
                 <div className="navi-item mb-2">
+                  <NavLink
+                    to="/user-profile/profile-overview"
+                    className="navi-link py-4"
+                    activeClassName="active"
+                  >
+                    <span className="navi-icon mr-2">
+                      <span className="svg-icon">
+                        <SVG
+                          src={toAbsoluteUrl(
+                            "/media/svg/icons/Design/Layers.svg"
+                          )}
+                        ></SVG>{" "}
+                      </span>
+                    </span>
+                    <span className="navi-text font-size-lg">
+                      Profile Overview
+                    </span>
+                  </NavLink>
+                </div>
+                <div className="navi-item mb-2 " style={{ whiteSpace: 'nowrap' }}>
                   <NavLink
                     to="/user-profile/personal-information"
                     className="navi-link py-4"
@@ -120,47 +122,7 @@ export function ProfileCard() {
                     </span>
                   </NavLink>
                 </div>
-                <div className="navi-item mb-2">
-                  <NavLink
-                    to="/user-profile/guardian-information"
-                    className="navi-link py-4"
-                    activeClassName="active"
-                  >
-                    <span className="navi-icon mr-2">
-                      <span className="svg-icon">
-                        <SVG
-                          src={toAbsoluteUrl(
-                            "/media/svg/icons/General/User.svg"
-                          )}
-                        ></SVG>{" "}
-                      </span>
-                    </span>
-                    <span className="navi-text font-size-lg">
-                      Guardian
-                    </span>
-                  </NavLink>
-                </div>
-                <div className="navi-item mb-2">
-                  <NavLink
-                    to="/user-profile/account-information"
-                    className="navi-link py-4"
-                    activeClassName="active"
-                  >
-                    <span className="navi-icon mr-2">
-                      <span className="svg-icon">
-                        <SVG
-                          src={toAbsoluteUrl(
-                            "/media/svg/icons/Code/Compiling.svg"
-                          )}
-                        ></SVG>{" "}
-                      </span>
-                    </span>
-                    <span className="navi-text font-size-lg">
-                      Account Information
-                    </span>
-                  </NavLink>
-                </div>
-                <div className="navi-item mb-2">
+                <div className="navi-item mb-2" style={{ whiteSpace: 'nowrap' }}>
                   <NavLink
                     to="/user-profile/change-password"
                     className="navi-link py-4"
@@ -179,9 +141,7 @@ export function ProfileCard() {
                       Change Password
                     </span>
                     <span className="navi-label">
-                      <span className="label label-light-danger label-rounded font-weight-bold">
-                        5
-                      </span>
+
                     </span>
                   </NavLink>
                 </div>
@@ -201,17 +161,18 @@ export function ProfileCard() {
                       </span>
                     </span>
                     <span className="navi-text font-size-lg">
-                      Email settings
+                      Languages
                     </span>
                   </NavLink>
                 </div>
-                              </div>
+              </div>
               {/* end::Nav */}
             </div>
             {/* end::Body */}
           </div>
         </div>
-      )}
+      )
+      }
     </>
   );
 }

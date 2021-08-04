@@ -15,7 +15,7 @@ function ChangePassword(props) {
   const [isError, setisError] = useState(false);
   const dispatch = useDispatch();
   const user = useSelector((state) => state.auth.user, shallowEqual);
-  useEffect(() => {}, [user]);
+  useEffect(() => { }, [user]);
   // Methods
   const saveUser = (values, setStatus, setSubmitting) => {
     setloading(true);
@@ -168,7 +168,7 @@ function ChangePassword(props) {
                 {...formik.getFieldProps("currentPassword")}
               />
               {formik.touched.currentPassword &&
-              formik.errors.currentPassword ? (
+                formik.errors.currentPassword ? (
                 <div className="invalid-feedback">
                   {formik.errors.currentPassword}
                 </div>
