@@ -36,6 +36,7 @@ export default function UserProfilePage() {
             path="/user-profile/personal-information"
             component={PersonaInformation}
           />
+
         </Switch>
       </div>
     </div>
