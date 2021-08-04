@@ -6,8 +6,29 @@ import * as Yup from "yup";
 import { ModalProgressBar } from "../../../_metronic/_partials/controls";
 import { toAbsoluteUrl } from "../../../_metronic/_helpers";
 import * as auth from "../Auth";
+import { makeStyles } from '@material-ui/core/styles';
+import TextField from '@material-ui/core/TextField';
+import { usePlacesWidget } from "react-google-autocomplete";
+
+
+
+
+
+const useStyles = makeStyles(theme => ({
+  container: {
+    display: 'flex',
+    flexWrap: 'wrap',
+  },
+  textField: {
+    marginLeft: theme.spacing(1),
+    marginRight: theme.spacing(1),
+    width: 200,
+  },
+}));
 
 function PersonaInformation(props) {
+  const classes = useStyles();
+
   // Fields
   const [loading, setloading] = useState(false);
   const [pic, setPic] = useState("");
@@ -48,6 +69,7 @@ function PersonaInformation(props) {
     phone: user.phone,
     email: user.email,
     website: user.website,
+    address: user.address,
   };
   const Schema = Yup.object().shape({
     pic: Yup.string(),
@@ -55,6 +77,7 @@ function PersonaInformation(props) {
     lastname: Yup.string().required("Last name is required"),
     companyName: Yup.string(),
     phone: Yup.string().required("Phone is required"),
+    address: Yup.string().required("Address is required"),
     email: Yup.string()
       .email("Wrong email format")
       .required("Email is required"),
@@ -69,6 +92,7 @@ function PersonaInformation(props) {
       return "is-valid";
     }
 
+
     return "";
   };
   const formik = useFormik({
@@ -81,6 +105,15 @@ function PersonaInformation(props) {
       resetForm();
     },
   });
+
+  const { ref, autocompleteRef } = usePlacesWidget({
+    apiKey: 'PUT_API_KEY_HERE',
+    onPlaceSelected: (place) => {
+      console.log(place);
+    }
+  });
+
+
   const getUserPic = () => {
     if (!pic) {
       return "none";
@@ -235,24 +268,44 @@ function PersonaInformation(props) {
               ) : null}
             </div>
           </div>
-          <div className="form-group row">
+          <div className='form-group row'>
+              <label className='col-xl-3 col-lg-3 col-form-label'>
+                Gender
+              </label>
+              <div className='col-lg-9 col-xl-6'>
+                <select
+                  className='form-control form-control-lg form-control-solid'
+                  name='gender'
+                  {...formik.getFieldProps("gender")}
+                >
+                  <option>Select Gender</option>
+                  <option value='Male'>Male </option>
+                  <option value='Female'>Female</option>
+                  <option value='Other'>Other</option>
+                </select>
+              </div>
+            </div>
+
+
+            <div className="form-group row">
             <label className="col-xl-3 col-lg-3 col-form-label">
-              Company Name
+              Date of Birth
             </label>
             <div className="col-lg-9 col-xl-6">
-              <input
-                type="text"
-                placeholder="Company name"
-                className={`form-control form-control-lg form-control-solid`}
-                name="companyName"
-                {...formik.getFieldProps("companyName")}
-              />
-              <span className="form-text text-muted">
-                If you want your invoices addressed to a company. Leave blank to
-                use your full name.
-              </span>
-            </div>
-          </div>
+
+            <TextField
+        id="date"
+        type="date"
+        defaultValue="2017-05-24"
+        className={classes.textField}
+        InputLabelProps={{
+          shrink: true,
+        }}
+      />
+
+</div>
+</div>
+
           <div className="row">
             <label className="col-xl-3"></label>
             <div className="col-lg-9 col-xl-6">
@@ -320,21 +373,21 @@ function PersonaInformation(props) {
           </div>
           <div className="form-group row">
             <label className="col-xl-3 col-lg-3 col-form-label">
-              Company Site
+              Address
             </label>
             <div className="col-lg-9 col-xl-6">
               <div className="input-group input-group-lg input-group-solid">
                 <input
+                  ref={ref}
                   type="text"
-                  placeholder="https://keenthemes.com"
+                  placeholder="152, Seatle"
                   className={`form-control form-control-lg form-control-solid`}
-                  name="website"
-                  {...formik.getFieldProps("website")}
+                  name="address"
                 />
               </div>
-              {formik.touched.website && formik.errors.website ? (
+              {formik.touched.address && formik.errors.address ? (
                 <div className="invalid-feedback display-block">
-                  {formik.errors.website}
+                  {formik.errors.address}
                 </div>
               ) : null}
             </div>

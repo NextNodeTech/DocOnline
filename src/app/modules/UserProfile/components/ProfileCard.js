@@ -147,7 +147,7 @@ export function ProfileCard() {
                 </div>
                 <div className="navi-item mb-2">
                   <NavLink
-                    to="/user-profile/email-settings"
+                    to="/user-profile/languages"
                     className="navi-link py-4"
                     activeClassName="active"
                   >
