@@ -7,6 +7,7 @@ import ChangePassword from "./ChangePassword";
 import PersonaInformation from "./PersonaInformation";
 import GuardianInformation from "./GuardianInformation";
 import EmailSettings from "./EmailSettings";
+import Languages from "./Languages";
 import { ProfileCard } from "./components/ProfileCard";
 
 export default function UserProfilePage() {
@@ -45,6 +46,10 @@ export default function UserProfilePage() {
           <Route
             path="/user-profile/guardian-information"
             component={GuardianInformation}
+          />
+          <Route
+            path="/user-profile/languages"
+            component={Languages}
           />
         </Switch>
       </div>
