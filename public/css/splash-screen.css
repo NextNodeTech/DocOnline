@@ -36,6 +36,14 @@ body {
   stroke-linecap: round;
   animation: dash 1.5s ease-in-out infinite;
 }
+.btn-circle {
+  width: 45px;
+  height: 45px;
+  line-height: 45px;
+  text-align: center;
+  padding: 0;
+  border-radius: 50%;
+}
 
 @keyframes rotate {
   100% {
