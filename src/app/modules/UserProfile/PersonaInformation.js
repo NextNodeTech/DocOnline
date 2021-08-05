@@ -106,12 +106,6 @@ function PersonaInformation(props) {
     },
   });
 
-  const { ref, autocompleteRef } = usePlacesWidget({
-    apiKey: 'PUT_API_KEY_HERE',
-    onPlaceSelected: (place) => {
-      console.log(place);
-    }
-  });
 
 
   const getUserPic = () => {
@@ -378,7 +372,6 @@ function PersonaInformation(props) {
             <div className="col-lg-9 col-xl-6">
               <div className="input-group input-group-lg input-group-solid">
                 <input
-                  ref={ref}
                   type="text"
                   placeholder="152, Seatle"
                   className={`form-control form-control-lg form-control-solid`}

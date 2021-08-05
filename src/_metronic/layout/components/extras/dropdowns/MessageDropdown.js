@@ -9,7 +9,7 @@ import { useHtmlClassService } from "../../../_core/MetronicLayout";
 import { toAbsoluteUrl } from "../../../../_helpers";
 import { DropdownTopbarItemToggler } from "../../../../_partials/dropdowns";
 
-export function QuickActionsDropdown() {
+export function MessageDropdown() {
   const bgImage = toAbsoluteUrl("/media/misc/bg-2.jpg");
   const uiService = useHtmlClassService();
   const layoutProps = useMemo(() => {
@@ -25,7 +25,7 @@ export function QuickActionsDropdown() {
       {layoutProps.offcanvas && (
         <OverlayTrigger
           placement="left"
-          overlay={<Tooltip id="quick-actions-tooltip">Quick actions</Tooltip>}
+          overlay={<Tooltip id="quick-actions-tooltip">Messages</Tooltip>}
         >
           <div className="topbar-item">
             <div
@@ -50,7 +50,7 @@ export function QuickActionsDropdown() {
             <OverlayTrigger
               placement="bottom"
               overlay={
-                <Tooltip id="quick-actions-tooltip">Quick actions</Tooltip>
+                <Tooltip id="quick-actions-tooltip">Messages</Tooltip>
               }
             >
               <div className="btn btn-icon btn-clean btn-dropdown btn-lg mr-1">
