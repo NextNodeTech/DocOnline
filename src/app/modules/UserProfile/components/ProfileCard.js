@@ -70,6 +70,7 @@ export function ProfileCard() {
                 <a href="#" class="btn btn-hover-light-primary font-weight-bold py-3 px-6 mb-2 text-center btn-block">Change Password</a>
                 <a href="#" class="btn btn-hover-light-primary font-weight-bold py-3 px-6 mb-2 text-center btn-block">Languages</a>
 
+
               </div>
               {/* end::Nav */}
             </div>

@@ -33,7 +33,7 @@ const Dashboard = () => {
         {/* <<<<<<<<<<<<<<<grid root >>>>>>>>>>>>>>>>>> */}
         <div className={classes.rootscroll}>
         <Grid style={{paddingLeft: "2vw", justifyContent: "left" }} container className={classes.root}>
-          <div style={{ width: "90%" }}>
+          <div className={classes.carousel}>
           <Carousel  show={6.5} >
             <Paper style={{margin: 12, width: "140px", height: "140px"}} elevation={3} className={classes.rootpapers}>
               <AddCircleOutlineIcon className={classes.PaperIcons} />
@@ -525,7 +525,7 @@ const Dashboard = () => {
                 </Typography>
               </div>
               <div className={classes.ArticaldivTwo}>
-                <img style={{ width: "90px" }} src={Image1} alt='Article 1' />
+                <img className={classes.articleimg} src={Image1} alt='Article 1' />
               </div>
             </Grid>
 
@@ -539,7 +539,7 @@ const Dashboard = () => {
                 </Typography>
               </div>
               <div className={classes.ArticaldivTwo}>
-                <img style={{ width: "90px" }} src={Image2} alt='Article2' />
+                <img className={classes.articleimg} src={Image2} alt='Article2' />
               </div>
             </Grid>
           </Grid>
