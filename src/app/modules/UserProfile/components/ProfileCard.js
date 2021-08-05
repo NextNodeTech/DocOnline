@@ -65,11 +65,34 @@ export function ProfileCard() {
 
               {/* begin::Nav */}
               <div className="mt-5">
-                <a href="#" class="btn btn-hover-light-primary font-weight-bold py-3 px-6 mb-2 text-center btn-block active">Profile Overview</a>
-                <a href="#" class="btn btn-hover-light-primary font-weight-bold py-3 px-6 mb-2 text-center btn-block">Personal information</a>
-                <a href="#" class="btn btn-hover-light-primary font-weight-bold py-3 px-6 mb-2 text-center btn-block">Change Password</a>
-                <a href="#" class="btn btn-hover-light-primary font-weight-bold py-3 px-6 mb-2 text-center btn-block">Languages</a>
-
+                <NavLink
+                  to="/user-profile/profile-overview"
+                  className="navi-link py-4"
+                  activeClassName="active"
+                >
+                  <a href="#" class="btn btn-hover-light-primary font-weight-bold py-3 px-6 mb-2 text-center btn-block active">Profile Overview</a>
+                </NavLink>
+                <NavLink
+                  to="/user-profile/personal-information"
+                  className="navi-link py-4"
+                  activeClassName="active"
+                >
+                  <a href="#" class="btn btn-hover-light-primary font-weight-bold py-3 px-6 mb-2 text-center btn-block">Personal information</a>
+                </NavLink>
+                <NavLink
+                  to="/user-profile/change-password"
+                  className="navi-link py-4"
+                  activeClassName="active"
+                >
+                  <a href="#" class="btn btn-hover-light-primary font-weight-bold py-3 px-6 mb-2 text-center btn-block">Change Password</a>
+                </NavLink>
+                <NavLink
+                  to="/user-profile/languages"
+                  className="navi-link py-4"
+                  activeClassName="active"
+                >
+                  <a href="#" class="btn btn-hover-light-primary font-weight-bold py-3 px-6 mb-2 text-center btn-block">Languages</a>
+                </NavLink>
 
               </div>
               {/* end::Nav */}

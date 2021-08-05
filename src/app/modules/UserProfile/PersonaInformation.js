@@ -8,7 +8,7 @@ import { toAbsoluteUrl } from "../../../_metronic/_helpers";
 import * as auth from "../Auth";
 import { makeStyles } from '@material-ui/core/styles';
 import TextField from '@material-ui/core/TextField';
-import { usePlacesWidget } from "react-google-autocomplete";
+// import { usePlacesWidget } from "react-google-autocomplete";
 
 
 
@@ -199,7 +199,7 @@ function PersonaInformation(props) {
                     type="file"
                     // name="pic"
                     accept=".png, .jpg, .jpeg"
-                    // {...formik.getFieldProps("pic")}
+                  // {...formik.getFieldProps("pic")}
                   />
                   <input type="hidden" name="profile_avatar_remove" />
                 </label>
@@ -269,42 +269,42 @@ function PersonaInformation(props) {
             </div>
           </div>
           <div className='form-group row'>
-              <label className='col-xl-3 col-lg-3 col-form-label'>
-                Gender
-              </label>
-              <div className='col-lg-9 col-xl-6'>
-                <select
-                  className='form-control form-control-lg form-control-solid'
-                  name='gender'
-                  {...formik.getFieldProps("gender")}
-                >
-                  <option>Select Gender</option>
-                  <option value='Male'>Male </option>
-                  <option value='Female'>Female</option>
-                  <option value='Other'>Other</option>
-                </select>
-              </div>
+            <label className='col-xl-3 col-lg-3 col-form-label'>
+              Gender
+            </label>
+            <div className='col-lg-9 col-xl-6'>
+              <select
+                className='form-control form-control-lg form-control-solid'
+                name='gender'
+                {...formik.getFieldProps("gender")}
+              >
+                <option>Select Gender</option>
+                <option value='Male'>Male </option>
+                <option value='Female'>Female</option>
+                <option value='Other'>Other</option>
+              </select>
             </div>
+          </div>
 
 
-            <div className="form-group row">
+          <div className="form-group row">
             <label className="col-xl-3 col-lg-3 col-form-label">
               Date of Birth
             </label>
             <div className="col-lg-9 col-xl-6">
 
-            <TextField
-        id="date"
-        type="date"
-        defaultValue="2017-05-24"
-        className={classes.textField}
-        InputLabelProps={{
-          shrink: true,
-        }}
-      />
+              <TextField
+                id="date"
+                type="date"
+                defaultValue="2017-05-24"
+                className={classes.textField}
+                InputLabelProps={{
+                  shrink: true,
+                }}
+              />
 
-</div>
-</div>
+            </div>
+          </div>
 
           <div className="row">
             <label className="col-xl-3"></label>
