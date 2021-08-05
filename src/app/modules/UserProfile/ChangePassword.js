@@ -88,7 +88,7 @@ function ChangePassword(props) {
 
       {/* begin::Header */}
       <div className="card-header py-3">
-        <div className="card-title align-items-start flex-column">
+        <div className="card-title align-items-start flex-column ml-4">
           <h3 className="card-label font-weight-bolder text-dark">
             Change Password
           </h3>
@@ -100,7 +100,7 @@ function ChangePassword(props) {
       </div>
       {/* end::Header */}
       {/* begin::Form */}
-      <div className="form">
+      <div className="form py-3 ">
         <div className="card-body">
           {/* begin::Alert */}
           {isError && (
@@ -138,7 +138,7 @@ function ChangePassword(props) {
           {/* end::Alert */}
           <div className="form-group ">
 
-            <div className="col-lg-9 col-xl-6 col-md-6 ">
+            <div className="col-lg-8 col-xl-6 col-md-6 ">
               <label className="col-form-label text-alert">Current Password</label>
               <input
                 type="password"
@@ -155,12 +155,9 @@ function ChangePassword(props) {
                   {formik.errors.currentPassword}
                 </div>
               ) : null}
-              <a href="#" className="text-sm font-weight-bold text-right">
-                Forgot password ?
-              </a>
             </div>
 
-            <div className="col-lg-9 col-xl-6 col-md-6">
+            <div className="col-lg-8 col-xl-6 col-md-6">
               <label className=" col-form-label text-alert">
                 New Password
               </label>
@@ -177,14 +174,14 @@ function ChangePassword(props) {
                 <div className="invalid-feedback">{formik.errors.password}</div>
               ) : null}
             </div>
-            <br />
-            <div className="col-lg-9 col-xl-6 col-md-6 py-2">
+
+            <div className="col-lg-8 col-xl-6 col-md-6 ">
               <label className="col-form-label text-alert">
-                Verify Password
+                Confirm Password
               </label>
               <input
                 type="password"
-                placeholder="Verify Password"
+                placeholder="confirm Password"
                 className={`form-control form-control-lg  form-control-solid ${getInputClasses(
                   "cPassword"
                 )}`}

@@ -113,7 +113,7 @@ function Languages(props) {
 
       {/* begin::Header */}
       <div className='card-header py-3'>
-        <div className='card-title align-items-start flex-column'>
+        <div className='card-title align-items-start flex-column ml-3'>
           <h3 className='card-label font-weight-bolder text-dark'>Languages</h3>
           <span className='text-muted font-weight-bold font-size-sm mt-1'>
             Update your Languages
@@ -124,8 +124,8 @@ function Languages(props) {
       {/* end::Header */}
       {/* begin::Form */}
 
-      <div className="form-group row fv-plugins-icon-container mt-7 col-12 justify-content-center align-items-center">
-        <div className="col-lg-6 col-md-6 ">
+      <div className="form-group row fv-plugins-icon-container mt-7 ml-8 align-items-center">
+        <div className="col-lg-5 col-md-5 ">
           <label>Select language</label>
           <select className="form-control" name="billing_card_exp_month">
             <option>Select Language...</option>
@@ -178,7 +178,7 @@ function Languages(props) {
             <option value="zh-tw">繁體中文 - Traditional Chinese</option>
           </select>
           <div className="fv-plugins-message-container"></div></div>
-        <div className="col-lg-6 col-md-6">
+        <div className="col-lg-5 col-md-5">
           <label>Select level</label>
           <select className="form-control" name="billing_card_exp_year">
             <option value=""></option>
@@ -188,16 +188,16 @@ function Languages(props) {
           </select>
           <div className="fv-plugins-message-container"></div></div>
       </div>
-      <div className="" >
+      <div className="ml-5" >
         <List className={classes.root} subheader={<li />}>
           <li className={classes.listSection}>
-            <div style={{ display: 'flex', paddingLeft: '15px', paddingBottom: '10px' }}>
+            <div style={{ display: 'flex', paddingLeft: '25px', paddingBottom: '10px' }}>
               <LabelIcon /><ul>English</ul>
-              <div style={{ paddingLeft: '15px' }}>(Good)</div>
+              <div style={{ paddingLeft: '10px' }}>(Good)</div>
             </div>
-            <div style={{ display: 'flex', paddingLeft: '15px', paddingBottom: '10px' }}>
+            <div style={{ display: 'flex', paddingLeft: '25px', paddingBottom: '10px' }}>
               <LabelIcon /><ul>Chineese</ul>
-              <div style={{ paddingLeft: '15px' }}>(Normal)</div>
+              <div style={{ paddingLeft: '10px' }}>(Normal)</div>
             </div>
           </li>
         </List>
