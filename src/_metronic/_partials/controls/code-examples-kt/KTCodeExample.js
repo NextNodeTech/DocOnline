@@ -1,8 +1,8 @@
 /* eslint-disable no-script-url,jsx-a11y/anchor-is-valid */
-import React, {useState, useEffect} from "react";
-import {KTCodeBlock} from "./KTCodeBlock";
-import {Card, CardBody, CardHeader} from "../Card";
-import {CodeBlockToolbar} from "../code-examples/CodeBlockToolbar";
+import React, { useState, useEffect } from "react";
+import { KTCodeBlock } from "./KTCodeBlock";
+import { Card, CardBody, CardHeader } from "../Card";
+import { CodeBlockToolbar } from "../code-examples/CodeBlockToolbar";
 
 export function KTCodeExample({
   jsCode,
@@ -13,12 +13,12 @@ export function KTCodeExample({
 }) {
   const defaultLanguages = !languages
     ? [
-        {
-          code: jsCode,
-          language: "javascript",
-          shortCode: "JS"
-        }
-      ]
+      {
+        code: jsCode,
+        language: "javascript",
+        shortCode: "JS"
+      }
+    ]
     : languages;
   const [isCodeBlockShown, setIsCodeBlockShown] = useState(false);
   const [tabId, setTabId] = useState(0);

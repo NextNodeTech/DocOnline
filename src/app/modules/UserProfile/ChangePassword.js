@@ -96,24 +96,7 @@ function ChangePassword(props) {
             Change your account password
           </span>
         </div>
-        <div className="card-toolbar">
-          <button
-            type="submit"
-            className="btn btn-success mr-2"
-            disabled={
-              formik.isSubmitting || (formik.touched && !formik.isValid)
-            }
-          >
-            Save Changes
-            {formik.isSubmitting}
-          </button>
-          <Link
-            to="/user-profile/profile-overview"
-            className="btn btn-secondary"
-          >
-            Cancel
-          </Link>
-        </div>
+
       </div>
       {/* end::Header */}
       {/* begin::Form */}
@@ -153,11 +136,10 @@ function ChangePassword(props) {
             </div>
           )}
           {/* end::Alert */}
-          <div className="form-group row">
-            <label className="col-xl-3 col-lg-3 col-form-label text-alert">
-              Current Password
-            </label>
-            <div className="col-lg-9 col-xl-6">
+          <div className="form-group">
+
+            <div className="col-lg-9 col-xl-6 col-md-6">
+              <label className="col-form-label text-alert">Current Password</label>
               <input
                 type="password"
                 placeholder="Current Password"
@@ -173,16 +155,15 @@ function ChangePassword(props) {
                   {formik.errors.currentPassword}
                 </div>
               ) : null}
-              <a href="#" className="text-sm font-weight-bold">
+              <a href="#" className="text-sm font-weight-bold text-right">
                 Forgot password ?
               </a>
             </div>
-          </div>
-          <div className="form-group row">
-            <label className="col-xl-3 col-lg-3 col-form-label text-alert">
-              New Password
-            </label>
-            <div className="col-lg-9 col-xl-6">
+
+            <div className="col-lg-9 col-xl-6 mt-1">
+              <label className=" col-form-label text-alert">
+                New Password
+              </label>
               <input
                 type="password"
                 placeholder="New Password"
@@ -196,16 +177,15 @@ function ChangePassword(props) {
                 <div className="invalid-feedback">{formik.errors.password}</div>
               ) : null}
             </div>
-          </div>
-          <div className="form-group row">
-            <label className="col-xl-3 col-lg-3 col-form-label text-alert">
-              Verify Password
-            </label>
-            <div className="col-lg-9 col-xl-6">
+
+            <div className="col-lg-9 col-xl-6 col-md-6 mt-2">
+              <label className="col-form-label text-alert">
+                Verify Password
+              </label>
               <input
                 type="password"
                 placeholder="Verify Password"
-                className={`form-control form-control-lg form-control-solid ${getInputClasses(
+                className={`form-control form-control-lg  form-control-solid ${getInputClasses(
                   "cPassword"
                 )}`}
                 name="cPassword"
@@ -216,6 +196,24 @@ function ChangePassword(props) {
                   {formik.errors.cPassword}
                 </div>
               ) : null}
+            </div>
+            <div className="card-toolbar text-right col-12 pb-4">
+              <button
+                type="submit"
+                className="btn btn-success mr-2"
+                disabled={
+                  formik.isSubmitting || (formik.touched && !formik.isValid)
+                }
+              >
+                Save Changes
+                {formik.isSubmitting}
+              </button>
+              <Link
+                to="/user-profile/profile-overview"
+                className="btn btn-secondary"
+              >
+                Cancel
+              </Link>
             </div>
           </div>
         </div>
