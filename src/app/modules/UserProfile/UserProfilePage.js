@@ -3,7 +3,7 @@ import { Redirect, Route, Switch } from "react-router-dom";
 import { useSubheader } from "../../../_metronic/layout";
 import { ProfileOverview } from "./ProfileOverview";
 import ChangePassword from "./ChangePassword";
-import PersonaInformation from "./PersonaInformation";
+// import PersonaInformation from "./PersonaInformation";
 import { ProfileCard } from "./components/ProfileCard";
 import Languages from "./Languages";
 
@@ -32,10 +32,10 @@ export default function UserProfilePage() {
             path="/user-profile/languages"
             component={Languages}
           />
-          <Route
+          {/* <Route
             path="/user-profile/personal-information"
             component={PersonaInformation}
-          />
+          /> */}
 
         </Switch>
       </div>
