@@ -214,9 +214,8 @@ export function SearchDropdown() {
                   />
 
                   <div
-                    className={`input-group-append ${
-                      loading ? "spinner spinner-sm spinner-primary" : ""
-                    }")}`}
+                    className={`input-group-append ${loading ? "spinner spinner-sm spinner-primary" : ""
+                      }")}`}
                   >
                     <span className="input-group-text">
                       <i
