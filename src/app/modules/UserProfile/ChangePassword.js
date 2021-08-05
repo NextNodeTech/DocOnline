@@ -136,9 +136,9 @@ function ChangePassword(props) {
             </div>
           )}
           {/* end::Alert */}
-          <div className="form-group">
+          <div className="form-group ">
 
-            <div className="col-lg-9 col-xl-6 col-md-6">
+            <div className="col-lg-9 col-xl-6 col-md-6 ">
               <label className="col-form-label text-alert">Current Password</label>
               <input
                 type="password"
@@ -160,7 +160,7 @@ function ChangePassword(props) {
               </a>
             </div>
 
-            <div className="col-lg-9 col-xl-6 mt-1">
+            <div className="col-lg-9 col-xl-6 col-md-6">
               <label className=" col-form-label text-alert">
                 New Password
               </label>
@@ -177,8 +177,8 @@ function ChangePassword(props) {
                 <div className="invalid-feedback">{formik.errors.password}</div>
               ) : null}
             </div>
-
-            <div className="col-lg-9 col-xl-6 col-md-6 mt-2">
+            <br />
+            <div className="col-lg-9 col-xl-6 col-md-6 py-2">
               <label className="col-form-label text-alert">
                 Verify Password
               </label>
@@ -219,7 +219,7 @@ function ChangePassword(props) {
         </div>
       </div>
       {/* end::Form */}
-    </form>
+    </form >
   );
 }
 
