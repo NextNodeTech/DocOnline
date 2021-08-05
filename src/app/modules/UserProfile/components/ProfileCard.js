@@ -3,13 +3,11 @@ import React, { useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import { shallowEqual, useSelector } from "react-redux";
 import { Dropdown } from "react-bootstrap";
-import SVG from "react-inlinesvg";
-import { toAbsoluteUrl } from "../../../../_metronic/_helpers";
 import {
   DropdownCustomToggler,
   DropdownMenu4,
 } from "../../../../_metronic/_partials/dropdowns";
-import './styles.css';
+
 
 
 export function ProfileCard() {
@@ -48,7 +46,7 @@ export function ProfileCard() {
               {/* end::Toolbar */}
               {/* begin::User */}
               <div className=" justify-content-center text-center">
-                <div className="symbol symbol-60 symbol-xxl-100 align-self-center align-self-xxl-center rounded-circle ">
+                <div className="symbol symbol-60 symbol-circle symbol-xl-90">
                   <div
                     className="symbol-label"
                     style={{ backgroundImage: `url(${user.pic})` }}
@@ -57,114 +55,22 @@ export function ProfileCard() {
                   mage:url('/metronic/theme/html/demo1/dist/assets/media/users/300_21.jpg')" */}
                   <i className="symbol-badge bg-success"></i>
                 </div>
-                <div>
-                  <a
-                    href="#"
-                    className="font-weight-bolder font-size-h5 text-dark-75 text-hover-primary"
-                  >
-                    {user.firstname} {user.lastname}
-                  </a>
-                  <div className="text-muted">{user.occupation}</div>
+                <div className="mt-1">
+                  <h4 class="font-weight-bold my-2"> {user.firstname} {user.lastname}</h4>
 
                 </div>
+                <span class="label label-light-warning label-inline font-weight-bold label-lg mt-1 text-center">Active</span>
               </div>
               {/* end::User */}
-              {/* begin::Contact */}
 
-              {/* icons add  here... */}
-              <div className="navi-item mb-4 pt-7 text-center ">
-                <button class="btn btn-success btn-circle btn-circle-sm m-2"><i class="fab fa-facebook-messenger ml-1"></i></button>
-                <button class="btn btn-primary btn-circle btn-circle-sm m-2"><i class="fab fa-facebook-f ml-1"></i></button>
-                <button class="btn btn-info btn-circle btn-circle-sm m-2"><i class="fab fa-instagram ml-1"></i></button>
-
-              </div>
-
-              {/* end::Contact */}
               {/* begin::Nav */}
-              <div className="navi navi-bold navi-hover navi-active navi-link-rounded py-7">
-                <div className="navi-item mb-2">
-                  <NavLink
-                    to="/user-profile/profile-overview"
-                    className="navi-link py-4"
-                    activeClassName="active"
-                  >
-                    <span className="navi-icon mr-2">
-                      <span className="svg-icon">
-                        <SVG
-                          src={toAbsoluteUrl(
-                            "/media/svg/icons/Design/Layers.svg"
-                          )}
-                        ></SVG>{" "}
-                      </span>
-                    </span>
-                    <span className="navi-text font-size-lg">
-                      Profile Overview
-                    </span>
-                  </NavLink>
-                </div>
-                <div className="navi-item mb-2 " style={{ whiteSpace: 'nowrap' }}>
-                  <NavLink
-                    to="/user-profile/personal-information"
-                    className="navi-link py-4"
-                    activeClassName="active"
-                  >
-                    <span className="navi-icon mr-2">
-                      <span className="svg-icon">
-                        <SVG
-                          src={toAbsoluteUrl(
-                            "/media/svg/icons/General/User.svg"
-                          )}
-                        ></SVG>{" "}
-                      </span>
-                    </span>
-                    <span className="navi-text font-size-lg">
-                      Personal Information
-                    </span>
-                  </NavLink>
-                </div>
-                <div className="navi-item mb-2" style={{ whiteSpace: 'nowrap' }}>
-                  <NavLink
-                    to="/user-profile/change-password"
-                    className="navi-link py-4"
-                    activeClassName="active"
-                  >
-                    <span className="navi-icon mr-2">
-                      <span className="svg-icon">
-                        <SVG
-                          src={toAbsoluteUrl(
-                            "/media/svg/icons/Communication/Shield-user.svg"
-                          )}
-                        ></SVG>{" "}
-                      </span>
-                    </span>
-                    <span className="navi-text font-size-lg">
-                      Change Password
-                    </span>
-                    <span className="navi-label">
+              <div className="mt-5">
+                <a href="#" class="btn btn-hover-light-primary font-weight-bold py-3 px-6 mb-2 text-center btn-block active">Profile Overview</a>
+                <a href="#" class="btn btn-hover-light-primary font-weight-bold py-3 px-6 mb-2 text-center btn-block">Personal information</a>
+                <a href="#" class="btn btn-hover-light-primary font-weight-bold py-3 px-6 mb-2 text-center btn-block">Change Password</a>
+                <a href="#" class="btn btn-hover-light-primary font-weight-bold py-3 px-6 mb-2 text-center btn-block">Languages</a>
 
-                    </span>
-                  </NavLink>
-                </div>
-                <div className="navi-item mb-2">
-                  <NavLink
-                    to="/user-profile/languages"
-                    className="navi-link py-4"
-                    activeClassName="active"
-                  >
-                    <span className="navi-icon mr-2">
-                      <span className="svg-icon">
-                        <SVG
-                          src={toAbsoluteUrl(
-                            "/media/svg/icons/Communication/Mail-opened.svg"
-                          )}
-                        ></SVG>{" "}
-                      </span>
-                    </span>
-                    <span className="navi-text font-size-lg">
-                      Languages
-                    </span>
-                  </NavLink>
-                </div>
+
               </div>
               {/* end::Nav */}
             </div>
