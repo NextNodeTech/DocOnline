@@ -3,7 +3,6 @@ import objectPath from "object-path";
 import {Link} from "react-router-dom";
 import {toAbsoluteUrl} from "../../../../_helpers";
 import {useHtmlClassService} from "../../../_core/MetronicLayout";
-import {HeaderMenu} from "./HeaderMenu";
 
 export function HeaderMenuWrapper() {
     const uiService = useHtmlClassService();
@@ -46,7 +45,8 @@ export function HeaderMenuWrapper() {
                 </>
             )}
             {/*begin::Header Menu*/}
-            <HeaderMenu layoutProps={layoutProps} />
+            {/* <HeaderMenu layoutProps={layoutProps} />
+             */}
             {/*end::Header Menu*/}
         </div>
         {/*Header Menu Wrapper*/}

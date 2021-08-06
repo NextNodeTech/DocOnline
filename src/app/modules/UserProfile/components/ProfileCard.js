@@ -4,10 +4,6 @@ import { NavLink } from "react-router-dom";
 import { useSelector, shallowEqual, useDispatch } from "react-redux";
 import SVG from "react-inlinesvg";
 import { toAbsoluteUrl } from "../../../../_metronic/_helpers";
-import {
-  DropdownCustomToggler,
-  DropdownMenu4,
-} from "../../../../_metronic/_partials/dropdowns";
 
 export function ProfileCard() {
   const user = useSelector(({ auth }) => auth.user, shallowEqual);

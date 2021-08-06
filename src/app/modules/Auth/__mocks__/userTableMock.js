@@ -13,7 +13,6 @@ export default [
     fullname: "Sean S",
     firstname: "Sean",
     lastname: "Stark",
-    address: "152, Seattle",
     occupation: "CEO",
     companyName: "Keenthemes",
     phone: "(333) 333-3333",

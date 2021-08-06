@@ -1,14 +1,9 @@
 import React, { useMemo } from "react";
 import objectPath from "object-path";
-import SVG from "react-inlinesvg";
-import { OverlayTrigger, Tooltip } from "react-bootstrap";
-import { toAbsoluteUrl } from "../../../_helpers";
 import { useHtmlClassService } from "../../_core/MetronicLayout";
-import { SearchDropdown } from "../extras/dropdowns/search/SearchDropdown";
+import ExpandedSearchBar from "../extras/dropdowns/search/ExpandedSearchBar";
 import { UserNotificationsDropdown } from "../extras/dropdowns/UserNotificationsDropdown";
 import { MessageDropdown } from "../extras/dropdowns/MessageDropdown";
-import { MyCartDropdown } from "../extras/dropdowns/MyCartDropdown";
-import { LanguageSelectorDropdown } from "../extras/dropdowns/LanguageSelectorDropdown";
 import { QuickUserToggler } from "../extras/QuiclUserToggler";
 
 export function Topbar() {
@@ -42,7 +37,7 @@ export function Topbar() {
 
   return (
     <div className="topbar">
-      {layoutProps.viewSearchDisplay && <SearchDropdown />}
+      {layoutProps.viewSearchDisplay && <ExpandedSearchBar />}
 
       {layoutProps.viewNotificationsDisplay && <UserNotificationsDropdown />}
 

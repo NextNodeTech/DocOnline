@@ -5,23 +5,21 @@ import { useFormik } from "formik";
 import * as Yup from "yup";
 import * as auth from "../Auth";
 import { makeStyles } from "@material-ui/core/styles";
-import TextField from "@material-ui/core/TextField";
-import { usePlacesWidget } from "react-google-autocomplete";
 
-const useStyles = makeStyles((theme) => ({
-  container: {
-    display: "flex",
-    flexWrap: "wrap",
-  },
-  textField: {
-    marginLeft: theme.spacing(1),
-    marginRight: theme.spacing(1),
-    width: 200,
-  },
-}));
+// const useStyles = makeStyles((theme) => ({
+//   container: {
+//     display: "flex",
+//     flexWrap: "wrap",
+//   },
+//   textField: {
+//     marginLeft: theme.spacing(1),
+//     marginRight: theme.spacing(1),
+//     width: 200,
+//   },
+// }));
 
 function PersonaInformation(props) {
-  const classes = useStyles();
+//   const classes = useStyles();
 
   // Fields
   const [loading, setloading] = useState(false);
@@ -46,7 +44,7 @@ function PersonaInformation(props) {
     phone: user.phone,
     email: user.email,
     website: user.website,
-    address: user.address,
+    address: user.addressLine,
   };
   const Schema = Yup.object().shape({
     pic: Yup.string(),
@@ -88,7 +86,7 @@ function PersonaInformation(props) {
       onSubmit={formik.handleSubmit}
     >
       {/* begin::Header */}
-      <div position='sticky' className='card-header py-3'>
+      <div position='sticky' className='card-header py-3  card-sticky'>
         <div className='card-title align-items-start flex-column'>
           <h3 className='card-label font-weight-bolder text-dark'>
             Personal Information
@@ -97,29 +95,11 @@ function PersonaInformation(props) {
             Update your personal informaiton
           </span>
         </div>
-        <div className='card-toolbar'>
-          <button
-            type='submit'
-            className='btn btn-success mr-2'
-            disabled={
-              formik.isSubmitting || (formik.touched && !formik.isValid)
-            }
-          >
-            Save Changes
-            {formik.isSubmitting}
-          </button>
-          <Link
-            to='/user-profile/profile-overview'
-            className='btn btn-secondary'
-          >
-            Cancel
-          </Link>
-        </div>
       </div>
 
       {/* end::Header */}
       {/* begin::Form */}
-      <div style={{ overflow: "auto", height: "80vh" }}>
+      <div>
         <div className='form'>
           {/* begin::Body */}
           <div className='card-body'>
@@ -279,6 +259,24 @@ function PersonaInformation(props) {
                   ) : null}
                 </div>
               </div>
+            </div>
+            <div className="card-toolbar text-right">
+              <button
+                type="submit"
+                className="btn btn-success mr-2"
+                disabled={
+                  formik.isSubmitting || (formik.touched && !formik.isValid)
+                }
+              >
+                Save Changes
+                {formik.isSubmitting}
+              </button>
+              <Link
+                to="/user-profile/profile-overview"
+                className="btn btn-secondary"
+              >
+                Cancel
+              </Link>
             </div>
           </div>
           {/* end::Body */}

@@ -194,7 +194,7 @@ function ChangePassword(props) {
                 </div>
               ) : null}
             </div>
-            <div className="card-toolbar text-right col-12 p-4">
+            <div className="card-toolbar text-right">
               <button
                 type="submit"
                 className="btn btn-success mr-2"
