@@ -143,7 +143,24 @@ export function ProfileCard() {
                     </span>
                   </NavLink>
                 </div>
-
+                <div className='navi-item mb-2'>
+                  <NavLink
+                    to='/user-profile/languages'
+                    className='navi-link py-4 text-nowrap'
+                    activeClassName='active'
+                  >
+                    <span className='navi-icon mr-2'>
+                      <span className='svg-icon'>
+                        <SVG
+                          src={toAbsoluteUrl(
+                            "/media/svg/icons/Communication/Mail-opened.svg"
+                          )}
+                        ></SVG>{" "}
+                      </span>
+                    </span>
+                    <span className='navi-text font-size-lg'>Languages</span>
+                  </NavLink>
+                </div>
                 <div className='navi-item mb-2'>
                   <NavLink
                     to='/user-profile/change-password'
@@ -162,24 +179,6 @@ export function ProfileCard() {
                     <span className='navi-text font-size-lg'>
                       Change Password
                     </span>
-                  </NavLink>
-                </div>
-                <div className='navi-item mb-2'>
-                  <NavLink
-                    to='/user-profile/languages'
-                    className='navi-link py-4 text-nowrap'
-                    activeClassName='active'
-                  >
-                    <span className='navi-icon mr-2'>
-                      <span className='svg-icon'>
-                        <SVG
-                          src={toAbsoluteUrl(
-                            "/media/svg/icons/Communication/Mail-opened.svg"
-                          )}
-                        ></SVG>{" "}
-                      </span>
-                    </span>
-                    <span className='navi-text font-size-lg'>Languages</span>
                   </NavLink>
                 </div>
               </div>
