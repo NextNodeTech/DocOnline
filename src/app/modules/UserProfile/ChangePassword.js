@@ -105,7 +105,7 @@ function ChangePassword(props) {
           {/* begin::Alert */}
           {isError && (
             <div
-              className="alert alert-custom alert-light-danger fade show mb-10"
+              className="alert alert-custom alert-light-danger fade show"
               role="alert"
             >
               <div className="alert-icon">
@@ -138,7 +138,7 @@ function ChangePassword(props) {
           {/* end::Alert */}
           <div className="form-group ">
 
-            <div className="col-lg-8 col-xl-6 col-md-6 ">
+            <div className="col-xl-6 col-lg-6 col-md-6">
               <label className="col-form-label text-alert">Current Password</label>
               <input
                 type="password"
@@ -157,7 +157,7 @@ function ChangePassword(props) {
               ) : null}
             </div>
 
-            <div className="col-lg-8 col-xl-6 col-md-6">
+            <div className="col-xl-6 col-lg-6 col-md-6">
               <label className=" col-form-label text-alert">
                 New Password
               </label>
@@ -175,7 +175,7 @@ function ChangePassword(props) {
               ) : null}
             </div>
 
-            <div className="col-lg-8 col-xl-6 col-md-6 ">
+            <div className="col-xl-6 col-lg-6 col-md-6 ">
               <label className="col-form-label text-alert">
                 Confirm Password
               </label>
@@ -194,7 +194,7 @@ function ChangePassword(props) {
                 </div>
               ) : null}
             </div>
-            <div className="card-toolbar text-right col-12 pb-4">
+            <div className="card-toolbar text-right col-12 p-4">
               <button
                 type="submit"
                 className="btn btn-success mr-2"

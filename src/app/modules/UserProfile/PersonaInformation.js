@@ -1,9 +1,8 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { useSelector, shallowEqual, connect, useDispatch } from "react-redux";
+import { useSelector, shallowEqual, connect } from "react-redux";
 import { useFormik } from "formik";
 import * as Yup from "yup";
-import { toAbsoluteUrl } from "../../../_metronic/_helpers";
 import * as auth from "../Auth";
 import { makeStyles } from "@material-ui/core/styles";
 import TextField from "@material-ui/core/TextField";
@@ -26,33 +25,16 @@ function PersonaInformation(props) {
 
   // Fields
   const [loading, setloading] = useState(false);
-  const [pic, setPic] = useState("");
-  const dispatch = useDispatch();
   const user = useSelector((state) => state.auth.user, shallowEqual);
-  useEffect(() => {
-    if (user.pic) {
-      setPic(user.pic);
-    }
-  }, [user]);
+
   // Methods
   const saveUser = (values, setStatus, setSubmitting) => {
     setloading(true);
     const updatedUser = Object.assign(user, values);
     // user for update preparation
-    dispatch(props.setUser(updatedUser));
     setTimeout(() => {
       setloading(false);
       setSubmitting(false);
-      // Do request to your server for user update, we just imitate user update there, For example:
-      // update(updatedUser)
-      //  .then(()) => {
-      //    setloading(false);
-      //  })
-      //  .catch((error) => {
-      //    setloading(false);
-      //    setSubmitting(false);
-      //    setStatus(error);
-      // });
     }, 1000);
   };
   // UI Helpers
@@ -100,23 +82,6 @@ function PersonaInformation(props) {
     },
   });
 
-  const { ref, autocompleteRef } = usePlacesWidget({
-    apiKey: "PUT_API_KEY_HERE",
-    onPlaceSelected: (place) => {
-      console.log(place);
-    },
-  });
-
-  const getUserPic = () => {
-    if (!pic) {
-      return "none";
-    }
-
-    return `url(${pic})`;
-  };
-  const removePic = () => {
-    setPic("");
-  };
   return (
     <form
       className='card card-custom card-stretch'
@@ -158,63 +123,6 @@ function PersonaInformation(props) {
         <div className='form'>
           {/* begin::Body */}
           <div className='card-body'>
-            <div className='form-group row'>
-              <label className='col-form-label'>Avatar</label>
-              <div className='col-lg-9 col-xl-6'>
-                <div
-                  className='image-input image-input-outline'
-                  id='kt_profile_avatar'
-                  style={{
-                    backgroundImage: `url(${toAbsoluteUrl(
-                      "/media/users/blank.png"
-                    )}`,
-                  }}
-                >
-                  <div
-                    className='image-input-wrapper'
-                    style={{ backgroundImage: `${getUserPic()}` }}
-                  />
-                  <label
-                    className='btn btn-xs btn-icon btn-circle btn-white btn-hover-text-primary btn-shadow'
-                    data-action='change'
-                    data-toggle='tooltip'
-                    title=''
-                    data-original-title='Change avatar'
-                  >
-                    <i className='fa fa-pen icon-sm text-muted'></i>
-                    <input
-                      type='file'
-                      // name="pic"
-                      accept='.png, .jpg, .jpeg'
-                      // {...formik.getFieldProps("pic")}
-                    />
-                    <input type='hidden' name='profile_avatar_remove' />
-                  </label>
-                  <span
-                    className='btn btn-xs btn-icon btn-circle btn-white btn-hover-text-primary btn-shadow'
-                    data-action='cancel'
-                    data-toggle='tooltip'
-                    title=''
-                    data-original-title='Cancel avatar'
-                  >
-                    <i className='ki ki-bold-close icon-xs text-muted'></i>
-                  </span>
-                  <span
-                    onClick={removePic}
-                    className='btn btn-xs btn-icon btn-circle btn-white btn-hover-text-primary btn-shadow'
-                    data-action='remove'
-                    data-toggle='tooltip'
-                    title=''
-                    data-original-title='Remove avatar'
-                  >
-                    <i className='ki ki-bold-close icon-xs text-muted'></i>
-                  </span>
-                </div>
-                <span className='form-text text-muted'>
-                  Allowed file types: png, jpg, jpeg.
-                </span>
-              </div>
-            </div>
             <div className='form-group row'>
               <div className='col-xl-4 col-lg-4 col-md-4'>
                 <div>
@@ -288,29 +196,17 @@ function PersonaInformation(props) {
                   </select>
                 </div>
               </div>
-              <div className='col-xl-4 col-lg-4 col-md-4'>
+              <div className='col-xl-4 col-lg-4 col-md-4 pt-0.5'>
                 <div>
-                  <label className='col-form-label'>Date of Birth</label>
-                  <TextField
-                    id='date'
-                    type='date'
-                    defaultValue='2017-05-24'
-                    className={classes.textField}
-                    InputLabelProps={{
-                      shrink: true,
-                    }}
-                  />
+                  <label className='col-form-label'> Date of Birth </label>
+                  <div className='input-group date'>
+                  <input type="text" className="form-control form-control-lg form-control-solid" value="02-16-2012" />
+                  <div className="input-group-addon">
+                        <span className="glyphicon glyphicon-th"></span>
+                    </div>
+                  </div>
                 </div>
               </div>
-            </div>
-
-            <div className='row'>
-              <label className='col-xl-3'></label>
-              <div className='col-lg-9 col-xl-6'>
-                <h5 className='font-weight-bold mt-10 mb-6'>Contact Info</h5>
-              </div>
-            </div>
-            <div className='form-group row'>
               <div className='col-xl-4 col-lg-4 col-md-4'>
                 <div>
                   <label className='col-form-label'>Contact Phone</label>
@@ -335,57 +231,55 @@ function PersonaInformation(props) {
                       {formik.errors.phone}
                     </div>
                   ) : null}
-                  <span className='form-text text-muted'>
-                    We'll never share your phone with anyone else.
-                  </span>
                 </div>
               </div>
-            <div className='col-xl-5 col-lg-5 col-md-5'>
-              <div>
-              <label className='col-form-label'>Email Address</label>
-                <div className='input-group input-group-lg input-group-solid'>
-                  <div className='input-group-prepend'>
-                    <span className='input-group-text'>
-                      <i className='fa fa-at'></i>
-                    </span>
-                  </div>
-                  <input
-                    type='email'
-                    placeholder='Email'
-                    className={`form-control form-control-lg form-control-solid ${getInputClasses(
-                      "email"
+            </div>
+            <div className='form-group row'>
+              <div className='col-xl-4 col-lg-4 col-md-4'>
+                <div>
+                  <label className='col-form-label'>Email Address</label>
+                  <div className='input-group input-group-lg input-group-solid'>
+                    <div className='input-group-prepend'>
+                      <span className='input-group-text'>
+                        <i className='fa fa-at'></i>
+                      </span>
+                    </div>
+                    <input
+                      type='email'
+                      placeholder='Email'
+                      className={`form-control form-control-lg form-control-solid ${getInputClasses(
+                        "email"
                       )}`}
-                    name='email'
-                    {...formik.getFieldProps("email")}
+                      name='email'
+                      {...formik.getFieldProps("email")}
                     />
-                </div>
-                {formik.touched.email && formik.errors.email ? (
-                  <div className='invalid-feedback display-block'>
-                    {formik.errors.email}
                   </div>
-                ) : null}
+                  {formik.touched.email && formik.errors.email ? (
+                    <div className='invalid-feedback display-block'>
+                      {formik.errors.email}
+                    </div>
+                  ) : null}
+                </div>
+              </div>
+              <div className='col-xl-12 col-lg-12 col-md-12'>
+                <div>
+                  <label className='col-form-label'>Address</label>
+                  <div className='input-group input-group-lg input-group-solid'>
+                    <textarea
+                      className='form-control'
+                      name='address'
+                      placeholder='152, Seattle'
+                      rows='3'
+                    ></textarea>
+                  </div>
+                  {formik.touched.address && formik.errors.address ? (
+                    <div className='invalid-feedback display-block'>
+                      {formik.errors.address}
+                    </div>
+                  ) : null}
+                </div>
               </div>
             </div>
-            <div className='col-xl-12 col-lg-12 col-md-12'>
-              <div>
-              <label className='col-form-label'>Address</label>
-                <div className='input-group input-group-lg input-group-solid'>
-                  <input
-                    ref={ref}
-                    type='text'
-                    placeholder='152, Seatle'
-                    className={`form-control form-control-lg form-control-solid`}
-                    name='address'
-                    />
-                </div>
-                {formik.touched.address && formik.errors.address ? (
-                  <div className='invalid-feedback display-block'>
-                    {formik.errors.address}
-                  </div>
-                ) : null}
-              </div>
-            </div>
-                </div>
           </div>
           {/* end::Body */}
         </div>

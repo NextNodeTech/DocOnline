@@ -124,12 +124,12 @@ function Languages(props) {
       {/* end::Header */}
       {/* begin::Form */}
 
-      <div className="form-group row fv-plugins-icon-container mt-7 ml-8 align-items-center">
-        <div className="col-lg-5 col-md-5 ">
+      <div className="form-group row fv-plugins-icon-container mt-7 p-12 align-items-center">
+        <div className="col-xl-4 col-lg-4 col-md-4">
           <label>Select language</label>
-          <select className="form-control" name="billing_card_exp_month">
-            <option>Select Language...</option>
-            <option value="id">Bahasa Indonesia - Indonesian</option>
+          <select className="form-control form-control-solid" name="billing_card_exp_month">
+            <option>Select Language</option>
+            <option value="id">Indonesian</option>
             <option value="msa">Bahasa Melayu - Malay</option>
             <option value="ca">Català - Catalan</option>
             <option value="cs">Čeština - Czech</option>
@@ -178,10 +178,10 @@ function Languages(props) {
             <option value="zh-tw">繁體中文 - Traditional Chinese</option>
           </select>
           <div className="fv-plugins-message-container"></div></div>
-        <div className="col-lg-5 col-md-5">
+        <div className="col-xl-4 col-lg-4 col-md-4">
           <label>Select level</label>
-          <select className="form-control" name="billing_card_exp_year">
-            <option value=""></option>
+          <select className="form-control form-control-solid" name="billing_card_exp_year">
+            <option>Select Level</option>
             <option value="normal">Normal</option>
             <option value="Good">Good</option>
 
@@ -202,7 +202,7 @@ function Languages(props) {
           </li>
         </List>
       </div>
-      <div className='card-toolbar text-right col-12 pb-4'>
+      <div className='card-toolbar text-right col-12 p-4 mb-10 pr-12'>
         <button
           type='submit'
           className='btn btn-success mr-2 '
