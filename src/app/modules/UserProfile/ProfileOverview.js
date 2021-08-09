@@ -103,42 +103,68 @@ function ProfileOverview(props) {
       {/* end::Header */}
       {/* begin::Form */}
       <div>
-        <div className='form'>
+        <div className='form d-flex p-2'>
           {/* begin::Body */}
-          <div className='card-body col-12'>
+          <div className='card-body col-6'>
             <List className='form-group row'>
               <ListItem className="row justify-content-between">
                 <div className="text-dark">Name</div>
-                <div className="text-muted">Muhammad Amir Saleem</div>
               </ListItem>
 
               <ListItem className="row justify-content-between">
                 <div className="text-dark">Email</div>
-                <div className="text-muted">ameirsaleem231@gmail.com</div>
               </ListItem>
 
               <ListItem className="row justify-content-between">
                 <div className="text-dark">Gender</div>
-                <div className="text-muted">Male</div>
               </ListItem>
 
               <ListItem className="row justify-content-between">
                 <div className="text-dark">Date of Birth</div>
-                <div className="text-muted">24/09/1998</div>
               </ListItem>
 
                <ListItem className="row justify-content-between">
                 <div className="text-dark">Phone No</div>
-                <div className="text-muted">+92 321-431 -312</div>
               </ListItem>
 
               <ListItem className="row justify-content-between">
                 <div className="text-dark">Postal Address</div>
-                <div className="text-muted">201 street D-block Gulshan Ravi Lahore</div>
               </ListItem>
 
               <ListItem className="row justify-content-between">
                 <div className="text-dark">Languages</div>
+              </ListItem>
+            </List>
+          </div>
+          {/* end::Body */}
+          {/* begin::Body */}
+          <div className='card-body col-6'>
+            <List className='form-group row'>
+              <ListItem className="row justify-content-between">
+                <div className="text-muted">Muhammad Amir Saleem</div>
+              </ListItem>
+
+              <ListItem className="row justify-content-between">
+                <div className="text-muted">ameirsaleem231@gmail.com</div>
+              </ListItem>
+
+              <ListItem className="row justify-content-between">
+                <div className="text-muted">Male</div>
+              </ListItem>
+
+              <ListItem className="row justify-content-between">
+                <div className="text-muted">24/09/1998</div>
+              </ListItem>
+
+               <ListItem className="row justify-content-between">
+                <div className="text-muted">(333) 333-3333</div>
+              </ListItem>
+
+              <ListItem className="row justify-content-between">
+                <div className="text-muted">201 street D-block Gulshan Ravi Lahore</div>
+              </ListItem>
+
+              <ListItem className="row justify-content-between">
                 <div className="text-muted">English & Urdu</div>
               </ListItem>
             </List>
@@ -152,3 +178,4 @@ function ProfileOverview(props) {
 }
 
 export default connect(null, auth.actions)(ProfileOverview);
+
