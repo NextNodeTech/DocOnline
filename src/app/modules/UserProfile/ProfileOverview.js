@@ -106,42 +106,43 @@ function ProfileOverview(props) {
         <div className='form'>
           {/* begin::Body */}
           <div className='card-body col-12'>
-            <List className='form-group row'>
-              <ListItem className="row justify-content-between">
-                <div className="text-dark">Name</div>
-                <div className="text-muted">Muhammad Amir Saleem</div>
+          
+              
+              <ListItem className="row text-nowrap">
+                <div className="text-dark col ">Name</div>
+                <div className="text-muted col text-nowrap">Muhammad Amir Saleem</div>
               </ListItem>
 
-              <ListItem className="row justify-content-between">
-                <div className="text-dark">Email</div>
-                <div className="text-muted">ameirsaleem231@gmail.com</div>
+              <ListItem className="row ">
+                <div className="text-dark col ">Email</div>
+                <div className="text-muted  col text-nowrap ">ameirsaleem231@gmail.com</div>
               </ListItem>
 
-              <ListItem className="row justify-content-between">
-                <div className="text-dark">Gender</div>
-                <div className="text-muted">Male</div>
+              <ListItem className="row ">
+                <div className="text-dark col ">Gender</div>
+                <div className="text-muted col text-nowrap">Male</div>
               </ListItem>
 
-              <ListItem className="row justify-content-between">
-                <div className="text-dark">Date of Birth</div>
-                <div className="text-muted">24/09/1998</div>
+              <ListItem className="row ">
+                <div className="text-dark col text-nowrap">Date of Birth</div>
+                <div className="text-muted col text-nowrap">24/09/1998</div>
               </ListItem>
 
-               <ListItem className="row justify-content-between">
-                <div className="text-dark">Phone No</div>
-                <div className="text-muted">+92 321-431 -312</div>
+               <ListItem className="row ">
+                <div className="text-dark col">Phone No</div>
+                <div className="text-muted col text-nowrap">+92 321-431 -312</div>
               </ListItem>
 
-              <ListItem className="row justify-content-between">
-                <div className="text-dark">Postal Address</div>
-                <div className="text-muted">201 street D-block Gulshan Ravi Lahore</div>
+              <ListItem className="row ">
+                <div className="text-dark col text-nowrap">Postal Address</div>
+                <div className="text-muted col text-nowrap">201 street D-block Gulshan Ravi Lahore</div>
               </ListItem>
 
-              <ListItem className="row justify-content-between">
-                <div className="text-dark">Languages</div>
-                <div className="text-muted">English & Urdu</div>
+              <ListItem className="row ">
+                <div className="text-dark col ">Languages</div>
+                <div className="text-muted col text-nowrap">English & Urdu</div>
               </ListItem>
-            </List>
+            
           </div>
           {/* end::Body */}
         </div>
