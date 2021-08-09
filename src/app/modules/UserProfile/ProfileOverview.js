@@ -105,49 +105,41 @@ function ProfileOverview(props) {
       <div>
         <div className='form'>
           {/* begin::Body */}
-          <div className='card-body'>
+          <div className='card-body col-12'>
             <List className='form-group row'>
-              <ListItem>
-                <div className='col-xl-4 col-lg-4 col-md-4'><h6>Name</h6></div>
-                <ListItemText>
-                  Muhammad Aamir Saleem
-                </ListItemText>
+              <ListItem className="row justify-content-between">
+                <div className="text-dark">Name</div>
+                <div className="text-muted">Muhammad Amir Saleem</div>
               </ListItem>
-              <ListItem>
-                <div className='col-xl-4 col-lg-4 col-md-4'><h6>Email Address</h6></div>
-                <ListItemText className='d-flex flex-nowrap'>
-                  aamirsaleem@mail.com
-                </ListItemText>
+
+              <ListItem className="row justify-content-between">
+                <div className="text-dark">Email</div>
+                <div className="text-muted">ameirsaleem231@gmail.com</div>
               </ListItem>
-              <ListItem>
-                <div className='col-xl-4 col-lg-4 col-md-6'><h6>Gender</h6></div>
-                <ListItemText className='d-flex flex-nowrap'>
-                  Male
-                </ListItemText>
+
+              <ListItem className="row justify-content-between">
+                <div className="text-dark">Gender</div>
+                <div className="text-muted">Male</div>
               </ListItem>
-              <ListItem>
-                <div className='col-xl-4 col-lg-4 col-md-4'><h6>Date of Birth</h6></div>
-                <ListItemText className='d-flex flex-nowrap'>
-                  22 August, 1986
-                </ListItemText>
+
+              <ListItem className="row justify-content-between">
+                <div className="text-dark">Date of Birth</div>
+                <div className="text-muted">24/09/1998</div>
               </ListItem>
-              <ListItem>
-                <div className='col-xl-4 col-lg-4 col-md-4'><h6>Phone Number</h6></div>
-                <ListItemText className='d-flex flex-nowrap'>
-                  (333) 333-3333
-                </ListItemText>
+
+               <ListItem className="row justify-content-between">
+                <div className="text-dark">Phone No</div>
+                <div className="text-muted">+92 321-431 -312</div>
               </ListItem>
-              <ListItem className='d-flex flex-nowrap'>
-                <div className='col-xl-4 col-lg-4 col-md-4'><h6>Postal Address</h6></div>
-                <ListItemText>
-                30 Church Drive Bridgewater, NJ 08807, Paulo Alto, USA.
-                </ListItemText>
+
+              <ListItem className="row justify-content-between">
+                <div className="text-dark">Postal Address</div>
+                <div className="text-muted">201 street D-block Gulshan Ravi Lahore</div>
               </ListItem>
-              <ListItem className='d-flex flex-nowrap'>
-                <div className='col-xl-4 col-lg-4 col-md-4'><h6>Languages</h6></div>
-                <ListItemText>
-                English (Good), Chineese (Normal)
-                </ListItemText>
+
+              <ListItem className="row justify-content-between">
+                <div className="text-dark">Languages</div>
+                <div className="text-muted">English & Urdu</div>
               </ListItem>
             </List>
           </div>
