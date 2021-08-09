@@ -1,7 +1,7 @@
 import React from "react";
 import { Redirect, Route, Switch } from "react-router-dom";
 import { useSubheader } from "../../../_metronic/layout";
-import { ProfileOverview } from "./ProfileOverview";
+import ProfileOverview from "./ProfileOverview";
 import ChangePassword from "./ChangePassword";
 import PersonaInformation from "./PersonaInformation";
 import { ProfileCard } from "./components/ProfileCard";
