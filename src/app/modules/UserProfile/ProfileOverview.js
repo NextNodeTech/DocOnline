@@ -1,25 +1,8 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
 import { useSelector, shallowEqual, connect } from "react-redux";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import * as auth from "../Auth";
-import { makeStyles } from "@material-ui/core/styles";
-import List from "@material-ui/core/List";
-import ListItem from "@material-ui/core/ListItem";
-import ListItemText from "@material-ui/core/ListItemText";
-
-// const useStyles = makeStyles((theme) => ({
-//   container: {
-//     display: "flex",
-//     flexWrap: "wrap",
-//   },
-//   textField: {
-//     marginLeft: theme.spacing(1),
-//     marginRight: theme.spacing(1),
-//     width: 200,
-//   },
-// }));
 
 function ProfileOverview(props) {
   //   const classes = useStyles();
@@ -103,79 +86,38 @@ function ProfileOverview(props) {
       {/* end::Header */}
       {/* begin::Form */}
       <div>
-        <div className='form d-flex p-2'>
-          {/* begin::Body */}
-          <div className='card-body col-6'>
-            <List className='form-group row'>
-              <ListItem className="row justify-content-between">
-                <div className="text-dark">Name</div>
-              </ListItem>
-
-              <ListItem className="row justify-content-between">
-                <div className="text-dark">Email</div>
-              </ListItem>
-
-              <ListItem className="row justify-content-between">
-                <div className="text-dark">Gender</div>
-              </ListItem>
-
-              <ListItem className="row justify-content-between">
-                <div className="text-dark">Date of Birth</div>
-              </ListItem>
-
-               <ListItem className="row justify-content-between">
-                <div className="text-dark">Phone No</div>
-              </ListItem>
-
-              <ListItem className="row justify-content-between">
-                <div className="text-dark">Postal Address</div>
-              </ListItem>
-
-              <ListItem className="row justify-content-between">
-                <div className="text-dark">Languages</div>
-              </ListItem>
-            </List>
-          </div>
-          {/* end::Body */}
-          {/* begin::Body */}
-          <div className='card-body col-6'>
-            <List className='form-group row'>
-              <ListItem className="row justify-content-between">
-                <div className="text-muted">Muhammad Amir Saleem</div>
-              </ListItem>
-
-              <ListItem className="row justify-content-between">
-                <div className="text-muted">ameirsaleem231@gmail.com</div>
-              </ListItem>
-
-              <ListItem className="row justify-content-between">
-                <div className="text-muted">Male</div>
-              </ListItem>
-
-              <ListItem className="row justify-content-between">
-                <div className="text-muted">24/09/1998</div>
-              </ListItem>
-
-               <ListItem className="row justify-content-between">
-                <div className="text-muted">(333) 333-3333</div>
-              </ListItem>
-
-              <ListItem className="row justify-content-between">
-                <div className="text-muted">201 street D-block Gulshan Ravi Lahore</div>
-              </ListItem>
-
-              <ListItem className="row justify-content-between">
-                <div className="text-muted">English & Urdu</div>
-              </ListItem>
-            </List>
-          </div>
-          {/* end::Body */}
-        </div>
-        {/* end::Form */}
+        <table className='table table-borderless ml-6 mt-3'>
+          <tbody>
+            <tr>
+              <td className='font-weight-bold'>Name</td>
+              <td>Muhammad Amir Saleem</td>
+            </tr>
+            <tr>
+              <td className='font-weight-bold'>Email Address</td>
+              <td>ameirsaleem231@gmail.com</td>
+            </tr>
+            <tr>
+              <td className='font-weight-bold'>Gender</td>
+              <td>Male</td>
+            </tr>
+            <tr>
+              <td className='font-weight-bold'>Phone Number</td>
+              <td>(333) 333-3333</td>
+            </tr>
+            <tr>
+              <td className='font-weight-bold'>Address</td>
+              <td>152 Reiman Street, Paulo Alto Road, Paulo Alto, USA</td>
+            </tr>
+            <tr>
+              <td className='font-weight-bold'>Languages</td>
+              <td>English & Chineese</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
+      {/* end::Form */}
     </form>
   );
 }
 
 export default connect(null, auth.actions)(ProfileOverview);
-
