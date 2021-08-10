@@ -89,13 +89,13 @@ export default function MedicalChart() {
                     <div class="card-toolbar">
                         <ul class="nav nav-light-success nav-bold nav-pills text-nowrap">
                             <li class="nav-item">
-                                <a class="nav-link active" data-toggle="tab" href="#kt_tab_pane_4_1">
+                                <a class="nav-link " data-toggle="tab" href="#kt_tab_pane_4_1">
                                     <span class="nav-icon"><i class="flaticon2-chat-1"></i></span>
                                     <span class="nav-text">Medications</span>
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" data-toggle="tab" href="#kt_tab_pane_4_2">
+                                <a class="nav-link active" data-toggle="tab" href="#kt_tab_pane_4_2">
                                     <span class="nav-icon"><i class="flaticon2-drop"></i></span>
                                     <span class="nav-text">Reports</span>
                                 </a>
@@ -115,7 +115,7 @@ export default function MedicalChart() {
 
                         {/* medicaltion start */ }
 
-                        <div class="tab-pane fade show active" id="kt_tab_pane_4_1" role="tabpanel" aria-labelledby="kt_tab_pane_4_1">
+                        <div class="tab-pane fade " id="kt_tab_pane_4_1" role="tabpanel" aria-labelledby="kt_tab_pane_4_1">
 
                             <div className='card-body'>
                                 <div className='form-group row'>
@@ -246,8 +246,87 @@ export default function MedicalChart() {
                             </div>
 
                         </div>
-                        <div class="tab-pane fade " id="kt_tab_pane_4_2" role="tabpanel" aria-labelledby="kt_tab_pane_4_2">
-                            f
+                        <div class="tab-pane fade show active" id="kt_tab_pane_4_2" role="tabpanel" aria-labelledby="kt_tab_pane_4_2">
+                            <div className='card-body'>
+                                <div className='form-group row'>
+                                    <div className='col-xl-6 col-lg-6 col-md-6'>
+                                        <div>
+                                            <label className='col-form-label'>Medicine</label>
+                                            <input
+                                                type='text'
+                                                placeholder='medicine name'
+                                                className={ `form-control form-control-lg form-control-solid ${getInputClasses(
+                                                    "medicionname"
+                                                )}` }
+                                                name='medicionname'
+                                                { ...formik.getFieldProps("medicionname") }
+                                            />
+                                        </div>
+                                        { formik.touched.medicionname && formik.errors.medicionname ? (
+                                            <div className='invalid-feedback'>
+                                                { formik.errors.medicionname }
+                                            </div>
+                                        ) : null }
+                                    </div>
+                                    <div className='col-xl-6 col-lg-6 col-md-6'>
+                                        <div>
+                                            <label className='col-form-label'>Allergy level</label>
+                                            <select
+                                                className='form-control form-control-lg form-control-solid'
+                                                name='allergy'
+                                                { ...formik.getFieldProps("allergy") }
+                                            >
+                                                <option>Select level</option>
+                                                <option value='acute'>Acute </option>
+                                                <option value='chronic'>Chronic</option>
+                                                <option value='Other'>Other</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <div className='col-xl-12 col-lg-12 col-md-12'>
+                                        <div>
+                                            <label className='col-form-label'> Allergy</label>
+                                            <div className='input-group input-group-lg input-group-solid'>
+                                                <textarea
+                                                    className='form-control'
+                                                    name='address'
+                                                    placeholder=' Allergies write here....'
+                                                    rows='3'
+                                                ></textarea>
+                                            </div>
+                                            { formik.touched.address && formik.errors.address ? (
+                                                <div className='invalid-feedback display-block'>
+                                                    { formik.errors.address }
+                                                </div>
+                                            ) : null }
+                                        </div>
+                                    </div>
+
+
+                                </div>
+
+
+                                <div className="card-toolbar text-right">
+                                    <button
+                                        type="submit"
+                                        className="btn btn-success mr-2"
+                                        disabled={
+                                            formik.isSubmitting || (formik.touched && !formik.isValid)
+                                        }
+                                    >
+                                        Save Changes
+                                        { formik.isSubmitting }
+                                    </button>
+                                    <Link
+                                        to="/user-profile/profile-overview"
+                                        className="btn btn-secondary"
+                                    >
+                                        Cancel
+                                    </Link>
+                                </div>
+                            </div>
+
                         </div>
                         <div class="tab-pane fade" id="kt_tab_pane_4_3" role="tabpanel" aria-labelledby="kt_tab_pane_4_3">
                             d
