@@ -12,47 +12,46 @@ export function AsideMenuList({ layoutProps }) {
   const getMenuItemActive = (url, hasSubmenu = false) => {
     return checkIsActive(location, url)
       ? ` ${!hasSubmenu &&
-          "menu-item-active"} menu-item-open menu-item-not-hightlighted`
+      "menu-item-active"} menu-item-open menu-item-not-hightlighted`
       : "";
   };
 
   return (
     <>
-      {/* begin::Menu Nav */}
-      <ul className={`menu-nav ${layoutProps.ulClasses}`}>
-        {/*begin::1 Level*/}
+      {/* begin::Menu Nav */ }
+      <ul className={ `menu-nav ${layoutProps.ulClasses}` }>
+        {/*begin::1 Level*/ }
         <li
-          className={`menu-item ${getMenuItemActive("/dashboard", false)}`}
+          className={ `menu-item ${getMenuItemActive("/dashboard", false)}` }
           aria-haspopup="true"
         >
           <NavLink className="menu-link" to="/dashboard">
             <span className="svg-icon menu-icon">
-              <SVG src={toAbsoluteUrl("/media/svg/icons/Design/Layers.svg")} />
+              <SVG src={ toAbsoluteUrl("/media/svg/icons/Design/Layers.svg") } />
             </span>
             <span className="menu-text">Dashboard</span>
           </NavLink>
         </li>
-        {/*end::1 Level*/}
+        {/*end::1 Level*/ }
 
 
-        {/*begin::1 Level*/}
-        {/* <li
-          className={`menu-item ${getMenuItemActive("/user-profile", false)}`}
+        {/*begin::1 Level*/ }
+        <li
+          className={ `menu-item ${getMenuItemActive("/medicalchart", false)}` }
           aria-haspopup="true"
         >
-          <NavLink className="menu-link" to="/user-profile">
+          <NavLink className="menu-link" to="/medicalchart">
             <span className="svg-icon menu-icon">
-              <PersonIcon
-              />
+              <SVG src={ toAbsoluteUrl("/media/svg/icons/Design/Layers.svg") } />
             </span>
-            <span className="menu-text">User Profile</span>
+            <span className="menu-text">Medical Chart</span>
           </NavLink>
-        </li> */}
-        {/*end::1 Level*/}
+        </li>
+        {/*end::1 Level*/ }
 
-        {/*begin::1 Level*/}
+        {/*begin::1 Level*/ }
         <li
-          className={`menu-item ${getMenuItemActive("/emr", false)}`}
+          className={ `menu-item ${getMenuItemActive("/emr", false)}` }
           aria-haspopup="true"
         >
           <NavLink className="menu-link" to="/emr">
@@ -62,10 +61,10 @@ export function AsideMenuList({ layoutProps }) {
             <span className="menu-text">EMR</span>
           </NavLink>
         </li>
-        {/*end::1 Level*/}
+        {/*end::1 Level*/ }
       </ul>
 
-      {/* end::Menu Nav */}
+      {/* end::Menu Nav */ }
     </>
   );
 }

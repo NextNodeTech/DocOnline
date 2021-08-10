@@ -1,8 +1,10 @@
 import React, { Suspense, lazy } from "react";
 import { Redirect, Switch, Route } from "react-router-dom";
 import { LayoutSplashScreen, ContentRoute } from "../_metronic/layout";
-import EMR  from "./pages/EMRPage";
+import EMR from "./pages/EMRPage";
 import { DashboardPage } from "./pages/DashboardPage";
+import { MedicalPage } from "./pages/MedicalPage";
+
 
 const UserProfilepage = lazy(() =>
   import("./modules/UserProfile/UserProfilePage")
@@ -15,15 +17,17 @@ export default function BasePage() {
   // https://reactjs.org/docs/hooks-reference.html#useeffect
 
   return (
-    <Suspense fallback={<LayoutSplashScreen />}>
+    <Suspense fallback={ <LayoutSplashScreen /> }>
       <Switch>
         {
           /* Redirect from root URL to /dashboard. */
           <Redirect exact from="/" to="/dashboard" />
         }
-        <ContentRoute path="/dashboard" component={DashboardPage} />
-        <Route path="/user-profile" component={UserProfilepage} />
-        <ContentRoute path="/emr" component={EMR} />
+        <ContentRoute path="/dashboard" component={ DashboardPage } />
+        <Route path="/user-profile" component={ UserProfilepage } />
+        <ContentRoute path="/emr" component={ EMR } />
+        <ContentRoute path="/medicalChart" component={ MedicalPage } />
+
         <Redirect to="error/error-v1" />
       </Switch>
     </Suspense>
