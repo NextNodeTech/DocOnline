@@ -11,7 +11,6 @@ function PersonaInformation(props) {
   const [loading, setloading] = useState(false);
   const user = useSelector((state) => state.auth.user, shallowEqual);
 
-  loading(true);
   // Methods
   const saveUser = (values, setStatus, setSubmitting) => {
     setloading(true);
