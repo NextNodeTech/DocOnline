@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { useSelector, shallowEqual, connect } from "react-redux";
 import { useFormik } from "formik";
 import * as Yup from "yup";
+// import { MDBFileInput } from "mdbreact";
 import { makeStyles } from '@material-ui/core/styles';
 import TextField from '@material-ui/core/TextField';
 
@@ -95,15 +96,15 @@ export default function MedicalChart() {
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link active" data-toggle="tab" href="#kt_tab_pane_4_2">
+                                <a class="nav-link " data-toggle="tab" href="#kt_tab_pane_4_2">
                                     <span class="nav-icon"><i class="flaticon2-drop"></i></span>
-                                    <span class="nav-text">Reports</span>
+                                    <span class="nav-text text-nowrap">Medications Allergies</span>
                                 </a>
                             </li>
                             <li class="nav-item dropdown">
-                                <a class="nav-link " data-toggle="tab" href="#kt_tab_pane_4_2">
+                                <a class="nav-link active" data-toggle="tab" href="#kt_tab_pane_4_2">
                                     <span class="nav-icon"><i class="flaticon2-gear"></i></span>
-                                    <span class="nav-text text-nowrap">Medications Allergies</span>
+                                    <span class="nav-text ">Reports</span>
                                 </a>
 
                             </li>
@@ -246,7 +247,7 @@ export default function MedicalChart() {
                             </div>
 
                         </div>
-                        <div class="tab-pane fade show active" id="kt_tab_pane_4_2" role="tabpanel" aria-labelledby="kt_tab_pane_4_2">
+                        <div class="tab-pane fade " id="kt_tab_pane_4_2" role="tabpanel" aria-labelledby="kt_tab_pane_4_2">
                             <div className='card-body'>
                                 <div className='form-group row'>
                                     <div className='col-xl-6 col-lg-6 col-md-6'>
@@ -328,8 +329,88 @@ export default function MedicalChart() {
                             </div>
 
                         </div>
-                        <div class="tab-pane fade" id="kt_tab_pane_4_3" role="tabpanel" aria-labelledby="kt_tab_pane_4_3">
-                            d
+                        <div class="tab-pane fade show active" id="kt_tab_pane_4_3" role="tabpanel" aria-labelledby="kt_tab_pane_4_3">
+                            <div className='card-body'>
+                                <div className='form-group row'>
+                                    <div className='col-xl-6 col-lg-6 col-md-6'>
+                                        <div>
+                                            <label className='col-form-label'>First Name</label>
+                                            <input
+                                                type='text'
+                                                placeholder='First name'
+                                                className={ `form-control form-control-lg form-control-solid ${getInputClasses(
+                                                    "firstname"
+                                                )}` }
+                                                name='firstname'
+                                                { ...formik.getFieldProps("firstname") }
+                                            />
+                                        </div>
+                                        { formik.touched.firstname && formik.errors.firstname ? (
+                                            <div className='invalid-feedback'>
+                                                { formik.errors.firstname }
+                                            </div>
+                                        ) : null }
+                                    </div>
+
+
+
+                                    <div className=' ml-6  mt-10'>
+                                        <form className='' noValidate>
+                                            <TextField
+                                                id="date"
+                                                label="Report Date"
+                                                type="date"
+                                                defaultValue="2017-05-24"
+                                                className={ classes.textField }
+                                                InputLabelProps={ {
+                                                    shrink: true,
+                                                } }
+                                            />
+                                        </form>
+                                    </div>
+
+                                    <div className='col-12 mt-4 ml-1 row'>
+                                        <form>
+                                            <div class="form-group">
+                                                <label for="exampleFormControlFile1">Upload File</label>
+                                                <input type="file" class="form-control-file" id="exampleFormControlFile1" />
+                                            </div>
+                                        </form>
+                                        <button
+                                            type="submit"
+                                            className="btn btn-sm btn-info mt-2 ml-2 h-40px text-center "
+                                            disabled={
+                                                formik.isSubmitting || (formik.touched && !formik.isValid)
+                                            }
+                                        >
+                                            Upload
+                                            { formik.isSubmitting }
+                                        </button>
+                                    </div>
+
+
+                                </div>
+
+
+                                <div className="card-toolbar text-right">
+                                    <button
+                                        type="submit"
+                                        className="btn btn-success mr-2"
+                                        disabled={
+                                            formik.isSubmitting || (formik.touched && !formik.isValid)
+                                        }
+                                    >
+                                        Save Changes
+                                        { formik.isSubmitting }
+                                    </button>
+                                    <Link
+                                        to="/user-profile/profile-overview"
+                                        className="btn btn-secondary"
+                                    >
+                                        Cancel
+                                    </Link>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
