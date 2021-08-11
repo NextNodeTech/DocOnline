@@ -91,7 +91,7 @@ export default function MedicalChart() {
                         <ul class="nav nav-light-success nav-bold nav-pills text-nowrap">
                             <li class="nav-item">
                                 <a class="nav-link " data-toggle="tab" href="#kt_tab_pane_4_1">
-                                    <span class="nav-icon"><i class="flaticon2-chat-1"></i></span>
+                                    <span class="nav-icon active"><i class="flaticon2-chat-1"></i></span>
                                     <span class="nav-text">Medications</span>
                                 </a>
                             </li>
@@ -102,7 +102,7 @@ export default function MedicalChart() {
                                 </a>
                             </li>
                             <li class="nav-item dropdown">
-                                <a class="nav-link active" data-toggle="tab" href="#kt_tab_pane_4_2">
+                                <a class="nav-link " data-toggle="tab" href="#kt_tab_pane_4_2">
                                     <span class="nav-icon"><i class="flaticon2-gear"></i></span>
                                     <span class="nav-text ">Reports</span>
                                 </a>
@@ -116,7 +116,7 @@ export default function MedicalChart() {
 
                         {/* medicaltion start */ }
 
-                        <div class="tab-pane fade " id="kt_tab_pane_4_1" role="tabpanel" aria-labelledby="kt_tab_pane_4_1">
+                        <div class="tab-pane fade show active" id="kt_tab_pane_4_1" role="tabpanel" aria-labelledby="kt_tab_pane_4_1">
 
                             <div className='card-body'>
                                 <div className='form-group row'>
@@ -329,7 +329,7 @@ export default function MedicalChart() {
                             </div>
 
                         </div>
-                        <div class="tab-pane fade show active" id="kt_tab_pane_4_3" role="tabpanel" aria-labelledby="kt_tab_pane_4_3">
+                        <div class="tab-pane fade " id="kt_tab_pane_4_3" role="tabpanel" aria-labelledby="kt_tab_pane_4_3">
                             <div className='card-body'>
                                 <div className='form-group row'>
                                     <div className='col-xl-6 col-lg-6 col-md-6'>
