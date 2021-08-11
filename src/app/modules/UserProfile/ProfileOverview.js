@@ -67,64 +67,136 @@ function ProfileOverview(props) {
   });
 
   return (
-    <form
-      className='card card-custom card-stretch'
-      onSubmit={formik.handleSubmit}
-    >
-      {/* begin::Header */}
-      <div position='sticky' className='card-header py-3  card-sticky'>
-        <div className='card-title align-items-start flex-column'>
-          <h3 className='card-label font-weight-bolder text-dark'>
-            Profile Overview
-          </h3>
-          <span className='text-muted font-weight-bold font-size-sm mt-1'>
-            Updated Profile Information
-          </span>
+    <>
+      <form
+        className='card card-custom card-stretch'
+        onSubmit={ formik.handleSubmit }
+      >
+        {/* begin::Header */ }
+        <div position='sticky' className='card-header py-3  card-sticky'>
+          <div className='card-title align-items-start flex-column'>
+            <h3 className='card-label font-weight-bolder text-dark'>
+              Profile Overview
+            </h3>
+            <span className='text-muted font-weight-bold font-size-sm mt-1'>
+              Updated Profile Information
+            </span>
+          </div>
         </div>
-      </div>
 
-      {/* end::Header */}
-      {/* begin::Form */}
-      <div>
-        <table className='table table-borderless ml-6 mt-3'>
-          <tbody>
-            <tr>
-              <td className='font-weight-bold'>Name</td>
-              <td>Muhammad Amir Saleem</td>
-            </tr>
-            <tr>
-              <td className='font-weight-bold'>Email Address</td>
-              <td>ameirsaleem231@gmail.com</td>
-            </tr>
-            <tr>
-              <td className='font-weight-bold'>Gender</td>
-              <td>Male</td>
-            </tr>
-            <tr>
-              <td className='font-weight-bold'>Phone Number</td>
-              <td>(333) 333-3333</td>
-            </tr>
-            <tr>
-              <td className='font-weight-bold'>Address</td>
-              <td>152 Reiman Street, Paulo Alto Road, Paulo Alto, USA</td>
-            </tr>
-            <tr>
-              <td className='font-weight-bold'>Languages</td>
-              <td>English & Chineese</td>
-            </tr>
-            <tr>
-              <td className='font-weight-bold'>Allergy</td>
-              <td> Acute </td>
-            </tr>
-            <tr>
-              <td className='font-weight-bold'>Medication</td>
-              <td> Panadol ( Aug 15, 2021 - Aug 22, 2021 )</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-      {/* end::Form */}
-    </form>
+        {/* end::Header */ }
+        {/* begin::Form */ }
+        <div>
+          <table className='table table-borderless ml-6 mt-3'>
+            <tbody>
+              <tr>
+                <td className='font-weight-bold'>Name</td>
+                <td>Muhammad Amir Saleem</td>
+              </tr>
+              <tr>
+                <td className='font-weight-bold'>Email Address</td>
+                <td>ameirsaleem231@gmail.com</td>
+              </tr>
+              <tr>
+                <td className='font-weight-bold'>Gender</td>
+                <td>Male</td>
+              </tr>
+              <tr>
+                <td className='font-weight-bold'>Phone Number</td>
+                <td>(333) 333-3333</td>
+              </tr>
+              <tr>
+                <td className='font-weight-bold'>Address</td>
+                <td>152 Reiman Street, Paulo Alto Road, Paulo Alto, USA</td>
+              </tr>
+              <tr>
+                <td className='font-weight-bold pt-2'>Languages</td>
+                <table className='table table-bordered col-lg-8 '>
+                  <thead className='thead-light'>
+                    <tr className=' mb-2'>
+                      <th>Language</th>
+                      <th> level</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>English</td>
+                      <td>Good</td>
+
+                    </tr>
+                    <tr>
+                      <td>Urdu</td>
+                      <td>Best</td>
+
+                    </tr>
+                  </tbody>
+                </table>
+              </tr>
+              <tr>
+                <td className='font-weight-bold pt-2'>Allergy</td>
+                <table className='table table-bordered col-lg-8 '>
+                  <thead className='thead-light'>
+                    <tr className=' mb-2'>
+                      <th>Medicine</th>
+                      <th>Allergy level</th>
+                      <th>Allergy</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>calpol</td>
+                      <td>Acute</td>
+                      <td>Allergy</td>
+                    </tr>
+                    <tr>
+                      <td>Panadol</td>
+                      <td>Chronic</td>
+                      <td>Allergy</td>
+                    </tr> <tr>
+                      <td>Solocip</td>
+                      <td>Acute</td>
+                      <td>Allergy</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </tr>
+              <tr>
+                <td className='font-weight-bold pt-2'>Medication</td>
+                <table className='table table-bordered col-lg-8 '>
+                  <thead className='thead-light'>
+                    <tr className=' mb-2'>
+                      <th>Medicine</th>
+                      <th>Duration</th>
+                      <th>Reason</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>calpol</td>
+                      <td>01/03/2018 -30/12/2020</td>
+                      <td>Reason</td>
+                    </tr>
+                    <tr>
+                      <td>Panadol</td>
+                      <td>01/03/2018 -30/12/2020</td>
+                      <td>Reason</td>
+                    </tr> <tr>
+                      <td>Solocip</td>
+                      <td>01/03/2018 -30/12/2020</td>
+                      <td>Reason</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        {/* end::Form */ }
+      </form>
+
+
+
+    </>
   );
 }
 
