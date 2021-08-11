@@ -247,7 +247,7 @@ export default function MedicalChart() {
 
                         </div>
                         <div class="tab-pane fade " id="kt_tab_pane_4_2" role="tabpanel" aria-labelledby="kt_tab_pane_4_2">
-                            f
+                            second
                         </div>
                         <div class="tab-pane fade" id="kt_tab_pane_4_3" role="tabpanel" aria-labelledby="kt_tab_pane_4_3">
                             d
