@@ -248,6 +248,7 @@ export default function MedicalChart() {
 
                         </div>
                         <div class="tab-pane fade " id="kt_tab_pane_4_2" role="tabpanel" aria-labelledby="kt_tab_pane_4_2">
+
                             <div className='card-body'>
                                 <div className='form-group row'>
                                     <div className='col-xl-6 col-lg-6 col-md-6'>
@@ -328,6 +329,8 @@ export default function MedicalChart() {
                                 </div>
                             </div>
 
+
+                           
                         </div>
                         <div class="tab-pane fade " id="kt_tab_pane_4_3" role="tabpanel" aria-labelledby="kt_tab_pane_4_3">
                             <div className='card-body'>

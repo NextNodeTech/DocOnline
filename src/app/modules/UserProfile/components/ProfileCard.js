@@ -90,7 +90,7 @@ export function ProfileCard() {
                   </div>
                 </div>
                 <div className='mt-2 justify-content-center text-center'>
-                  <h4 class='font-weight-bold my-2'>
+                  <h4 className='font-weight-bold my-2'>
                     {" "}
                     {user.firstname} {user.lastname}
                   </h4>
