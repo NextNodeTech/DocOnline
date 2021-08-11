@@ -112,6 +112,14 @@ function ProfileOverview(props) {
               <td className='font-weight-bold'>Languages</td>
               <td>English & Chineese</td>
             </tr>
+            <tr>
+              <td className='font-weight-bold'>Allergy</td>
+              <td> Acute </td>
+            </tr>
+            <tr>
+              <td className='font-weight-bold'>Medication</td>
+              <td> Panadol ( Aug 15, 2021 - Aug 22, 2021 )</td>
+            </tr>
           </tbody>
         </table>
       </div>
