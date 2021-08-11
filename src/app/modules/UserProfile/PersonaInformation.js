@@ -6,7 +6,6 @@ import * as Yup from "yup";
 import * as auth from "../Auth";
 
 function PersonaInformation(props) {
-
   // Fields
   const [loading, setloading] = useState(false);
   const user = useSelector((state) => state.auth.user, shallowEqual);
@@ -166,9 +165,13 @@ function PersonaInformation(props) {
                 <div>
                   <label className='col-form-label'> Date of Birth </label>
                   <div className='input-group date'>
-                  <input type="text" className="form-control form-control-lg form-control-solid" value="02-16-2012" />
-                  <div className="input-group-addon">
-                        <span className="glyphicon glyphicon-th"></span>
+                    <input
+                      type='text'
+                      className='form-control form-control-lg form-control-solid'
+                      value='02-16-2012'
+                    />
+                    <div className='input-group-addon'>
+                      <span className='glyphicon glyphicon-th'></span>
                     </div>
                   </div>
                 </div>
@@ -246,10 +249,10 @@ function PersonaInformation(props) {
                 </div>
               </div>
             </div>
-            <div className="card-toolbar text-right">
+            <div className='card-toolbar text-right'>
               <button
-                type="submit"
-                className="btn btn-success mr-2"
+                type='submit'
+                className='btn btn-success mr-2'
                 disabled={
                   formik.isSubmitting || (formik.touched && !formik.isValid)
                 }
@@ -258,8 +261,8 @@ function PersonaInformation(props) {
                 {formik.isSubmitting}
               </button>
               <Link
-                to="/user-profile/profile-overview"
-                className="btn btn-secondary"
+                to='/user-profile/profile-overview'
+                className='btn btn-secondary'
               >
                 Cancel
               </Link>
