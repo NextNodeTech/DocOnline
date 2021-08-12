@@ -167,6 +167,7 @@ function PersonaInformation(props) {
                   <label className='col-form-label'> Date of Birth </label>
                   <div className='input-group date'>
                     <input
+                      readOnly
                       type='text'
                       className='form-control form-control-lg form-control-solid'
                       value='02-16-2012'
