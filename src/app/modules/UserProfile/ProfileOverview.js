@@ -111,11 +111,11 @@ function ProfileOverview(props) {
               </tr>
               <tr>
                 <td className='font-weight-bold pt-2'>Languages</td>
-                <table className='table table-bordered col-lg-8 '>
+                <table className='table table-bordered col-lg-8 mt-3'>
                   <thead className='thead-light'>
                     <tr className=' mb-2'>
                       <th>Language</th>
-                      <th> level</th>
+                      <th> Level</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -125,7 +125,7 @@ function ProfileOverview(props) {
 
                     </tr>
                     <tr>
-                      <td>Urdu</td>
+                      <td>Chineese</td>
                       <td>Best</td>
 
                     </tr>
@@ -134,17 +134,17 @@ function ProfileOverview(props) {
               </tr>
               <tr>
                 <td className='font-weight-bold pt-2'>Allergy</td>
-                <table className='table table-bordered col-lg-8 '>
+                <table className='table table-bordered col-lg-8 mt-3'>
                   <thead className='thead-light'>
                     <tr className=' mb-2'>
-                      <th>Medicine</th>
-                      <th>Allergy level</th>
-                      <th>Allergy</th>
+                      <th>Disease</th>
+                      <th>Allergy Level</th>
+                      <th>Reason</th>
                     </tr>
                   </thead>
                   <tbody>
                     <tr>
-                      <td>calpol</td>
+                      <td>Calpol</td>
                       <td>Acute</td>
                       <td>Allergy</td>
                     </tr>
@@ -162,7 +162,7 @@ function ProfileOverview(props) {
               </tr>
               <tr>
                 <td className='font-weight-bold pt-2'>Medication</td>
-                <table className='table table-bordered col-lg-8 '>
+                <table className='table table-bordered col-lg-8 mt-3'>
                   <thead className='thead-light'>
                     <tr className=' mb-2'>
                       <th>Medicine</th>
@@ -172,18 +172,18 @@ function ProfileOverview(props) {
                   </thead>
                   <tbody>
                     <tr>
-                      <td>calpol</td>
+                      <td>Calpol</td>
                       <td>01/03/2018 -30/12/2020</td>
-                      <td>Reason</td>
+                      <td>Headache</td>
                     </tr>
                     <tr>
                       <td>Panadol</td>
                       <td>01/03/2018 -30/12/2020</td>
-                      <td>Reason</td>
+                      <td>Fever</td>
                     </tr> <tr>
                       <td>Solocip</td>
                       <td>01/03/2018 -30/12/2020</td>
-                      <td>Reason</td>
+                      <td>Antibacterial</td>
                     </tr>
                   </tbody>
                 </table>
