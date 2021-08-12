@@ -75,17 +75,6 @@ function Languages(props) {
     communicationSMS: Yup.bool(),
     communicationPhone: Yup.bool(),
   });
-  const getInputClasses = (fieldname) => {
-    if (formik.touched[fieldname] && formik.errors[fieldname]) {
-      return "is-invalid";
-    }
-
-    if (formik.touched[fieldname] && !formik.errors[fieldname]) {
-      return "is-valid";
-    }
-
-    return "";
-  };
   const formik = useFormik({
     initialValues,
     validationSchema: Schema,
