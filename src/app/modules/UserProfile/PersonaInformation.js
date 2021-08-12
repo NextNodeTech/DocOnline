@@ -7,16 +7,17 @@ import * as auth from "../Auth";
 
 function PersonaInformation(props) {
   // Fields
-  const [loading, setloading] = useState(false);
+  const [loading, setLoading] = useState(false);
   const user = useSelector((state) => state.auth.user, shallowEqual);
 
   // Methods
   const saveUser = (values, setStatus, setSubmitting) => {
-    setloading(true);
+    loading(false);
+    setLoading(true);
     const updatedUser = Object.assign(user, values);
     // user for update preparation
     setTimeout(() => {
-      setloading(false);
+      setLoading(false);
       setSubmitting(false);
     }, 1000);
   };
