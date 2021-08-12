@@ -251,7 +251,7 @@ export default function MedicalChart() {
                                     </div>
                                     <div className='col-12 mt-4 ml-1 row'>
                                         <div className="form-group row">
-                                            <label class=" col-form-label text-dark ">Upload Files:</label>
+                                            <label className=" col-form-label text-dark ">Upload Files:</label>
                                             <input type="file" className="form-control-file " id="exampleFormControlFile1" />
                                         </div>
                                     </div>
