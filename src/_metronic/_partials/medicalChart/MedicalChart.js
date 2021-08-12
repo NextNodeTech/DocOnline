@@ -22,13 +22,14 @@ const useStyles = makeStyles(theme => ({
 var KTBootstrapDaterangepicker = function () {
     // Private functions
     var demos = function () {
-     // minimum setup
-     ('#kt_daterangepicker_1, #kt_daterangepicker_1_modal').daterangepicker({
-      buttonClasses: ' btn',
-      applyClass: 'btn-primary',
-      cancelClass: 'btn-secondary'
-     })
-    }}
+        // minimum setup
+        ('#kt_daterangepicker_1, #kt_daterangepicker_1_modal').daterangepicker({
+            buttonClasses: ' btn',
+            applyClass: 'btn-primary',
+            cancelClass: 'btn-secondary'
+        })
+    }
+}
 
 
 export default function MedicalChart() {
@@ -38,7 +39,7 @@ export default function MedicalChart() {
     const [value, setValue] = React.useState(0);
 
     const handleChange = (event, newValue) => {
-      setValue(newValue);
+        setValue(newValue);
     };
 
     // Methods
@@ -98,36 +99,36 @@ export default function MedicalChart() {
 
     function TabPanel(props) {
         const { children, value, index, ...other } = props;
-      
+
         return (
-          <div
-            role="tabpanel"
-            hidden={value !== index}
-            id={`simple-tabpanel-${index}`}
-            aria-labelledby={`simple-tab-${index}`}
-            {...other}
-          >
-            {value === index && (
-              <Box div={3}>
-                <div>{children}</div>
-              </Box>
-            )}
-          </div>
+            <div
+                role="tabpanel"
+                hidden={ value !== index }
+                id={ `simple-tabpanel-${index}` }
+                aria-labelledby={ `simple-tab-${index}` }
+                { ...other }
+            >
+                { value === index && (
+                    <Box div={ 3 }>
+                        <div>{ children }</div>
+                    </Box>
+                ) }
+            </div>
         );
-      }
-      
-      TabPanel.propTypes = {
+    }
+
+    TabPanel.propTypes = {
         children: PropTypes.node,
         index: PropTypes.any.isRequired,
         value: PropTypes.any.isRequired,
-      };
-      
-      function a11yProps(index) {
+    };
+
+    function a11yProps(index) {
         return {
-          id: `simple-tab-${index}`,
-          'aria-controls': `simple-tabpanel-${index}`,
+            id: `simple-tab-${index}`,
+            'aria-controls': `simple-tabpanel-${index}`,
         };
-      }  
+    }
 
     return (
         <>
@@ -138,18 +139,18 @@ export default function MedicalChart() {
                     </div>
                     <div className="card-toolbar">
                         <ul className="nav nav-light-success nav-bold nav-pills text-nowrap">
-                        <Tabs value={value} onChange={handleChange} aria-label="simple tabs example">
-                            <Tab label="Medication" {...a11yProps(0)} />
-                            <Tab label="Allergies" {...a11yProps(1)} />
-                            <Tab label="Reports" {...a11yProps(2)} />
-                        </Tabs>
+                            <Tabs value={ value } onChange={ handleChange } aria-label="simple tabs example">
+                                <Tab label="Medication" { ...a11yProps(0) } />
+                                <Tab label="Allergies" { ...a11yProps(1) } />
+                                <Tab label="Reports" { ...a11yProps(2) } />
+                            </Tabs>
                         </ul>
                     </div>
                 </div>
                 <div className="card-body">
                     <div className="tab-content">
-                    <TabPanel value={value} index={0}>
-                        {/* medicaltion start */ }
+                        <TabPanel value={ value } index={ 0 }>
+                            {/* medicaltion start */ }
                             <div className='card-body'>
                                 <div className='form-group row'>
                                     <div className='col-xl-4 col-lg-4 col-md-4'>
@@ -163,19 +164,27 @@ export default function MedicalChart() {
                                                 )}` }
                                                 name='medicinename'
                                                 { ...formik.getFieldProps("medicinename") }
-                                                />
+                                            />
                                         </div>
                                         { formik.touched.firstname && formik.errors.firstname ? (
                                             <div className='invalid-feedback'>
-                                                { formik.errors.firstname } 
+                                                { formik.errors.firstname }
                                             </div>
                                         ) : null }
                                     </div>
                                     <div className='col-xl-4 col-lg-4 col-md-4 mt-3'>
                                         <div>
-                                        <label>Medication Duration</label>
+                                            <label>Medication Start Date</label>
                                             <div>
-                                                <input type='text' className="form-control form-control-lg form-control-solid" id="kt_daterangepicker_1" readOnly placeholder="Select time" type="text"/>
+                                                <input type='text' className="form-control form-control-lg form-control-solid" id="kt_daterangepicker_1" readOnly placeholder="Start date" type="text" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className='col-xl-4 col-lg-4 col-md-4 mt-3'>
+                                        <div>
+                                            <label>Medication End Date</label>
+                                            <div>
+                                                <input type='text' className="form-control form-control-lg form-control-solid" id="kt_daterangepicker_1" readOnly placeholder="last date" type="text" />
                                             </div>
                                         </div>
                                     </div>
@@ -201,10 +210,10 @@ export default function MedicalChart() {
                                     </div>
                                 </div>
 
-                        </div>
-                        {/* medicaltion end */ }
-                    </TabPanel>
-                    <TabPanel value={value} index={1}>
+                            </div>
+                            {/* medicaltion end */ }
+                        </TabPanel>
+                        <TabPanel value={ value } index={ 1 }>
                             <div className='card-body'>
                                 <div className='form-group row'>
                                     <div className='col-xl-4 col-lg-4 col-md-4'>
@@ -261,9 +270,9 @@ export default function MedicalChart() {
                                     </div>
                                 </div>
 
-                        </div>
-                    </TabPanel>
-                    <TabPanel value={value} index={2}>
+                            </div>
+                        </TabPanel>
+                        <TabPanel value={ value } index={ 2 }>
                             <div className='card-body'>
                                 <div className='form-group row'>
                                     <div className='col-xl-4 col-lg-4 col-md-4'>
@@ -286,66 +295,58 @@ export default function MedicalChart() {
                                         ) : null }
                                     </div>
                                     <div className='col-xl-4 col-lg-4 col-md-4'>
-                                    <div>
-                                        <label className='col-form-label'> Date of Report </label>
+                                        <div>
+                                            <label className='col-form-label'> Date of Report </label>
                                             <div className='input-group date'>
                                                 <input
-                                                type='text'
-                                                className='form-control form-control-lg form-control-solid'
-                                                value='02-16-2012'
+                                                    type='text'
+                                                    className='form-control form-control-lg form-control-solid'
+                                                    value='02-16-2012'
                                                 />
-                                            <div className='input-group-addon'>
-                                            <span className='glyphicon glyphicon-th'></span>
-                                            </div>
+                                                <div className='input-group-addon'>
+                                                    <span className='glyphicon glyphicon-th'></span>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                     <div className='col-12 mt-4 ml-1 row'>
-                                        <form>
-                                            <div className="form-group">
-                                                <label htmlFor="exampleFormControlFile1">Upload File</label>
-                                                <input type="file" className="form-control-file" id="exampleFormControlFile1" />
-                                            </div>
-                                        </form>
-                                        <button
-                                            type="submit"
-                                            className="btn btn-lg btn-info h-40px mt-2"
-                                            disabled={
-                                                formik.isSubmitting || (formik.touched && !formik.isValid)
-                                            }
-                                        >
-                                            Upload
-                                            { formik.isSubmitting }
-                                        </button>
+                                        <div className="form-group row">
+                                            <label class=" col-form-label text-dark ">Upload Files:</label>
+                                            <input type="file" className="form-control-file " id="exampleFormControlFile1" />
+                                        </div>
                                     </div>
+
+
+
                                 </div>
                             </div>
-                    </TabPanel>
-                        {/* Footer Start */}
-                            <div className='mr-9'>
-                                <div className="card-toolbar text-right 4">
-                                    <button
-                                        type="submit"
-                                        className="btn btn-success mr-2"
-                                        disabled={
-                                            formik.isSubmitting || (formik.touched && !formik.isValid)
-                                        }
-                                    >
-                                        Save Changes
-                                        { formik.isSubmitting }
-                                    </button>
-                                    <Link
-                                        to="/user-profile/profile-overview"
-                                        className="btn btn-secondary"
-                                    >
-                                        Cancel
-                                    </Link>
-                                </div>
-                            </div>
-                        {/* Footer End */}
+                        </TabPanel>
                     </div>
                 </div>
+                {/* Footer Start */ }
+                <div className=' card-footer'>
+                    <div className=" card-toolbar text-right ">
+                        <button
+                            type="submit"
+                            className="btn btn-success mr-2"
+                            disabled={
+                                formik.isSubmitting || (formik.touched && !formik.isValid)
+                            }
+                        >
+                            Save Changes
+                            { formik.isSubmitting }
+                        </button>
+                        <Link
+                            to="/user-profile/profile-overview"
+                            className="btn btn-secondary"
+                        >
+                            Cancel
+                        </Link>
+                    </div>
+                </div>
+                {/* Footer End */ }
             </div>
+
         </>
     )
 }
