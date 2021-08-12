@@ -26,6 +26,7 @@ import {
 } from "./_metronic/layout";
 import { MetronicI18nProvider } from "./_metronic/i18n";
 
+
 /**
  * Base URL of the website.
  *
@@ -52,7 +53,7 @@ ReactDOM.render(
     <MetronicLayoutProvider>
       <MetronicSubheaderProvider>
         <MetronicSplashScreenProvider>
-          <App store={store} persistor={persistor} basename={PUBLIC_URL} />
+          <App store={ store } persistor={ persistor } basename={ PUBLIC_URL } />
         </MetronicSplashScreenProvider>
       </MetronicSubheaderProvider>
     </MetronicLayoutProvider>
