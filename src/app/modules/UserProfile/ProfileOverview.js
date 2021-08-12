@@ -88,108 +88,116 @@ function ProfileOverview(props) {
         {/* end::Header */ }
         {/* begin::Form */ }
         <div>
-          <table className='table table-borderless ml-6 mt-3'>
-            <tbody>
-              <tr>
-                <td className='font-weight-bold'>Name</td>
-                <td>Muhammad Amir Saleem</td>
-              </tr>
-              <tr>
-                <td className='font-weight-bold'>Email Address</td>
-                <td>ameirsaleem231@gmail.com</td>
-              </tr>
-              <tr>
-                <td className='font-weight-bold'>Gender</td>
-                <td>Male</td>
-              </tr>
-              <tr>
-                <td className='font-weight-bold'>Phone Number</td>
-                <td>(333) 333-3333</td>
-              </tr>
-              <tr>
-                <td className='font-weight-bold'>Address</td>
-                <td>152 Reiman Street, Paulo Alto Road, Paulo Alto, USA</td>
-              </tr>
-              <tr>
-                <td className='font-weight-bold pt-2'>Languages</td>
-                <table className='table table-bordered col-lg-8 mt-3'>
-                  <thead className='thead-light'>
-                    <tr className=' mb-2'>
-                      <th>Language</th>
-                      <th> Level</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>English</td>
-                      <td>Good</td>
-                    </tr>
-                    <tr>
-                      <td>Chineese</td>
-                      <td>Best</td>
+          {/* ///////////////header div///// */ }
+          <div className='row col-lg-12 py-3 '>
+            <div className='col-4  p-4'>
+              <div className="font-weight-bold pl-5 text-nowrap">Name</div>
+              <br />
+              <div className="font-weight-bold pl-5 text-nowrap">Email</div>
+              <br />
+              <div className="font-weight-bold pl-5 text-nowrap">Gender</div>
+              <br />
+              <div className="font-weight-bold pl-5 text-nowrap">Phone</div>
+              <br />
+              <div className="font-weight-bold pl-5 text-nowrap">Address</div>
+            </div>
+            {/* //////////// info content//////////// */ }
+            <div className='col-8  p-4'>
+              <div>Nauman Khan</div>
+              <br />
+              <div className='text-nowrap'>NaumanKhan642@gmail.com</div>
+              <br />
+              <div className='text-nowrap'>male</div>
+              <br />
+              <div className='text-nowrap'>(333) 333-3333</div>
+              <br />
+              <div className=''>152 Reiman Street, Paulo Alto Road, Paulo Alto, USA. </div>
+            </div>
+          </div>
+          {/* //////languages ////////////// */ }
+          <div className='row pl-7  col-12'>
+            <div className="font-weight-bold pl-5 text-nowrap p-2 col-4">Languages</div>
+            <table className='table table-bordered col-lg-6  m-3 text-center '>
+              <thead className='thead-light'>
+                <tr className=' mb-2'>
+                  <th>Language</th>
+                  <th> level</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>English</td>
+                  <td>Good</td>
 
-                    </tr>
-                  </tbody>
-                </table>
-              </tr>
-              <tr>
-                <td className='font-weight-bold pt-2'>Allergy</td>
-                <table className='table table-bordered col-lg-8 mt-3'>
-                  <thead className='thead-light'>
-                    <tr className=' mb-2'>
-                      <th>Disease</th>
-                      <th>Allergy Level</th>
-                      <th>Reason</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>Calpol</td>
-                      <td>Acute</td>
-                      <td>Allergy</td>
-                    </tr>
-                    <tr>
-                      <td>Panadol</td>
-                      <td>Chronic</td>
-                      <td>Allergy</td>
-                    </tr> <tr>
-                      <td>Solocip</td>
-                      <td>Acute</td>
-                      <td>Allergy</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </tr>
-              <tr>
-                <td className='font-weight-bold pt-2'>Medication</td>
-                <table className='table table-bordered col-lg-8 mt-3'>
-                  <thead className='thead-light'>
-                    <tr className=' mb-2'>
-                      <th>Medicine</th>
-                      <th>Duration</th>
-                      <th>Reason</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>Calpol</td>
-                      <td>01/03/2018 -30/12/2020</td>
-                      <td>Headache</td>
-                    </tr>
-                    <tr>
-                      <td>Panadol</td>
-                      <td>01/03/2018 -30/12/2020</td>
-                      <td>Fever</td>
-                    </tr> <tr>
-                      <td>Solocip</td>
-                      <td>01/03/2018 -30/12/2020</td>
-                      <td>Antibacterial</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </tr>
-            </tbody>
-          </table>
+                </tr>
+                <tr>
+                  <td>Urdu</td>
+                  <td>Best</td>
+
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          {/* //////////////Allergy//////////////////////// */ }
+          <div className='row pl-7  col-12'>
+            <div className="font-weight-bold pl-5 text-nowrap p-2 col-4">Allergy</div>
+            <table className='table table-bordered col-lg-6 text-center m-3 '>
+              <thead className='thead-light'>
+                <tr className=' mb-2'>
+                  <th>Medicine</th>
+                  <th>Allergy level</th>
+                  <th>Allergy</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>calpol</td>
+                  <td>Acute</td>
+                  <td>Allergy</td>
+                </tr>
+                <tr>
+                  <td>Panadol</td>
+                  <td>Chronic</td>
+                  <td>Allergy</td>
+                </tr> <tr>
+                  <td>Solocip</td>
+                  <td>Acute</td>
+                  <td>Allergy</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          {/* /////////////medication//////////// */ }
+          <div className='row pl-7  col-12'>
+            <div className="font-weight-bold pl-5 text-nowrap p-2 col-4">Medication</div>
+            <table className='table table-bordered col-lg-6 text-center m-3'>
+              <thead className='thead-light'>
+                <tr className=' mb-2'>
+                  <th>Medicine</th>
+                  <th>Duration</th>
+                  <th>Reason</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>calpol</td>
+                  <td>01/03/2018 -30/12/2020</td>
+                  <td>Reason</td>
+                </tr>
+                <tr>
+                  <td>Panadol</td>
+                  <td>01/03/2018 -30/12/2020</td>
+                  <td>Reason</td>
+                </tr> <tr>
+                  <td>Solocip</td>
+                  <td>01/03/2018 -30/12/2020</td>
+                  <td>Reason</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
         </div>
         {/* end::Form */ }
       </form>

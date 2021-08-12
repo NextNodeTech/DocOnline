@@ -5,7 +5,6 @@ import { useFormik } from "formik";
 import * as Yup from "yup";
 // import { MDBFileInput } from "mdbreact";
 import { makeStyles } from '@material-ui/core/styles';
-import TextField from '@material-ui/core/TextField';
 import PropTypes from 'prop-types';
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
@@ -19,17 +18,7 @@ const useStyles = makeStyles(theme => ({
     },
 }));
 
-var KTBootstrapDaterangepicker = function () {
-    // Private functions
-    var demos = function () {
-        // minimum setup
-        ('#kt_daterangepicker_1, #kt_daterangepicker_1_modal').daterangepicker({
-            buttonClasses: ' btn',
-            applyClass: 'btn-primary',
-            cancelClass: 'btn-secondary'
-        })
-    }
-}
+
 
 
 export default function MedicalChart() {
@@ -311,7 +300,7 @@ export default function MedicalChart() {
                                     </div>
                                     <div className='col-12 mt-4 ml-1 row'>
                                         <div className="form-group row">
-                                            <label class=" col-form-label text-dark ">Upload Files:</label>
+                                            <label className=" col-form-label text-dark ">Upload Files:</label>
                                             <input type="file" className="form-control-file " id="exampleFormControlFile1" />
                                         </div>
                                     </div>
