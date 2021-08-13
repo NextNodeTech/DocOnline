@@ -4,11 +4,28 @@ import { Link } from "react-router-dom";
 import { useFormik } from "formik";
 // import * as Yup from "yup";
 // import { MDBFileInput } from "mdbreact";
+<<<<<<< Updated upstream
 // import { makeStyles } from '@material-ui/core/styles';
+=======
+import { makeStyles } from '@material-ui/core/styles';
+>>>>>>> Stashed changes
 import PropTypes from 'prop-types';
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 import Box from '@material-ui/core/Box';
+<<<<<<< Updated upstream
+=======
+const useStyles = makeStyles(theme => ({
+
+    textField: {
+        marginLeft: theme.spacing(3),
+        marginRight: theme.spacing(0),
+        // width: '30%',
+    },
+}));
+
+
+>>>>>>> Stashed changes
 
 
 export default function MedicalChart() {
