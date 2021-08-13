@@ -4,17 +4,11 @@ import { Link } from "react-router-dom";
 import { useFormik } from "formik";
 // import * as Yup from "yup";
 // import { MDBFileInput } from "mdbreact";
-<<<<<<< Updated upstream
-// import { makeStyles } from '@material-ui/core/styles';
-=======
 import { makeStyles } from '@material-ui/core/styles';
->>>>>>> Stashed changes
 import PropTypes from 'prop-types';
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 import Box from '@material-ui/core/Box';
-<<<<<<< Updated upstream
-=======
 const useStyles = makeStyles(theme => ({
 
     textField: {
@@ -25,13 +19,12 @@ const useStyles = makeStyles(theme => ({
 }));
 
 
->>>>>>> Stashed changes
 
 
 export default function MedicalChart() {
     const [value, setValue] = React.useState(0);
 
-    const handleChange = ( newValue) => {
+    const handleChange = (newValue) => {
         setValue(newValue);
     };
 
@@ -49,7 +42,7 @@ export default function MedicalChart() {
     const formik = useFormik({
         onSubmit: (values, { setStatus, setSubmitting }) => {
         },
-        onReset: ( { resetForm }) => {
+        onReset: ({ resetForm }) => {
             resetForm();
         },
     });

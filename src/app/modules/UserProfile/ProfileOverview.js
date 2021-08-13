@@ -122,7 +122,6 @@ function ProfileOverview(props) {
                 <tr>
                   <td>Urdu</td>
                   <td>Best</td>
-<<<<<<< Updated upstream
 
                 </tr>
               </tbody>
@@ -158,43 +157,6 @@ function ProfileOverview(props) {
             </table>
           </div>
 
-=======
-
-                </tr>
-              </tbody>
-            </table>
-          </div>
-          {/* //////////////Allergy//////////////////////// */ }
-          <div className='row pl-7  col-12'>
-            <div className="font-weight-bold pl-5 text-nowrap p-2 col-4">Allergy</div>
-            <table className='table table-bordered col-lg-6 text-center m-3 '>
-              <thead className='thead-light'>
-                <tr className=' mb-2'>
-                  <th>Medicine</th>
-                  <th>Allergy level</th>
-                  <th>Allergy</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>calpol</td>
-                  <td>Acute</td>
-                  <td>Allergy</td>
-                </tr>
-                <tr>
-                  <td>Panadol</td>
-                  <td>Chronic</td>
-                  <td>Allergy</td>
-                </tr> <tr>
-                  <td>Solocip</td>
-                  <td>Acute</td>
-                  <td>Allergy</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-
->>>>>>> Stashed changes
           {/* /////////////medication//////////// */ }
           <div className='row pl-7  col-12'>
             <div className="font-weight-bold pl-5 text-nowrap p-2 col-4">Medication</div>
