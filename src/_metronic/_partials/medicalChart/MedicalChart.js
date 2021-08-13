@@ -4,11 +4,8 @@ import { Link } from "react-router-dom";
 import { useFormik } from "formik";
 // import * as Yup from "yup";
 // import { MDBFileInput } from "mdbreact";
-<<<<<<< Updated upstream
-=======
 // import { makeStyles } from '@material-ui/core/styles';
 
->>>>>>> Stashed changes
 import { makeStyles } from '@material-ui/core/styles';
 import PropTypes from 'prop-types';
 import Tabs from '@material-ui/core/Tabs';
