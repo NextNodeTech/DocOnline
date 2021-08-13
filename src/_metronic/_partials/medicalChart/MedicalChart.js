@@ -1,8 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
-// import { useSelector, shallowEqual } from "react-redux";
+import { useSelector, shallowEqual, connect } from "react-redux";
 import { useFormik } from "formik";
-// import * as Yup from "yup";
+import * as Yup from "yup";
 // import { MDBFileInput } from "mdbreact";
 import { makeStyles } from '@material-ui/core/styles';
 import PropTypes from 'prop-types';
@@ -22,12 +22,48 @@ const useStyles = makeStyles(theme => ({
 
 
 export default function MedicalChart() {
+    const classes = useStyles();
+    const [loading, setloading] = useState(false);
+    const user = useSelector((state) => state.auth.user, shallowEqual);
     const [value, setValue] = React.useState(0);
 
-    const handleChange = (newValue) => {
+    const handleChange = (event, newValue) => {
         setValue(newValue);
     };
 
+    // Methods
+    const saveUser = (values, setStatus, setSubmitting) => {
+        setloading(true);
+        const updatedUser = Object.assign(user, values);
+        // user for update preparation
+        setTimeout(() => {
+            setloading(false);
+            setSubmitting(false);
+        }, 1000);
+    };
+    // UI Helpers
+    const initialValues = {
+        pic: user.pic,
+        firstname: user.firstname,
+        lastname: user.lastname,
+        companyName: user.companyName,
+        phone: user.phone,
+        email: user.email,
+        website: user.website,
+        address: user.addressLine,
+    };
+    const Schema = Yup.object().shape({
+        pic: Yup.string(),
+        firstname: Yup.string().required("First name is required"),
+        lastname: Yup.string().required("Last name is required"),
+        companyName: Yup.string(),
+        phone: Yup.string().required("Phone is required"),
+        address: Yup.string().required("Address is required"),
+        email: Yup.string()
+            .email("Wrong email format")
+            .required("Email is required"),
+        website: Yup.string(),
+    });
     const getInputClasses = (fieldname) => {
         if (formik.touched[fieldname] && formik.errors[fieldname]) {
             return "is-invalid";
@@ -40,9 +76,12 @@ export default function MedicalChart() {
         return "";
     };
     const formik = useFormik({
+        initialValues,
+        validationSchema: Schema,
         onSubmit: (values, { setStatus, setSubmitting }) => {
+            saveUser(values, setStatus, setSubmitting);
         },
-        onReset: ({ resetForm }) => {
+        onReset: (values, { resetForm }) => {
             resetForm();
         },
     });
@@ -126,7 +165,7 @@ export default function MedicalChart() {
                                         <div>
                                             <label>Medication Start Date</label>
                                             <div>
-                                                <input className="form-control form-control-lg form-control-solid" id="kt_daterangepicker_1" readOnly placeholder="Start date" type="text" />
+                                                <input type='text' className="form-control form-control-lg form-control-solid" id="kt_daterangepicker_1" readOnly placeholder="Start date" type="text" />
                                             </div>
                                         </div>
                                     </div>
@@ -134,7 +173,7 @@ export default function MedicalChart() {
                                         <div>
                                             <label>Medication End Date</label>
                                             <div>
-                                                <input className="form-control form-control-lg form-control-solid" id="kt_daterangepicker_1" readOnly placeholder="last date" type="text" />
+                                                <input type='text' className="form-control form-control-lg form-control-solid" id="kt_daterangepicker_1" readOnly placeholder="last date" type="text" />
                                             </div>
                                         </div>
                                     </div>

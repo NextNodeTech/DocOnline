@@ -11,10 +11,10 @@ function PersonaInformation(props) {
   const user = useSelector((state) => state.auth.user, shallowEqual);
 
   // Methods
-  const saveUser = (values, setSubmitting) => {
+  const saveUser = (values, setStatus, setSubmitting) => {
     loading(false);
     setLoading(true);
-    // const updatedUser = Object.assign(user, values);
+    const updatedUser = Object.assign(user, values);
     // user for update preparation
     setTimeout(() => {
       setLoading(false);
@@ -167,7 +167,6 @@ function PersonaInformation(props) {
                   <label className='col-form-label'> Date of Birth </label>
                   <div className='input-group date'>
                     <input
-                      readOnly
                       type='text'
                       className='form-control form-control-lg form-control-solid'
                       value='02-16-2012'

@@ -7,9 +7,9 @@ import { toAbsoluteUrl } from "../../../../_helpers";
 export function QuickSearch() {
   return (
     <>
-      {/* begin::Search Panel */}
+      {/* begin::Search Panel */ }
       <div id="kt_quick_search" className="offcanvas offcanvas-left p-10">
-        {/* begin::Header */}
+        {/* begin::Header */ }
         <div className="offcanvas-header d-flex align-items-center justify-content-between mb-5">
           <h3 className="font-weight-bold m-0">
             Search
@@ -25,16 +25,16 @@ export function QuickSearch() {
             <i className="ki ki-close icon-xs text-muted"></i>
           </a>
         </div>
-        {/* end::Header */}
+        {/* end::Header */ }
 
-        {/* begin::Content */}
+        {/* begin::Content */ }
         <div className="offcanvas-content">
-          {/* begin::Container */}
+          {/* begin::Container */ }
           <div
             className="quick-search quick-search-offcanvas quick-search-has-result"
             id="kt_quick_search_offcanvas"
           >
-            {/* begin::Form */}
+            {/* begin::Form */ }
             <form
               method="get"
               className="quick-search-form border-bottom pt-5 pb-1"
@@ -44,9 +44,9 @@ export function QuickSearch() {
                   <span className="input-group-text">
                     <span className="svg-icon svg-icon-lg">
                       <SVG
-                        src={toAbsoluteUrl(
+                        src={ toAbsoluteUrl(
                           "/media/svg/icons/General/Search.svg"
-                        )}
+                        ) }
                       />
                     </span>
                   </span>
@@ -54,7 +54,7 @@ export function QuickSearch() {
                 <input
                   type="text"
                   className="form-control "
-                  placeholder="Search..."
+                  placeholder="Search.."
                 />
                 <div className="input-group-append">
                   <span className="input-group-text">
@@ -63,25 +63,25 @@ export function QuickSearch() {
                 </div>
               </div>
             </form>
-            {/* end::Form */}
+            {/* end::Form */ }
 
-            {/* begin::Wrapper */}
+            {/* begin::Wrapper */ }
             <div className="quick-search-wrapper pt-5">
               <div className="quick-search-result">
-                {/* begin::Message */}
+                {/* begin::Message */ }
                 <div className="text-muted d-none">No record found</div>
-                {/* end::Message */}
+                {/* end::Message */ }
 
-                {/* begin::Section */}
+                {/* begin::Section */ }
                 <div className="font-size-sm text-primary font-weight-bolder text-uppercase mb-2">
                   Documents
                 </div>
                 <div className="mb-10">
-                  {/* begin::Item */}
+                  {/* begin::Item */ }
                   <div className="d-flex align-items-center flex-grow-1 mb-2">
                     <div className="symbol symbol-30 bg-transparent flex-shrink-0">
                       <div className="svg-icon">
-                        <SVG src={toAbsoluteUrl("/media/svg/files/doc.svg")} />
+                        <SVG src={ toAbsoluteUrl("/media/svg/files/doc.svg") } />
                       </div>
                     </div>
                     <div className="d-flex flex-column ml-3 mt-2 mb-2">
@@ -96,13 +96,13 @@ export function QuickSearch() {
                       </span>
                     </div>
                   </div>
-                  {/* end::Item */}
+                  {/* end::Item */ }
 
-                  {/* begin::Item */}
+                  {/* begin::Item */ }
                   <div className="d-flex align-items-center flex-grow-1 mb-2">
                     <div className="symbol symbol-30 bg-transparent flex-shrink-0">
                       <div className="svg-icon">
-                        <SVG src={toAbsoluteUrl("/media/svg/files/pdf.svg")} />
+                        <SVG src={ toAbsoluteUrl("/media/svg/files/pdf.svg") } />
                       </div>
                     </div>
                     <div className="d-flex flex-column ml-3 mt-2 mb-2">
@@ -117,13 +117,13 @@ export function QuickSearch() {
                       </span>
                     </div>
                   </div>
-                  {/* end::Item */}
+                  {/* end::Item */ }
 
-                  {/* begin::Item */}
+                  {/* begin::Item */ }
                   <div className="d-flex align-items-center flex-grow-1 mb-2">
                     <div className="symbol symbol-30 bg-transparent flex-shrink-0">
                       <div className="svg-icon">
-                        <SVG src={toAbsoluteUrl("/media/svg/files/xml.svg")} />
+                        <SVG src={ toAbsoluteUrl("/media/svg/files/xml.svg") } />
                       </div>
                     </div>
                     <div className="d-flex flex-column ml-3 mt-2 mb-2">
@@ -138,13 +138,13 @@ export function QuickSearch() {
                       </span>
                     </div>
                   </div>
-                  {/* end::Item */}
+                  {/* end::Item */ }
 
-                  {/* begin::Item */}
+                  {/* begin::Item */ }
                   <div className="d-flex align-items-center flex-grow-1 mb-2">
                     <div className="symbol symbol-30 bg-transparent flex-shrink-0">
                       <div className="svg-icon">
-                        <SVG src={toAbsoluteUrl("/media/svg/files/csv.svg")} />
+                        <SVG src={ toAbsoluteUrl("/media/svg/files/csv.svg") } />
                       </div>
                     </div>
                     <div className="d-flex flex-column ml-3 mt-2 mb-2">
@@ -159,11 +159,11 @@ export function QuickSearch() {
                       </span>
                     </div>
                   </div>
-                  {/* end::Item */}
+                  {/* end::Item */ }
                 </div>
-                {/* end::Section */}
+                {/* end::Section */ }
 
-                {/* begin::Section */}
+                {/* begin::Section */ }
                 <div className="font-size-sm text-primary font-weight-bolder text-uppercase mb-2">
                   Members
                 </div>
@@ -172,11 +172,11 @@ export function QuickSearch() {
                     <div className="symbol symbol-30 flex-shrink-0">
                       <div
                         className="symbol-label"
-                        style={{
+                        style={ {
                           backgroundImage: `url("${toAbsoluteUrl(
                             "/media/users/300_20.jpg"
                           )}")`,
-                        }}
+                        } }
                       />
                     </div>
                     <div className="d-flex flex-column ml-3 mt-2 mb-2">
@@ -195,11 +195,11 @@ export function QuickSearch() {
                     <div className="symbol symbol-30 flex-shrink-0">
                       <div
                         className="symbol-label"
-                        style={{
+                        style={ {
                           backgroundImage: `url("${toAbsoluteUrl(
                             "/media/users/300_15.jpg"
                           )}")`,
-                        }}
+                        } }
                       />
                     </div>
                     <div className="d-flex flex-column ml-3 mt-2 mb-2">
@@ -218,11 +218,11 @@ export function QuickSearch() {
                     <div className="symbol symbol-30 flex-shrink-0">
                       <div
                         className="symbol-label"
-                        style={{
+                        style={ {
                           backgroundImage: `url("${toAbsoluteUrl(
                             "/media/users/300_12.jpg"
                           )}")`,
-                        }}
+                        } }
                       />
                     </div>
                     <div className="d-flex flex-column ml-3 mt-2 mb-2">
@@ -241,11 +241,11 @@ export function QuickSearch() {
                     <div className="symbol symbol-30 flex-shrink-0">
                       <div
                         className="symbol-label"
-                        style={{
+                        style={ {
                           backgroundImage: `url("${toAbsoluteUrl(
                             "/media/users/300_16.jpg"
                           )}")`,
-                        }}
+                        } }
                       />
                     </div>
                     <div className="d-flex flex-column ml-3 mt-2 mb-2">
@@ -261,9 +261,9 @@ export function QuickSearch() {
                     </div>
                   </div>
                 </div>
-                {/* end::Section */}
+                {/* end::Section */ }
 
-                {/* begin::Section */}
+                {/* begin::Section */ }
                 <div className="font-size-sm text-primary font-weight-bolder text-uppercase mb-2">
                   Files
                 </div>
@@ -341,16 +341,16 @@ export function QuickSearch() {
                     </div>
                   </div>
                 </div>
-                {/* end::Section */}
+                {/* end::Section */ }
               </div>
             </div>
-            {/* end::Wrapper */}
+            {/* end::Wrapper */ }
           </div>
-          {/* end::Container */}
+          {/* end::Container */ }
         </div>
-        {/* end::Content */}
+        {/* end::Content */ }
       </div>
-      {/* end::Search Panel */}
+      {/* end::Search Panel */ }
     </>
   );
 }

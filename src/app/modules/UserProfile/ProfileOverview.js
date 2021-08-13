@@ -15,7 +15,7 @@ function ProfileOverview(props) {
   const saveUser = (values, setStatus, setSubmitting) => {
     loading(false);
     setLoading(true);
-    // const updatedUser = Object.assign(user, values);
+    const updatedUser = Object.assign(user, values);
     // user for update preparation
     setTimeout(() => {
       setLoading(false);
@@ -45,6 +45,17 @@ function ProfileOverview(props) {
       .required("Email is required"),
     website: Yup.string(),
   });
+  const getInputClasses = (fieldname) => {
+    if (formik.touched[fieldname] && formik.errors[fieldname]) {
+      return "is-invalid";
+    }
+
+    if (formik.touched[fieldname] && !formik.errors[fieldname]) {
+      return "is-valid";
+    }
+
+    return "";
+  };
   const formik = useFormik({
     initialValues,
     validationSchema: Schema,
@@ -106,7 +117,19 @@ function ProfileOverview(props) {
           {/* //////languages ////////////// */ }
           <div className='row pl-7  col-12'>
             <div className="font-weight-bold pl-5 text-nowrap p-2 col-4">Languages</div>
-            <table className='table table-bordered col-lg-6  m-3 text-center '>
+            <div className='col-4 '>
+              <div className='text-hover-primary cursor-pointer p-1'>English</div>
+              <div class="progress">
+                <div class="progress-bar bg-primary" role="progressbar" style={ { width: "50%" } } aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">Good</div>
+              </div>
+
+              <div className='text-hover-primary cursor-pointer p-1'>Urdu</div>
+              <div class="progress">
+                <div class="progress-bar bg-success" role="progressbar" style={ { width: "80%" } } aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">Best</div>
+              </div>
+            </div>
+
+            {/* <table className='table table-bordered col-lg-6  m-3 text-center '>
               <thead className='thead-light'>
                 <tr className=' mb-2'>
                   <th>Language</th>
@@ -125,7 +148,7 @@ function ProfileOverview(props) {
 
                 </tr>
               </tbody>
-            </table>
+            </table> */}
           </div>
           {/* //////////////Allergy//////////////////////// */ }
           <div className='row pl-7  col-12'>

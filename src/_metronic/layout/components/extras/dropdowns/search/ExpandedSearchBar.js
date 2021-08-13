@@ -6,14 +6,14 @@ import SearchIcon from "@material-ui/icons/Search";
 const useStyles = makeStyles((theme) => ({
   search: {
     display: "flex",
-    position: "relative",
-    borderRadius: theme.shape.borderRadius,
-    marginLeft: 0,
-    width: "100%",
-    [theme.breakpoints.up("sm")]: {
-      marginLeft: theme.spacing(1),
-      width: "auto",
-    },
+    // position: "relative",
+    // borderRadius: theme.shape.borderRadius,
+    // paddigRight: '50%',
+    // width: "100%",
+    // [theme.breakpoints.up("sm")]: {
+    //   marginLeft: theme.spacing(1),
+    //   width: "auto",
+    // },
   },
   searchIcon: {
     padding: theme.spacing(0, 2),
@@ -26,8 +26,8 @@ const useStyles = makeStyles((theme) => ({
   },
   inputRoot: {
     color: "inherit",
-},
-inputInput: {
+  },
+  inputInput: {
     maxWidth: '600px',
     padding: theme.spacing(1, 1, 1, 0),
     // vertical padding + font size from searchIcon
@@ -47,18 +47,19 @@ export default function ExpandedSearchBar() {
   const classes = useStyles();
 
   return (
-    <div className={classes.search}>
-      <div className={classes.searchIcon}>
-        <SearchIcon style={{color: '#3699FF'}} />
+    <div className={ classes.search }>
+      <div className={ classes.searchIcon }>
+        <SearchIcon style={ { color: '#3699FF' } } />
       </div>
       <InputBase
         placeholder='Search…'
-        classes={{
+        classes={ {
           root: classes.inputRoot,
           input: classes.inputInput,
-        }}
-        inputProps={{ "aria-label": "search" }}
+        } }
+        inputProps={ { "aria-label": "search" } }
       />
     </div>
+
   );
 }
