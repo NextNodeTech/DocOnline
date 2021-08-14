@@ -9,6 +9,7 @@ import { useHtmlClassService } from "../../../_core/MetronicLayout";
 import { toAbsoluteUrl } from "../../../../_helpers";
 import { DropdownTopbarItemToggler } from "../../../../_partials/dropdowns";
 import "./messageStyles.css";
+import ProfilePic from './300_21.jpg'
 export function MessageDropdown() {
   // const bgImage = toAbsoluteUrl("/media/misc/bg-2.jpg");
   const uiService = useHtmlClassService();
@@ -176,7 +177,7 @@ export function MessageDropdown() {
                       <div className="d-flex flex-column mb-5 align-items-start">
                         <div className="d-flex align-items-center">
                           <div className="symbol symbol-circle symbol-40 mr-3">
-                            <img alt="Pic" src="public/media/users/300_20.jpg" />
+                            <img alt="Pic" src={ProfilePic} />
                           </div>
                           <div>
                             <a href="#" className="text-dark-75 text-hover-primary font-weight-bold font-size-h6">Matt Pears</a>
@@ -194,7 +195,7 @@ export function MessageDropdown() {
                             <a href="#" className="text-dark-75 text-hover-primary font-weight-bold font-size-h6">You</a>
                           </div>
                           <div className="symbol symbol-circle symbol-40 ml-3">
-                            <img alt="Pic" src="assets/media/users/300_21.jpg" />
+                            <img alt="Pic" src={ProfilePic} />
                           </div>
                         </div>
                         <div className="mt-2 rounded p-5 bg-light-primary text-dark-50 font-weight-bold font-size-lg text-right max-w-400px">Hey there, we’re just writing to let you know that you’ve been subscribed to a repository on GitHub.</div>
@@ -204,7 +205,7 @@ export function MessageDropdown() {
                       <div className="d-flex flex-column mb-5 align-items-start">
                         <div className="d-flex align-items-center">
                           <div className="symbol symbol-circle symbol-40 mr-3">
-                            <img alt="Pic" src="assets/media/users/300_21.jpg" />
+                          <img alt="Pic" src={ProfilePic} />
                           </div>
                           <div>
                             <a href="#" className="text-dark-75 text-hover-primary font-weight-bold font-size-h6">Matt Pears</a>
@@ -222,7 +223,7 @@ export function MessageDropdown() {
                             <a href="#" className="text-dark-75 text-hover-primary font-weight-bold font-size-h6">You</a>
                           </div>
                           <div className="symbol symbol-circle symbol-40 ml-3">
-                            <img alt="Pic" src="assets/media/users/300_21.jpg" />
+                          <img alt="Pic" src={ProfilePic} />
                           </div>
                         </div>
                         <div className="mt-2 rounded p-5 bg-light-primary text-dark-50 font-weight-bold font-size-lg text-right max-w-400px">You’ll receive notifications for all issues, pull requests!</div>
@@ -251,7 +252,7 @@ export function MessageDropdown() {
                             <a href="#" className="text-dark-75 text-hover-primary font-weight-bold font-size-h6">You</a>
                           </div>
                           <div className="symbol symbol-circle symbol-40 ml-3">
-                            <img alt="Pic" src="assets/media/users/300_21.jpg" />
+                          <img alt="Pic" src={ProfilePic} />
                           </div>
                         </div>
                         <div className="mt-2 rounded p-5 bg-light-primary text-dark-50 font-weight-bold font-size-lg text-right max-w-400px">Discover what students who viewed Learn Figma - UI/UX Design. Essential Training also viewed</div>
@@ -279,7 +280,7 @@ export function MessageDropdown() {
                             <a href="#" className="text-dark-75 text-hover-primary font-weight-bold font-size-h6">You</a>
                           </div>
                           <div className="symbol symbol-circle symbol-40 ml-3">
-                            <img alt="Pic" src="assets/media/users/300_21.jpg" />
+                          <img alt="Pic" src={ProfilePic} />
                           </div>
                         </div>
                         <div className="mt-2 rounded p-5 bg-light-primary text-dark-50 font-weight-bold font-size-lg text-right max-w-400px">Company BBQ to celebrate the last quater achievements and goals. Food and drinks provided</div>

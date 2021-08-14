@@ -108,13 +108,13 @@ function ProfileOverview(props) {
             <div className="font-weight-bold pl-5 text-nowrap p-2 col-4">Languages</div>
             <div className='col-4 '>
               <div className='text-hover-primary cursor-pointer p-1'>English</div>
-              <div class="progress">
-                <div class="progress-bar bg-primary" role="progressbar" style={ { width: "50%" } } aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">Good</div>
+              <div className="progress">
+                <div className="progress-bar bg-primary" role="progressbar" style={ { width: "50%" } } aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">Good</div>
               </div>
 
               <div className='text-hover-primary cursor-pointer p-1'>Urdu</div>
-              <div class="progress">
-                <div class="progress-bar bg-success" role="progressbar" style={ { width: "80%" } } aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">Best</div>
+              <div className="progress">
+                <div className="progress-bar bg-success" role="progressbar" style={ { width: "80%" } } aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">Best</div>
               </div>
             </div>
 
