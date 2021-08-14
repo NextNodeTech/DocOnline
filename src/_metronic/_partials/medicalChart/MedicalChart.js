@@ -1,29 +1,16 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { useSelector, shallowEqual, connect } from "react-redux";
+import { useSelector, shallowEqual } from "react-redux";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 // import { MDBFileInput } from "mdbreact";
-import { makeStyles } from '@material-ui/core/styles';
 import PropTypes from 'prop-types';
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 import Box from '@material-ui/core/Box';
-const useStyles = makeStyles(theme => ({
-
-    textField: {
-        marginLeft: theme.spacing(3),
-        marginRight: theme.spacing(0),
-        // width: '30%',
-    },
-}));
-
-
-
 
 export default function MedicalChart() {
-    const classes = useStyles();
-    const [loading, setloading] = useState(false);
+    const [loading, setLoading] = useState(false);
     const user = useSelector((state) => state.auth.user, shallowEqual);
     const [value, setValue] = React.useState(0);
 
@@ -32,12 +19,13 @@ export default function MedicalChart() {
     };
 
     // Methods
-    const saveUser = (values, setStatus, setSubmitting) => {
-        setloading(true);
-        const updatedUser = Object.assign(user, values);
+    const saveUser = (values, setSubmitting) => {
+        loading(false);
+        setLoading(true);
+        // const updatedUser = Object.assign(user, values);
         // user for update preparation
         setTimeout(() => {
-            setloading(false);
+            setLoading(false);
             setSubmitting(false);
         }, 1000);
     };
@@ -165,7 +153,7 @@ export default function MedicalChart() {
                                         <div>
                                             <label>Medication Start Date</label>
                                             <div>
-                                                <input type='text' className="form-control form-control-lg form-control-solid" id="kt_daterangepicker_1" readOnly placeholder="Start date" type="text" />
+                                                <input type='text' className="form-control form-control-lg form-control-solid" readOnly placeholder="Start date" />
                                             </div>
                                         </div>
                                     </div>
@@ -173,7 +161,7 @@ export default function MedicalChart() {
                                         <div>
                                             <label>Medication End Date</label>
                                             <div>
-                                                <input type='text' className="form-control form-control-lg form-control-solid" id="kt_daterangepicker_1" readOnly placeholder="last date" type="text" />
+                                                <input type='text' className="form-control form-control-lg form-control-solid" readOnly placeholder="last date" />
                                             </div>
                                         </div>
                                     </div>

@@ -37,11 +37,11 @@ export function Topbar() {
 
   return (
     <>
-      <div class="input-group rounded m-auto">
-        <input type="search" class="form-control rounded" placeholder="Search..." aria-label="Search"
+      <div className="input-group rounded m-auto">
+        <input type="search" className="form-control rounded" placeholder="Search..." aria-label="Search"
           aria-describedby="search-addon" />
-        <span class="input-group-text border-0" id="search-addon" style={ { background: "#c9f7f5" } }>
-          <i class="fas fa-search"></i>
+        <span className="input-group-text border-0" id="search-addon" style={ { background: "#c9f7f5" } }>
+          <i className="fas fa-search"></i>
         </span>
       </div>
       <div className="topbar">

@@ -15,7 +15,7 @@ function ProfileOverview(props) {
   const saveUser = (values, setStatus, setSubmitting) => {
     loading(false);
     setLoading(true);
-    const updatedUser = Object.assign(user, values);
+    // const updatedUser = Object.assign(user, values);
     // user for update preparation
     setTimeout(() => {
       setLoading(false);
@@ -45,17 +45,6 @@ function ProfileOverview(props) {
       .required("Email is required"),
     website: Yup.string(),
   });
-  const getInputClasses = (fieldname) => {
-    if (formik.touched[fieldname] && formik.errors[fieldname]) {
-      return "is-invalid";
-    }
-
-    if (formik.touched[fieldname] && !formik.errors[fieldname]) {
-      return "is-valid";
-    }
-
-    return "";
-  };
   const formik = useFormik({
     initialValues,
     validationSchema: Schema,

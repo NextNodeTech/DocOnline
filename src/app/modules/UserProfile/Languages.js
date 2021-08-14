@@ -42,7 +42,7 @@ function Languages(props) {
   useEffect(() => { }, [user]);
 
   // Methods
-  const saveUser = (values, setStatus, setSubmitting) => {
+  const saveUser = (values, setSubmitting) => {
     setloading(true);
     const updatedUser = Object.assign(user, {
       name: values.name,
@@ -75,24 +75,13 @@ function Languages(props) {
     communicationSMS: Yup.bool(),
     communicationPhone: Yup.bool(),
   });
-  const getInputClasses = (fieldname) => {
-    if (formik.touched[fieldname] && formik.errors[fieldname]) {
-      return "is-invalid";
-    }
-
-    if (formik.touched[fieldname] && !formik.errors[fieldname]) {
-      return "is-valid";
-    }
-
-    return "";
-  };
   const formik = useFormik({
     initialValues,
     validationSchema: Schema,
     onSubmit: (values, { setStatus, setSubmitting }) => {
       saveUser(values, setStatus, setSubmitting);
     },
-    onReset: (values, { resetForm }) => {
+    onReset: ({ resetForm }) => {
       resetForm();
     },
   });

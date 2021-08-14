@@ -1,14 +1,16 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
-import { useSelector, shallowEqual, useDispatch } from "react-redux";
+import { useSelector, shallowEqual, 
+  // useDispatch
+ } from "react-redux";
 import SVG from "react-inlinesvg";
 import { toAbsoluteUrl } from "../../../../_metronic/_helpers";
 
 export function ProfileCard() {
   const user = useSelector(({ auth }) => auth.user, shallowEqual);
   const [pic, setPic] = useState("");
-  const dispatch = useDispatch();
+  // const dispatch = useDispatch();
   useEffect(() => {
     if (user.pic) {
       setPic(user.pic);

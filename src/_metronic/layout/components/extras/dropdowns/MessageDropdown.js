@@ -10,7 +10,7 @@ import { toAbsoluteUrl } from "../../../../_helpers";
 import { DropdownTopbarItemToggler } from "../../../../_partials/dropdowns";
 import "./messageStyles.css";
 export function MessageDropdown() {
-  const bgImage = toAbsoluteUrl("/media/misc/bg-2.jpg");
+  // const bgImage = toAbsoluteUrl("/media/misc/bg-2.jpg");
   const uiService = useHtmlClassService();
   const layoutProps = useMemo(() => {
     return {
