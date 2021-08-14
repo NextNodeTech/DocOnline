@@ -73,7 +73,6 @@ function ProfileOverview(props) {
             </span>
           </div>
         </div>
-
         {/* end::Header */ }
         {/* begin::Form */ }
         <div>
@@ -103,45 +102,50 @@ function ProfileOverview(props) {
               <div className=''>152 Reiman Street, Paulo Alto Road, Paulo Alto, USA. </div>
             </div>
           </div>
+          {/* begin::Language Header */ }
+          <div position='sticky' className='card-header py-3  card-sticky'>
+            <div className='align-items-start flex-column pb-2'>
+              <h3 className='card-label font-weight-bolder text-dark'>
+                Languages
+              </h3>
+              <span className='text-muted font-weight-bold font-size-sm mt-1'>
+                Spoken Languages
+              </span>
+            </div>
+          </div>
+          {/* end::Language Header */ }
           {/* //////languages ////////////// */ }
-          <div className='row pl-7  col-12'>
-            <div className="font-weight-bold pl-5 text-nowrap p-2 col-4">Languages</div>
-            <div className='col-4 '>
-              <div className='text-hover-primary cursor-pointer p-1'>English</div>
-              <div className="progress">
-                <div className="progress-bar bg-primary" role="progressbar" style={ { width: "50%" } } aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">Good</div>
-              </div>
-
+          <div className='row pl-7  col-12 pt-5 pb-10'>
+            <div className='col-4'>
               <div className='text-hover-primary cursor-pointer p-1'>Urdu</div>
               <div className="progress">
                 <div className="progress-bar bg-success" role="progressbar" style={ { width: "80%" } } aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">Best</div>
               </div>
+              <div className='text-hover-primary cursor-pointer p-1'>English</div>
+              <div className="progress">
+                <div className="progress-bar bg-primary" role="progressbar" style={ { width: "50%" } } aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">Good</div>
+              </div>
+              <div className='text-hover-primary cursor-pointer p-1'>Chineese</div>
+              <div className="progress">
+                <div className="progress-bar bg-warning" role="progressbar" style={ { width: "30%" } } aria-valuenow="30" aria-valuemin="0" aria-valuemax="100">Low</div>
+              </div>
             </div>
 
-            {/* <table className='table table-bordered col-lg-6  m-3 text-center '>
-              <thead className='thead-light'>
-                <tr className=' mb-2'>
-                  <th>Language</th>
-                  <th> level</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>English</td>
-                  <td>Good</td>
-
-                </tr>
-                <tr>
-                  <td>Urdu</td>
-                  <td>Best</td>
-
-                </tr>
-              </tbody>
-            </table> */}
           </div>
+          {/* begin::Allergy Header */ }
+          <div position='sticky' className='card-header py-3  card-sticky'>
+            <div className='align-items-start flex-column pb-2'>
+              <h3 className='card-label font-weight-bolder text-dark'>
+                Allergy
+              </h3>
+              <span className='text-muted font-weight-bold font-size-sm mt-1'>
+                Condition of Allegries
+              </span>
+            </div>
+          </div>
+          {/* end::Allergy Header */ }
           {/* //////////////Allergy//////////////////////// */ }
-          <div className='row pl-7  col-12'>
-            <div className="font-weight-bold pl-5 text-nowrap p-2 col-4">Allergy</div>
+          <div className='row pl-7  col-12 pt-5 pb-10'>
             <table className='table table-bordered col-lg-6 text-center m-3 '>
               <thead className='thead-light'>
                 <tr className=' mb-2'>
@@ -168,10 +172,20 @@ function ProfileOverview(props) {
               </tbody>
             </table>
           </div>
-
+          {/* begin::Medication Header */ }
+          <div position='sticky' className='card-header py-3  card-sticky'>
+            <div className='align-items-start flex-column pb-2'>
+              <h3 className='card-label font-weight-bolder text-dark'>
+                Medication
+              </h3>
+              <span className='text-muted font-weight-bold font-size-sm mt-1'>
+                 Recommended Medications
+              </span>
+            </div>
+          </div>
+          {/* end::Medication Header */ }
           {/* /////////////medication//////////// */ }
-          <div className='row pl-7  col-12'>
-            <div className="font-weight-bold pl-5 text-nowrap p-2 col-4">Medication</div>
+          <div className='row pl-7  col-12 pt-5 pb-10'>
             <table className='table table-bordered col-lg-6 text-center m-3'>
               <thead className='thead-light'>
                 <tr className=' mb-2'>
