@@ -3,34 +3,25 @@ import { Link } from "react-router-dom";
 import { useSelector, shallowEqual } from "react-redux";
 import { useFormik } from "formik";
 import * as Yup from "yup";
-import { makeStyles } from '@material-ui/core/styles';
 import TextField from '@material-ui/core/TextField';
-
+import AdapterDateFns from '@material-ui/lab/AdapterDateFns';
+import LocalizationProvider from '@material-ui/lab/LocalizationProvider';
+import DatePicker from '@material-ui/lab/DatePicker';
+import MobileDatePicker from '@material-ui/lab/MobileDatePicker';
+import DesktopDatePicker from '@material-ui/lab/DesktopDatePicker';
+import Stack from '@material-ui/core/Stack';
+// import { MDBFileInput } from "mdbreact";
 import PropTypes from 'prop-types';
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 import Box from '@material-ui/core/Box';
 
-const useStyles = makeStyles((theme) => ({
-    container: {
-        marginTop: '20px',
-        justifyContent: 'center',
-        display: 'flex',
-        flexWrap: 'wrap',
-    },
-    textField: {
-        marginLeft: theme.spacing(1),
-        background: '#F3F6F9',
-        marginRight: theme.spacing(1),
-        width: 265,
-    },
-}));
-
 export default function MedicalChart() {
+    const [valueDate, setValueDate] = React.useState(new Date());
     const [loading, setLoading] = useState(false);
     const user = useSelector((state) => state.auth.user, shallowEqual);
     const [value, setValue] = React.useState(0);
-    const classes = useStyles();
+
     const handleChange = (event, newValue) => {
         setValue(newValue);
     };
@@ -167,36 +158,30 @@ export default function MedicalChart() {
                                         ) : null }
                                     </div>
                                     <div className='col-xl-4 col-lg-4 col-md-4 mt-3'>
-                                        <form className={ classes.container } noValidate>
-                                            <TextField
+                                        <LocalizationProvider dateAdapter={ AdapterDateFns }>
+                                            <Stack spacing={ 3 }>
 
-                                                id="date"
-                                                variant="outlined"
-                                                label="Start Date"
-                                                type="date"
-                                                defaultValue=" "
-                                                className={ classes.textField }
-                                                InputLabelProps={ {
-                                                    shrink: true,
-                                                } }
-                                            />
-                                        </form>
+                                                <DatePicker
+                                                    disableFuture
+                                                    label="Responsive"
+                                                    openTo="year"
+                                                    views={ ['year', 'month', 'day'] }
+                                                    valueDate={ value }
+                                                    onChange={ (newValue) => {
+                                                        setValueDate(newValue);
+                                                    } }
+                                                    renderInput={ (params) => <TextField { ...params } /> }
+                                                />
+                                            </Stack>
+                                        </LocalizationProvider>
                                     </div>
                                     <div className='col-xl-4 col-lg-4 col-md-4 mt-3'>
-                                        <form className={ classes.container } noValidate>
-                                            <TextField
-
-                                                id="date"
-                                                variant="outlined"
-                                                label="Last Date"
-                                                type="date"
-                                                defaultValue=""
-                                                className={ classes.textField }
-                                                InputLabelProps={ {
-                                                    shrink: true,
-                                                } }
-                                            />
-                                        </form>
+                                        <div>
+                                            <label>Medication End Date</label>
+                                            <div>
+                                                <input type='text' className="form-control form-control-lg form-control-solid" readOnly placeholder="last date" />
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                                 <div className='form-group row'>
@@ -304,23 +289,20 @@ export default function MedicalChart() {
                                             </div>
                                         ) : null }
                                     </div>
-                                    <div className='col-xl-4 col-lg-4 col-md-4 mt-3'>
-
-                                        <form className={ classes.container } noValidate>
-                                            <TextField
-
-                                                id="date"
-                                                variant="outlined"
-                                                label="Date of Report"
-                                                type="date"
-                                                defaultValue=" "
-                                                className={ classes.textField }
-                                                InputLabelProps={ {
-                                                    shrink: true,
-                                                } }
-                                            />
-                                        </form>
-
+                                    <div className='col-xl-4 col-lg-4 col-md-4'>
+                                        <div>
+                                            <label className='col-form-label'> Date of Report </label>
+                                            <div className='input-group date'>
+                                                <input
+                                                    type='text'
+                                                    className='form-control form-control-lg form-control-solid'
+                                                    value='02-16-2012'
+                                                />
+                                                <div className='input-group-addon'>
+                                                    <span className='glyphicon glyphicon-th'></span>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                     <div className='col-12 mt-4 ml-1 row'>
                                         <div className="form-group row">

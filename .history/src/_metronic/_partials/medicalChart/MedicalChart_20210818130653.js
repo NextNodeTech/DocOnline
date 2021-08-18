@@ -304,23 +304,23 @@ export default function MedicalChart() {
                                             </div>
                                         ) : null }
                                     </div>
-                                    <div className='col-xl-4 col-lg-4 col-md-4 mt-3'>
+                                    <div className='col-xl-4 col-lg-4 col-md-4'>
+                                        <div>
+                                            <form className={ classes.container } noValidate>
+                                                <TextField
 
-                                        <form className={ classes.container } noValidate>
-                                            <TextField
-
-                                                id="date"
-                                                variant="outlined"
-                                                label="Date of Report"
-                                                type="date"
-                                                defaultValue=" "
-                                                className={ classes.textField }
-                                                InputLabelProps={ {
-                                                    shrink: true,
-                                                } }
-                                            />
-                                        </form>
-
+                                                    id="date"
+                                                    variant="outlined"
+                                                    label="Date of Report"
+                                                    type="date"
+                                                    defaultValue=" "
+                                                    className={ classes.textField }
+                                                    InputLabelProps={ {
+                                                        shrink: true,
+                                                    } }
+                                                />
+                                            </form>
+                                        </div>
                                     </div>
                                     <div className='col-12 mt-4 ml-1 row'>
                                         <div className="form-group row">

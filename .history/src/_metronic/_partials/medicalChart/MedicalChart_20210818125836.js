@@ -22,7 +22,7 @@ const useStyles = makeStyles((theme) => ({
         marginLeft: theme.spacing(1),
         background: '#F3F6F9',
         marginRight: theme.spacing(1),
-        width: 265,
+        width: 200,
     },
 }));
 
@@ -166,7 +166,7 @@ export default function MedicalChart() {
                                             </div>
                                         ) : null }
                                     </div>
-                                    <div className='col-xl-4 col-lg-4 col-md-4 mt-3'>
+                                    <div className='col-xl-5 col-lg-5 col-md-5 mt-3'>
                                         <form className={ classes.container } noValidate>
                                             <TextField
 
@@ -304,23 +304,20 @@ export default function MedicalChart() {
                                             </div>
                                         ) : null }
                                     </div>
-                                    <div className='col-xl-4 col-lg-4 col-md-4 mt-3'>
-
-                                        <form className={ classes.container } noValidate>
-                                            <TextField
-
-                                                id="date"
-                                                variant="outlined"
-                                                label="Date of Report"
-                                                type="date"
-                                                defaultValue=" "
-                                                className={ classes.textField }
-                                                InputLabelProps={ {
-                                                    shrink: true,
-                                                } }
-                                            />
-                                        </form>
-
+                                    <div className='col-xl-4 col-lg-4 col-md-4'>
+                                        <div>
+                                            <label className='col-form-label'> Date of Report </label>
+                                            <div className='input-group date'>
+                                                <input
+                                                    type='text'
+                                                    className='form-control form-control-lg form-control-solid'
+                                                    value='02-16-2012'
+                                                />
+                                                <div className='input-group-addon'>
+                                                    <span className='glyphicon glyphicon-th'></span>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                     <div className='col-12 mt-4 ml-1 row'>
                                         <div className="form-group row">
