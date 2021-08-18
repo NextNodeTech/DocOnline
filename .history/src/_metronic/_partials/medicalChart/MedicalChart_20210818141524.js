@@ -24,7 +24,6 @@ const useStyles = makeStyles((theme) => ({
         background: '#F3F6F9',
         marginRight: theme.spacing(0),
         width: 265,
-        // height: '40px !important'
     },
 }));
 

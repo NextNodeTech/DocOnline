@@ -194,8 +194,7 @@ function ChangePassword(props) {
                 </div>
               ) : null }
             </div>
-
-            <div className="card-footer text-right mt-5">
+            <div className="card-footer text-right">
               <button
                 type="submit"
                 className="btn btn-success mr-2"

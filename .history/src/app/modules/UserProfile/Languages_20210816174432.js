@@ -87,10 +87,10 @@ function Languages(props) {
   });
 
   return (
-    <form className='card card-custom' onSubmit={ formik.handleSubmit }>
-      { loading && <ModalProgressBar /> }
+    <form className='card card-custom' onSubmit={formik.handleSubmit}>
+      {loading && <ModalProgressBar />}
 
-      {/* begin::Header */ }
+      {/* begin::Header */}
       <div className='card-header py-3'>
         <div className='card-title align-items-start flex-column ml-3'>
           <h3 className='card-label font-weight-bolder text-dark'>Languages</h3>
@@ -100,8 +100,8 @@ function Languages(props) {
         </div>
 
       </div>
-      {/* end::Header */ }
-      {/* begin::Form */ }
+      {/* end::Header */}
+      {/* begin::Form */}
 
       <div className="form-group row fv-plugins-icon-container mt-7 p-12 align-items-center">
         <div className="col-xl-4 col-lg-4 col-md-4">
@@ -168,20 +168,20 @@ function Languages(props) {
           <div className="fv-plugins-message-container"></div></div>
       </div>
       <div className="ml-5" >
-        <List className={ classes.root } subheader={ <li /> }>
-          <li className={ classes.listSection }>
-            <div style={ { display: 'flex', paddingLeft: '25px', paddingBottom: '10px' } }>
+        <List className={classes.root} subheader={<li />}>
+          <li className={classes.listSection}>
+            <div style={{ display: 'flex', paddingLeft: '25px', paddingBottom: '10px' }}>
               <LabelIcon /><ul>English</ul>
-              <div style={ { paddingLeft: '10px' } }>(Good)</div>
+              <div style={{ paddingLeft: '10px' }}>(Good)</div>
             </div>
-            <div style={ { display: 'flex', paddingLeft: '25px', paddingBottom: '10px' } }>
+            <div style={{ display: 'flex', paddingLeft: '25px', paddingBottom: '10px' }}>
               <LabelIcon /><ul>Chineese</ul>
-              <div style={ { paddingLeft: '10px' } }>(Normal)</div>
+              <div style={{ paddingLeft: '10px' }}>(Normal)</div>
             </div>
           </li>
         </List>
       </div>
-      <div className='card-footer text-right col-12 p-4 mb-10 pr-12'>
+      <div className='card-toolbar text-right col-12 p-4 mb-10 pr-12'>
         <button
           type='submit'
           className='btn btn-success mr-2 '
@@ -190,7 +190,7 @@ function Languages(props) {
           }
         >
           Save Changes
-          { formik.isSubmitting }
+          {formik.isSubmitting}
         </button>
         <Link
           to='/user-profile/profile-overview'

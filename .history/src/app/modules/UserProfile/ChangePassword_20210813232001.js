@@ -83,10 +83,10 @@ function ChangePassword(props) {
   });
 
   return (
-    <form className="card card-custom" onSubmit={ formik.handleSubmit }>
-      { loading && <ModalProgressBar /> }
+    <form className="card card-custom" onSubmit={formik.handleSubmit}>
+      {loading && <ModalProgressBar />}
 
-      {/* begin::Header */ }
+      {/* begin::Header */}
       <div className="card-header py-3">
         <div className="card-title align-items-start flex-column ml-4">
           <h3 className="card-label font-weight-bolder text-dark">
@@ -98,12 +98,12 @@ function ChangePassword(props) {
         </div>
 
       </div>
-      {/* end::Header */ }
-      {/* begin::Form */ }
+      {/* end::Header */}
+      {/* begin::Form */}
       <div className="form py-3 ">
         <div className="card-body">
-          {/* begin::Alert */ }
-          { isError && (
+          {/* begin::Alert */}
+          {isError && (
             <div
               className="alert alert-custom alert-light-danger fade show"
               role="alert"
@@ -111,8 +111,8 @@ function ChangePassword(props) {
               <div className="alert-icon">
                 <span className="svg-icon svg-icon-3x svg-icon-danger">
                   <SVG
-                    src={ toAbsoluteUrl("/media/svg/icons/Code/Info-circle.svg") }
-                  ></SVG>{ " " }
+                    src={toAbsoluteUrl("/media/svg/icons/Code/Info-circle.svg")}
+                  ></SVG>{" "}
                 </span>
               </div>
               <div className="alert-text font-weight-bold">
@@ -121,7 +121,7 @@ function ChangePassword(props) {
                 <br />
                 or they might inadvertently get locked out of the system!
               </div>
-              <div className="alert-close" onClick={ () => setisError(false) }>
+              <div className="alert-close" onClick={() => setisError(false)}>
                 <button
                   type="button"
                   className="close"
@@ -134,8 +134,8 @@ function ChangePassword(props) {
                 </button>
               </div>
             </div>
-          ) }
-          {/* end::Alert */ }
+          )}
+          {/* end::Alert */}
           <div className="form-group ">
 
             <div className="col-xl-6 col-lg-6 col-md-6">
@@ -143,18 +143,18 @@ function ChangePassword(props) {
               <input
                 type="password"
                 placeholder="Current Password"
-                className={ `form-control form-control-lg form-control-solid mb-2 ${getInputClasses(
+                className={`form-control form-control-lg form-control-solid mb-2 ${getInputClasses(
                   "currentPassword"
-                )}` }
+                )}`}
                 name="currentPassword"
-                { ...formik.getFieldProps("currentPassword") }
+                {...formik.getFieldProps("currentPassword")}
               />
-              { formik.touched.currentPassword &&
+              {formik.touched.currentPassword &&
                 formik.errors.currentPassword ? (
                 <div className="invalid-feedback">
-                  { formik.errors.currentPassword }
+                  {formik.errors.currentPassword}
                 </div>
-              ) : null }
+              ) : null}
             </div>
 
             <div className="col-xl-6 col-lg-6 col-md-6">
@@ -164,15 +164,15 @@ function ChangePassword(props) {
               <input
                 type="password"
                 placeholder="New Password"
-                className={ `form-control form-control-lg form-control-solid ${getInputClasses(
+                className={`form-control form-control-lg form-control-solid ${getInputClasses(
                   "password"
-                )}` }
+                )}`}
                 name="password"
-                { ...formik.getFieldProps("password") }
+                {...formik.getFieldProps("password")}
               />
-              { formik.touched.password && formik.errors.password ? (
-                <div className="invalid-feedback">{ formik.errors.password }</div>
-              ) : null }
+              {formik.touched.password && formik.errors.password ? (
+                <div className="invalid-feedback">{formik.errors.password}</div>
+              ) : null}
             </div>
 
             <div className="col-xl-6 col-lg-6 col-md-6 ">
@@ -182,20 +182,19 @@ function ChangePassword(props) {
               <input
                 type="password"
                 placeholder="confirm Password"
-                className={ `form-control form-control-lg  form-control-solid ${getInputClasses(
+                className={`form-control form-control-lg  form-control-solid ${getInputClasses(
                   "cPassword"
-                )}` }
+                )}`}
                 name="cPassword"
-                { ...formik.getFieldProps("cPassword") }
+                {...formik.getFieldProps("cPassword")}
               />
-              { formik.touched.cPassword && formik.errors.cPassword ? (
+              {formik.touched.cPassword && formik.errors.cPassword ? (
                 <div className="invalid-feedback">
-                  { formik.errors.cPassword }
+                  {formik.errors.cPassword}
                 </div>
-              ) : null }
+              ) : null}
             </div>
-
-            <div className="card-footer text-right mt-5">
+            <div className="card-toolbar text-right">
               <button
                 type="submit"
                 className="btn btn-success mr-2"
@@ -204,7 +203,7 @@ function ChangePassword(props) {
                 }
               >
                 Save Changes
-                { formik.isSubmitting }
+                {formik.isSubmitting}
               </button>
               <Link
                 to="/user-profile/profile-overview"
@@ -216,7 +215,7 @@ function ChangePassword(props) {
           </div>
         </div>
       </div>
-      {/* end::Form */ }
+      {/* end::Form */}
     </form >
   );
 }

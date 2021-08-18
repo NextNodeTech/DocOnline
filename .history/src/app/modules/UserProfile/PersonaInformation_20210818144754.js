@@ -250,28 +250,24 @@ function PersonaInformation(props) {
                 </div>
               </div>
             </div>
-            {/* Footer Start */ }
-            <div className=' card-footer'>
-              <div className=" card-toolbar text-right ">
-                <button
-                  type="submit"
-                  className="btn btn-success mr-2"
-                  disabled={
-                    formik.isSubmitting || (formik.touched && !formik.isValid)
-                  }
-                >
-                  Save Changes
-                  { formik.isSubmitting }
-                </button>
-                <button
-                  to="/user-profile/profile-overview"
-                  className="btn btn-secondary"
-                >
-                  Cancel
-                </button>
-              </div>
+            <div className='card-footer text-right'>
+              <button
+                type='submit'
+                className='btn btn-success mr-2'
+                disabled={
+                  formik.isSubmitting || (formik.touched && !formik.isValid)
+                }
+              >
+                Save Changes
+                { formik.isSubmitting }
+              </button>
+              <Link
+                to='/user-profile/profile-overview'
+                className='btn btn-secondary'
+              >
+                Cancel
+              </Link>
             </div>
-            {/* Footer End */ }
           </div>
           {/* end::Body */ }
         </div>

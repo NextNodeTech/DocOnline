@@ -15,16 +15,15 @@ import Box from '@material-ui/core/Box';
 const useStyles = makeStyles((theme) => ({
     container: {
         // marginTop: '20px',
-        // justifyContent: 'center',
+        justifyContent: 'center',
         display: 'flex',
         flexWrap: 'wrap',
     },
     textField: {
-        marginLeft: theme.spacing(0),
+        marginLeft: theme.spacing(1),
         background: '#F3F6F9',
-        marginRight: theme.spacing(0),
+        marginRight: theme.spacing(1),
         width: 265,
-        // height: '40px !important'
     },
 }));
 
@@ -168,7 +167,7 @@ export default function MedicalChart() {
                                             </div>
                                         ) : null }
                                     </div>
-                                    <div className='col-xl-4 col-lg-4 col-md-4 '>
+                                    <div className='col-xl-4 col-lg-4 col-md-4 mt-3'>
                                         <label className='col-form-label'>Start Date</label>
                                         <form className={ classes.container } noValidate>
                                             <TextField
@@ -183,14 +182,14 @@ export default function MedicalChart() {
                                             />
                                         </form>
                                     </div>
-                                    <div className='col-xl-4 col-lg-4 col-md-4 '>
-                                        <label className='col-form-label'>End Date</label>
+                                    <div className='col-xl-4 col-lg-4 col-md-4 mt-3'>
                                         <form className={ classes.container } noValidate>
                                             <TextField
+
                                                 id="date"
                                                 variant="outlined"
                                                 type="date"
-                                                defaultValue=" "
+                                                defaultValue=""
                                                 className={ classes.textField }
                                                 InputLabelProps={ {
                                                     shrink: true,

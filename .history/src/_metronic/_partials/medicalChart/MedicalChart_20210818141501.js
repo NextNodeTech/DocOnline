@@ -24,7 +24,6 @@ const useStyles = makeStyles((theme) => ({
         background: '#F3F6F9',
         marginRight: theme.spacing(0),
         width: 265,
-        // height: '40px !important'
     },
 }));
 
@@ -179,6 +178,16 @@ export default function MedicalChart() {
                                                 className={ classes.textField }
                                                 InputLabelProps={ {
                                                     shrink: true,
+                                                } }
+                                                inputProps={ {
+                                                    underline: {
+                                                        "&&&:before": {
+                                                            border: "none"
+                                                        },
+                                                        "&&:after": {
+                                                            border: "none"
+                                                        }
+                                                    }
                                                 } }
                                             />
                                         </form>

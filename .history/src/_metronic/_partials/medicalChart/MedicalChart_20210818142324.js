@@ -24,7 +24,7 @@ const useStyles = makeStyles((theme) => ({
         background: '#F3F6F9',
         marginRight: theme.spacing(0),
         width: 265,
-        // height: '40px !important'
+        height: '50px !important'
     },
 }));
 
@@ -173,7 +173,7 @@ export default function MedicalChart() {
                                         <form className={ classes.container } noValidate>
                                             <TextField
                                                 id="date"
-                                                variant="outlined"
+                                                variant="none"
                                                 type="date"
                                                 defaultValue=" "
                                                 className={ classes.textField }
@@ -188,7 +188,7 @@ export default function MedicalChart() {
                                         <form className={ classes.container } noValidate>
                                             <TextField
                                                 id="date"
-                                                variant="outlined"
+                                                variant="none"
                                                 type="date"
                                                 defaultValue=" "
                                                 className={ classes.textField }

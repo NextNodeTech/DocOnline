@@ -24,7 +24,6 @@ const useStyles = makeStyles((theme) => ({
         background: '#F3F6F9',
         marginRight: theme.spacing(0),
         width: 265,
-        // height: '40px !important'
     },
 }));
 
@@ -183,14 +182,14 @@ export default function MedicalChart() {
                                             />
                                         </form>
                                     </div>
-                                    <div className='col-xl-4 col-lg-4 col-md-4 '>
-                                        <label className='col-form-label'>End Date</label>
+                                    <div className='col-xl-4 col-lg-4 col-md-4 mt-3'>
                                         <form className={ classes.container } noValidate>
                                             <TextField
+
                                                 id="date"
                                                 variant="outlined"
                                                 type="date"
-                                                defaultValue=" "
+                                                defaultValue=""
                                                 className={ classes.textField }
                                                 InputLabelProps={ {
                                                     shrink: true,
