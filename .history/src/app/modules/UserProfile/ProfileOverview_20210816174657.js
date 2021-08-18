@@ -115,7 +115,7 @@ function ProfileOverview(props) {
           </div>
           {/* end::Language Header */ }
           {/* //////languages ////////////// */ }
-          <div className='row pl-7  col-12 pt-5 pb-10 d-flex justify-content-center'>
+          <div className='row pl-7  col-12 pt-5 pb-10 m-auto'>
             <div className='col-4'>
               <div className='text-hover-primary cursor-pointer p-1'>Urdu</div>
               <div className="progress">
@@ -145,7 +145,7 @@ function ProfileOverview(props) {
           </div>
           {/* end::Allergy Header */ }
           {/* //////////////Allergy//////////////////////// */ }
-          <div className='row pl-7  col-12 pt-5 pb-10 d-flex justify-content-center'>
+          <div className='row pl-7  col-12 pt-5 pb-10'>
             <table className='table table-bordered col-lg-6 text-center m-3 '>
               <thead className='thead-light'>
                 <tr className=' mb-2'>
@@ -185,7 +185,7 @@ function ProfileOverview(props) {
           </div>
           {/* end::Medication Header */ }
           {/* /////////////medication//////////// */ }
-          <div className='row pl-7  col-12 pt-5 pb-10 d-flex justify-content-center'>
+          <div className='row pl-7  col-12 pt-5 pb-10'>
             <table className='table table-bordered col-lg-6 text-center m-3'>
               <thead className='thead-light'>
                 <tr className=' mb-2'>

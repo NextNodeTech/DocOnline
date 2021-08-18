@@ -19,10 +19,10 @@ export function QuickUserToggler() {
 
   return (
     <>
-      {layoutProps.offcanvas && (
+      { layoutProps.offcanvas && (
         <OverlayTrigger
           placement="bottom"
-          overlay={<Tooltip id="quick-user-tooltip">View user</Tooltip>}
+          overlay={ <Tooltip id="quick-user-tooltip">View user</Tooltip> }
         >
           <div className="topbar-item">
             <div
@@ -34,20 +34,20 @@ export function QuickUserToggler() {
                   Hi,
                 </span>
                 <span className="text-dark-50 font-weight-bolder font-size-base d-none d-md-inline mr-3">
-                  {user.fullname}
+                  { user.fullname }
                 </span>
                 <span className="symbol symbol-35 symbol-light-success">
                   <span className="symbol-label font-size-h5 font-weight-bold">
-                    {user.fullname[0]}
+                    { user.fullname[0] }
                   </span>
                 </span>
               </>
             </div>
           </div>
         </OverlayTrigger>
-      )}
+      ) }
 
-      {!layoutProps.offcanvas && <UserProfileDropdown />}
+      { !layoutProps.offcanvas && <UserProfileDropdown /> }
     </>
   );
 }
