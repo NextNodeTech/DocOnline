@@ -167,20 +167,23 @@ function Languages(props) {
           </select>
           <div className="fv-plugins-message-container"></div></div>
       </div>
-      <div className="ml-5" >
-        <List className={ classes.root } subheader={ <li /> }>
-          <li className={ classes.listSection }>
-            <div style={ { display: 'flex', paddingLeft: '25px', paddingBottom: '10px' } }>
-              <LabelIcon /><ul>English</ul>
-              <div style={ { paddingLeft: '10px' } }>(Good)</div>
+      <div className='row pl-14 col-12 pb-10 '>
+            <div className='col-4'>
+              <div className='text-hover-primary cursor-pointer p-1'>Urdu</div>
+              <div className="progress">
+                <div className="progress-bar bg-success" role="progressbar" style={ { width: "80%" } } aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">Best</div>
+              </div>
+              <div className='text-hover-primary cursor-pointer p-1'>English</div>
+              <div className="progress">
+                <div className="progress-bar bg-primary" role="progressbar" style={ { width: "50%" } } aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">Good</div>
+              </div>
+              <div className='text-hover-primary cursor-pointer p-1'>Chineese</div>
+              <div className="progress">
+                <div className="progress-bar bg-warning" role="progressbar" style={ { width: "30%" } } aria-valuenow="30" aria-valuemin="0" aria-valuemax="100">Low</div>
+              </div>
             </div>
-            <div style={ { display: 'flex', paddingLeft: '25px', paddingBottom: '10px' } }>
-              <LabelIcon /><ul>Chineese</ul>
-              <div style={ { paddingLeft: '10px' } }>(Normal)</div>
-            </div>
-          </li>
-        </List>
-      </div>
+
+          </div>
       <div className='card-footer text-right col-12 p-4 mb-10 pr-12'>
         <button
           type='submit'
