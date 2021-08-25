@@ -87,10 +87,10 @@ function Languages(props) {
   });
 
   return (
-    <form className='card card-custom' onSubmit={formik.handleSubmit}>
-      {loading && <ModalProgressBar />}
+    <form className='card card-custom' onSubmit={ formik.handleSubmit }>
+      { loading && <ModalProgressBar /> }
 
-      {/* begin::Header */}
+      {/* begin::Header */ }
       <div className='card-header py-3'>
         <div className='card-title align-items-start flex-column ml-3'>
           <h3 className='card-label font-weight-bolder text-dark'>Languages</h3>
@@ -100,8 +100,8 @@ function Languages(props) {
         </div>
 
       </div>
-      {/* end::Header */}
-      {/* begin::Form */}
+      {/* end::Header */ }
+      {/* begin::Form */ }
 
       <div className="form-group row fv-plugins-icon-container mt-7 p-12 align-items-center">
         <div className="col-xl-4 col-lg-4 col-md-4">
@@ -167,21 +167,24 @@ function Languages(props) {
           </select>
           <div className="fv-plugins-message-container"></div></div>
       </div>
-      <div className="ml-5" >
-        <List className={classes.root} subheader={<li />}>
-          <li className={classes.listSection}>
-            <div style={{ display: 'flex', paddingLeft: '25px', paddingBottom: '10px' }}>
-              <LabelIcon /><ul>English</ul>
-              <div style={{ paddingLeft: '10px' }}>(Good)</div>
+      <div className='row pl-14 col-12 pb-10 '>
+            <div className='col-4'>
+              <div className='text-hover-primary cursor-pointer p-1'>Urdu</div>
+              <div className="progress">
+                <div className="progress-bar bg-success" role="progressbar" style={ { width: "80%" } } aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">Best</div>
+              </div>
+              <div className='text-hover-primary cursor-pointer p-1'>English</div>
+              <div className="progress">
+                <div className="progress-bar bg-primary" role="progressbar" style={ { width: "50%" } } aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">Good</div>
+              </div>
+              <div className='text-hover-primary cursor-pointer p-1'>Chineese</div>
+              <div className="progress">
+                <div className="progress-bar bg-warning" role="progressbar" style={ { width: "30%" } } aria-valuenow="30" aria-valuemin="0" aria-valuemax="100">Low</div>
+              </div>
             </div>
-            <div style={{ display: 'flex', paddingLeft: '25px', paddingBottom: '10px' }}>
-              <LabelIcon /><ul>Chineese</ul>
-              <div style={{ paddingLeft: '10px' }}>(Normal)</div>
-            </div>
-          </li>
-        </List>
-      </div>
-      <div className='card-toolbar text-right col-12 p-4 mb-10 pr-12'>
+
+          </div>
+      <div className='card-footer text-right col-12 p-4 mb-10 pr-12'>
         <button
           type='submit'
           className='btn btn-success mr-2 '
@@ -190,7 +193,7 @@ function Languages(props) {
           }
         >
           Save Changes
-          {formik.isSubmitting}
+          { formik.isSubmitting }
         </button>
         <Link
           to='/user-profile/profile-overview'

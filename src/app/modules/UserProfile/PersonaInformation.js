@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
 import { useSelector, shallowEqual, connect } from "react-redux";
 import { useFormik } from "formik";
 import * as Yup from "yup";
@@ -69,9 +68,9 @@ function PersonaInformation(props) {
   return (
     <form
       className='card card-custom card-stretch'
-      onSubmit={formik.handleSubmit}
+      onSubmit={ formik.handleSubmit }
     >
-      {/* begin::Header */}
+      {/* begin::Header */ }
       <div position='sticky' className='card-header py-3  card-sticky'>
         <div className='card-title align-items-start flex-column'>
           <h3 className='card-label font-weight-bolder text-dark'>
@@ -83,11 +82,11 @@ function PersonaInformation(props) {
         </div>
       </div>
 
-      {/* end::Header */}
-      {/* begin::Form */}
+      {/* end::Header */ }
+      {/* begin::Form */ }
       <div>
         <div className='form'>
-          {/* begin::Body */}
+          {/* begin::Body */ }
           <div className='card-body'>
             <div className='form-group row'>
               <div className='col-xl-4 col-lg-4 col-md-4'>
@@ -96,18 +95,18 @@ function PersonaInformation(props) {
                   <input
                     type='text'
                     placeholder='First name'
-                    className={`form-control form-control-lg form-control-solid ${getInputClasses(
+                    className={ `form-control form-control-lg form-control-solid ${getInputClasses(
                       "firstname"
-                    )}`}
+                    )}` }
                     name='firstname'
-                    {...formik.getFieldProps("firstname")}
+                    { ...formik.getFieldProps("firstname") }
                   />
                 </div>
-                {formik.touched.firstname && formik.errors.firstname ? (
+                { formik.touched.firstname && formik.errors.firstname ? (
                   <div className='invalid-feedback'>
-                    {formik.errors.firstname}
+                    { formik.errors.firstname }
                   </div>
-                ) : null}
+                ) : null }
               </div>
               <div className='col-xl-4 col-lg-4 col-md-4'>
                 <div>
@@ -115,17 +114,17 @@ function PersonaInformation(props) {
                   <input
                     type='text'
                     placeholder='Middle name'
-                    className={`form-control form-control-lg form-control-solid ${getInputClasses(
+                    className={ `form-control form-control-lg form-control-solid ${getInputClasses(
                       "middlename"
-                    )}`}
+                    )}` }
                     name='middlename'
-                    {...formik.getFieldProps("middlename")}
+                    { ...formik.getFieldProps("middlename") }
                   />
-                  {formik.touched.middlename && formik.errors.middlename ? (
+                  { formik.touched.middlename && formik.errors.middlename ? (
                     <div className='invalid-feedback'>
-                      {formik.errors.middlename}
+                      { formik.errors.middlename }
                     </div>
-                  ) : null}
+                  ) : null }
                 </div>
               </div>
               <div className='col-xl-4 col-lg-4 col-md-4'>
@@ -134,17 +133,17 @@ function PersonaInformation(props) {
                   <input
                     type='text'
                     placeholder='Last name'
-                    className={`form-control form-control-lg form-control-solid ${getInputClasses(
+                    className={ `form-control form-control-lg form-control-solid ${getInputClasses(
                       "lastname"
-                    )}`}
+                    )}` }
                     name='lastname'
-                    {...formik.getFieldProps("lastname")}
+                    { ...formik.getFieldProps("lastname") }
                   />
-                  {formik.touched.lastname && formik.errors.lastname ? (
+                  { formik.touched.lastname && formik.errors.lastname ? (
                     <div className='invalid-feedback'>
-                      {formik.errors.lastname}
+                      { formik.errors.lastname }
                     </div>
-                  ) : null}
+                  ) : null }
                 </div>
               </div>
               <div className='col-xl-4 col-lg-4 col-md-4'>
@@ -153,7 +152,7 @@ function PersonaInformation(props) {
                   <select
                     className='form-control form-control-lg form-control-solid'
                     name='gender'
-                    {...formik.getFieldProps("gender")}
+                    { ...formik.getFieldProps("gender") }
                   >
                     <option>Select Gender</option>
                     <option value='Male'>Male </option>
@@ -189,18 +188,18 @@ function PersonaInformation(props) {
                     <input
                       type='text'
                       placeholder='+1(123)112-11-11'
-                      className={`form-control form-control-lg form-control-solid ${getInputClasses(
+                      className={ `form-control form-control-lg form-control-solid ${getInputClasses(
                         "phone"
-                      )}`}
+                      )}` }
                       name='phone'
-                      {...formik.getFieldProps("phone")}
+                      { ...formik.getFieldProps("phone") }
                     />
                   </div>
-                  {formik.touched.phone && formik.errors.phone ? (
+                  { formik.touched.phone && formik.errors.phone ? (
                     <div className='invalid-feedback display-block'>
-                      {formik.errors.phone}
+                      { formik.errors.phone }
                     </div>
-                  ) : null}
+                  ) : null }
                 </div>
               </div>
             </div>
@@ -217,18 +216,18 @@ function PersonaInformation(props) {
                     <input
                       type='email'
                       placeholder='Email'
-                      className={`form-control form-control-lg form-control-solid ${getInputClasses(
+                      className={ `form-control form-control-lg form-control-solid ${getInputClasses(
                         "email"
-                      )}`}
+                      )}` }
                       name='email'
-                      {...formik.getFieldProps("email")}
+                      { ...formik.getFieldProps("email") }
                     />
                   </div>
-                  {formik.touched.email && formik.errors.email ? (
+                  { formik.touched.email && formik.errors.email ? (
                     <div className='invalid-feedback display-block'>
-                      {formik.errors.email}
+                      { formik.errors.email }
                     </div>
-                  ) : null}
+                  ) : null }
                 </div>
               </div>
               <div className='col-xl-12 col-lg-12 col-md-12'>
@@ -242,36 +241,40 @@ function PersonaInformation(props) {
                       rows='3'
                     ></textarea>
                   </div>
-                  {formik.touched.address && formik.errors.address ? (
+                  { formik.touched.address && formik.errors.address ? (
                     <div className='invalid-feedback display-block'>
-                      {formik.errors.address}
+                      { formik.errors.address }
                     </div>
-                  ) : null}
+                  ) : null }
                 </div>
               </div>
             </div>
-            <div className='card-toolbar text-right'>
-              <button
-                type='submit'
-                className='btn btn-success mr-2'
-                disabled={
-                  formik.isSubmitting || (formik.touched && !formik.isValid)
-                }
-              >
-                Save Changes
-                {formik.isSubmitting}
-              </button>
-              <Link
-                to='/user-profile/profile-overview'
-                className='btn btn-secondary'
-              >
-                Cancel
-              </Link>
+            {/* Footer Start */ }
+            <div className=' card-footer'>
+              <div className=" card-toolbar text-right ">
+                <button
+                  type="submit"
+                  className="btn btn-success mr-2"
+                  disabled={
+                    formik.isSubmitting || (formik.touched && !formik.isValid)
+                  }
+                >
+                  Save Changes
+                  { formik.isSubmitting }
+                </button>
+                <button
+                  to="/user-profile/profile-overview"
+                  className="btn btn-secondary"
+                >
+                  Cancel
+                </button>
+              </div>
             </div>
+            {/* Footer End */ }
           </div>
-          {/* end::Body */}
+          {/* end::Body */ }
         </div>
-        {/* end::Form */}
+        {/* end::Form */ }
       </div>
     </form>
   );
