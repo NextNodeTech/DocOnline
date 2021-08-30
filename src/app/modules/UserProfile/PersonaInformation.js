@@ -163,7 +163,7 @@ function PersonaInformation(props) {
               </div>
               <div className='col-xl-4 col-lg-4 col-md-4 pt-0.5'>
                 <div>
-                  <label className='col-form-label'> Date of Birth </label>
+                  <label readOnly className='col-form-label'> Date of Birth </label>
                   <div className='input-group date'>
                     <input
                       type='text'

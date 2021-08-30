@@ -7,34 +7,8 @@ import * as Yup from "yup";
 import { ModalProgressBar } from "../../../_metronic/_partials/controls";
 import * as auth from "../Auth";
 
-import { makeStyles } from '@material-ui/core/styles';
-import List from '@material-ui/core/List';
-import LabelIcon from '@material-ui/icons/Label';
-
-const useStyles = makeStyles(theme => ({
-  root: {
-    width: '100%',
-    maxWidth: 360,
-    backgroundColor: theme.palette.background.paper,
-    position: 'relative',
-    overflow: 'auto',
-    maxHeight: 300,
-  },
-  listSection: {
-    backgroundColor: 'inherit',
-  },
-  ul: {
-    backgroundColor: 'inherit',
-    padding: 0,
-  },
-}));
-
-
-
-
 
 function Languages(props) {
-  const classes = useStyles();
   // Fields
   const [loading, setloading] = useState(false);
   const dispatch = useDispatch();
@@ -114,7 +88,7 @@ function Languages(props) {
             <option value="cs">Čeština - Czech</option>
             <option value="da">Dansk - Danish</option>
             <option value="de">Deutsch - German</option>
-            <option value="en" selected="selected">English</option>
+            <option value="en" defaultValue >English</option>
             <option value="en-gb">English UK - British English</option>
             <option value="es">Español - Spanish</option>
             <option value="eu">Euskara - Basque (beta)</option>
